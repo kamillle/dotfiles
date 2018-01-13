@@ -28,7 +28,4 @@ export PATH="/usr/local/opt/elasticsearch@5.6/bin:$PATH"
 export PGDATA=/usr/local/var/postgres
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-# connect development server
-export CONNECT_BASIC_AUTH_USERNAME= "cotree"
-export CONNECT_BASIC_AUTH_PASSWORD= "toceer1"
 
