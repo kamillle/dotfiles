@@ -25,7 +25,8 @@ eval "$(pyenv init -)"
 # elastic
 export PATH="/usr/local/opt/elasticsearch@5.6/bin:$PATH"
 # psql
-export PGDATA=/usr/local/var/postgres
+export PGDATA="/usr/local/var/postgresql@9.6"
+#export PATH="/usr/local/opt/postgresql@9.6/bin$"
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
