@@ -110,7 +110,7 @@ NeoBundle 'ctrlpvim/ctrlp.vim'              " 多機能セレクタ
 NeoBundle 'tacahiroy/ctrlp-funky'           " CtrlPの拡張プラグイン. 関数検索
 NeoBundle 'suy/vim-ctrlp-commandline'       " CtrlPの拡張プラグイン. コマンド履歴検索
 NeoBundle 'Yggdroot/indentLine'             " インデントの可視化
-NeoBundle 'Shougo/unite.vim'                " Unite検索
+"NeoBundle 'Shougo/unite.vim'                " Unite検索
 NeoBundle 'cohama/lexima.vim'               " 閉じ括弧の補完
 if has('lua')
     NeoBundle 'Shougo/neocomplete.vim'      " コード自動補完
