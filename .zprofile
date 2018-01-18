@@ -15,18 +15,3 @@ bindkey "^N" history-beginning-search-forward-end
 # alias
 alias diff="coloddiff"
 
-##### PATH #####
-# Ruby
-eval "$(rbenv init -)"
-#Python
-PYENV_ROOT=~/.pyenv
-export PATH=$PATH:$PYENV_ROOT/bin
-eval "$(pyenv init -)"
-# elastic
-export PATH="/usr/local/opt/elasticsearch@5.6/bin:$PATH"
-# psql
-export PGDATA="/usr/local/var/postgresql@9.6"
-#export PATH="/usr/local/opt/postgresql@9.6/bin$"
-# nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"

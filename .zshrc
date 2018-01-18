@@ -1,4 +1,5 @@
-export BROWSER=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
+#export BROWSER=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
+#BROWSER=google-chrome
 source ~/.zplug/init.zsh
 
 # 日本語を使用
@@ -59,3 +60,19 @@ precmd () { vcs_info }
 PROMPT='[ %{$fg_bold[blue]%}%T% %{$fg_bold[yellow]%} %n@%m% %{$fg_bold[green]%} %~% %{$reset_color%} ]
 %{${fg_bold[green]}%}%} > %{${reset_color}% '
 RPROMPT='${vcs_info_msg_0_}'
+
+
+##### PATH #####
+# Ruby
+eval "$(rbenv init -)"
+#Python
+PYENV_ROOT=~/.pyenv
+export PATH=$PATH:$PYENV_ROOT/bin
+eval "$(pyenv init -)"
+# elastic
+export PATH="/usr/local/opt/elasticsearch@5.6/bin:$PATH"
+# psql
+export PGDATA="/usr/local/var/postgresql@9.6"
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
