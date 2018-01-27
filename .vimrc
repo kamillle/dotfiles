@@ -5,7 +5,7 @@ language C
 " operation
 "----------------------------------------------------------
 set wildmenu wildmode=list:longest,full " コマンドラインモードでTABキーによるファイル名補完を有効にする
-set history=5000                        " コマンドラインの履歴を10000件保存する
+set history=1000                        " コマンドラインの履歴をXXXX件保存する
 set clipboard=unnamed,unnamedplus       " クリップボードをOSと共有
 set scrolloff=8                         " 上下8行の視界を確保
 set sidescrolloff=16                    " 左右スクロール時の視界を確保

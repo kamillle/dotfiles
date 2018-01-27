@@ -1,5 +1,3 @@
-#export BROWSER=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
-#BROWSER=google-chrome
 source ~/.zplug/init.zsh
 
 # 日本語を使用
