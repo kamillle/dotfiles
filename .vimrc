@@ -106,7 +106,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'gosukiwi/vim-atom-dark'          " color-theme
 NeoBundle 'bronson/vim-trailing-whitespace' " 末尾の全角と半角の空白文字を赤くハイライト
 NeoBundle 'itchyny/lightline.vim'           " ステータスラインの表示内容強化
-NeoBundle 'ctrlpvim/ctrlp.vim'              " 多機能セレクタ
 NeoBundle 'Yggdroot/indentLine'             " インデントの可視化
 NeoBundle 'Shougo/unite.vim'                " Unite検索
 NeoBundle 'Shougo/neomru.vim'               " for Unite
