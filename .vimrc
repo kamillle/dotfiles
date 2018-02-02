@@ -109,8 +109,8 @@ NeoBundle 'itchyny/lightline.vim'           " ステータスラインの表示�
 NeoBundle 'ctrlpvim/ctrlp.vim'              " 多機能セレクタ
 NeoBundle 'Yggdroot/indentLine'             " インデントの可視化
 NeoBundle 'Shougo/unite.vim'                " Unite検索
+NeoBundle 'Shougo/neomru.vim'               " for Unite
 NeoBundle 'cohama/lexima.vim'               " 閉じ括弧の補完
-NeoBundle 'Shougo/neomru.vim'
 if has('lua')
     NeoBundle 'Shougo/neocomplete.vim'      " コード自動補完
     NeoBundle "Shougo/neosnippet"           " スニペットの補完機能
