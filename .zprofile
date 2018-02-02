@@ -13,5 +13,5 @@ bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
 # alias
-alias diff="coloddiff"
-
+alias es="elasticsearch"
+alias vi="vim"

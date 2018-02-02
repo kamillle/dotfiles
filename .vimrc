@@ -17,8 +17,8 @@ set hidden                              " 変更中のファイルでの、保�
 set autoread                            " 編集中のファイルが変更されたら自動で読み直す
 set noswapfile                          " ファイル編集中にスワップファイルを作らない
 set confirm                             " 保存されていないファイルがあるときは終了前に保存確認
-" インサートモードにてffでエスケープ
-inoremap ff <Esc>
+" インサートモードにてjjでエスケープ
+inoremap jj <Esc>
 " 行が折り返し表示されていた場合、行単位ではなく表示行単位でカーソルを移動する
 nnoremap j gj
 nnoremap k gk
@@ -107,11 +107,10 @@ NeoBundle 'gosukiwi/vim-atom-dark'          " color-theme
 NeoBundle 'bronson/vim-trailing-whitespace' " 末尾の全角と半角の空白文字を赤くハイライト
 NeoBundle 'itchyny/lightline.vim'           " ステータスラインの表示内容強化
 NeoBundle 'ctrlpvim/ctrlp.vim'              " 多機能セレクタ
-NeoBundle 'tacahiroy/ctrlp-funky'           " CtrlPの拡張プラグイン. 関数検索
-NeoBundle 'suy/vim-ctrlp-commandline'       " CtrlPの拡張プラグイン. コマンド履歴検索
 NeoBundle 'Yggdroot/indentLine'             " インデントの可視化
-"NeoBundle 'Shougo/unite.vim'                " Unite検索
+NeoBundle 'Shougo/unite.vim'                " Unite検索
 NeoBundle 'cohama/lexima.vim'               " 閉じ括弧の補完
+NeoBundle 'Shougo/neomru.vim'
 if has('lua')
     NeoBundle 'Shougo/neocomplete.vim'      " コード自動補完
     NeoBundle "Shougo/neosnippet"           " スニペットの補完機能
@@ -132,16 +131,6 @@ set laststatus=2 " ステータスラインを常に表示
 set showmode     " 現在のモードを表示
 set showcmd      " 打ったコマンドをステータスラインの下に表示
 set ruler        " ステータスラインの右側にカーソルの現在位置を表示する
-
-"----------------------------------------------------------
-" CtrlPの設定
-"----------------------------------------------------------
-let g:ctrlp_match_window = 'order:ttb,min:20,max:20,results:100'  " マッチウインドウの設定. 「下部に表示, 大きさ20行で固定, 検索結果100件」
-let g:ctrlp_show_hidden = 1                                       " .(ドット)から始まるファイルも検索対象にする
-let g:ctrlp_types = ['fil']                                       " ファイル検索のみ使用
-let g:ctrlp_extensions = ['funky', 'commandline']                 " CtrlPの拡張として「funky」と「commandline」を使用
-command! CtrlPCommandLine call ctrlp#init(ctrlp#commandline#id()) " CtrlPCommandLineの有効化
-let g:ctrlp_funky_matchtype = 'path'                              " CtrlPFunkyの有効化
 
 "----------------------------------------------------------
 " neocomplete・neosnippetの設定
@@ -167,23 +156,47 @@ if neobundle#is_installed('neocomplete.vim')
 endif
 
 "----------------------------------------------------------
-" unite * ag setting
+" unite setting
 "----------------------------------------------------------
-let g:unite_source_grep_command = 'ag'
-let g:unite_source_grep_default_opts = '--nocolor --nogroup'
-let g:unite_source_grep_max_candidates = 200
-let g:unite_source_grep_recursive_opt = ''
-let g:unite_enable_start_insert=1
 let g:unite_source_history_yank_enable =1
-let g:unite_source_file_mru_limit = 200
-nnoremap <silent> ,aa :<C-u>Unite history/yank<CR>
-nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
-nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
-nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
-" unite-grepの便利キーマップ
-vnoremap /g y:Unite grep::-iRn:<C-R>=escape(@", '\\.*$^[]')<CR><CR>
+  "prefix keyの設定
+  nmap <Space> [unite]
 
+  "スペースキーとaキーでカレントディレクトリを表示
+  nnoremap <silent> [unite]a :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+
+  "スペースキーとスペースキーでバッファと最近開いたファイル一覧を表示
+  nnoremap <silent> [unite]<Space> :<C-u>Unite<Space>buffer file_mru<CR>
+
+  "スペースキーとdキーで最近開いたディレクトリを表示
+  nnoremap <silent> [unite]d :<C-u>Unite<Space>directory_mru<CR>
+
+  "スペースキーとbキーでバッファを表示
+  nnoremap <silent> [unite]b :<C-u>Unite<Space>buffer<CR>
+
+  ""スペースキーとrキーでレジストリを表示
+  nnoremap <silent> [unite]r :<C-u>Unite<Space>register<CR>
+
+  "スペースキーとtキーでタブを表示
+  nnoremap <silent> [unite]t :<C-u>Unite<Space>tab<CR>
+
+  "スペースキーとhキーでヒストリ/ヤンクを表示
+  nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
+
+  "スペースキーとoキーでoutline
+  nnoremap <silent> [unite]o :<C-u>Unite<Space>outline<CR>
+
+  "スペースキーとENTERキーでfile_rec:!
+  nnoremap <silent> [unite]<CR> :<C-u>Unite<Space>file_rec:!<CR>
+
+  "unite.vimを開いている間のキーマッピング
+  autocmd FileType unite call s:unite_my_settings()
+
+
+  " ESCでuniteを終了
+  function! s:unite_my_settings()"{{{
+        nmap <buffer> <ESC> <Plug>(unite_exit)
+  endfunction"}}}
 call neobundle#end()
 
 " Required:
