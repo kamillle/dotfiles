@@ -63,7 +63,6 @@ nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 "set visualbell  " ビープ音を可視化
 set vb t_vb=     " ビープ音を消す
 set noerrorbells " エラーメッセージの表示時にビープを鳴らさない
-set showmatch    " 対応括弧をハイライト表示する
 set matchtime=3  " 対応カッコの表示秒数を3秒に
 
 " クリップボードからのペーストの場合、自動インデントを無効
@@ -153,7 +152,7 @@ if neobundle#is_installed('neocomplete.vim')
     " タブキーで補完候補の選択. スニペット内のジャンプもタブキーでジャンプ・・・・・・③
     imap <expr><TAB> pumvisible() ? "<C-n>" : neosnippet#jumpable() ? "<Plug>(neosnippet_expand_or_jump)" : "<TAB>"
 endif
-
+inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "<CR>"
 "----------------------------------------------------------
 " unite setting
 "----------------------------------------------------------
