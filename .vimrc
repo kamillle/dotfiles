@@ -1,6 +1,7 @@
 set encoding=utf-8
 scriptencoding utf-8
 language C
+
 "----------------------------------------------------------
 " operation
 "----------------------------------------------------------
@@ -17,8 +18,12 @@ set hidden                              " 変更中のファイルでの、保�
 set autoread                            " 編集中のファイルが変更されたら自動で読み直す
 set noswapfile                          " ファイル編集中にスワップファイルを作らない
 set confirm                             " 保存されていないファイルがあるときは終了前に保存確認
+set formatoptions=q                     " 改行無効化
 " インサートモードにてjjでエスケープ
 inoremap jj <Esc>
+" F1ヘルプの無効化
+nnoremap <F1> <nop>
+imap     <F1> <nop>
 " 行が折り返し表示されていた場合、行単位ではなく表示行単位でカーソルを移動する
 nnoremap j gj
 nnoremap k gk
@@ -49,7 +54,7 @@ set shiftwidth=2  " smartindentで増減する幅
 "----------------------------------------------------------
 "" search function
 "----------------------------------------------------------
-set incsearch  " インクリメンタルサーチ. １文字入力毎に検索を行う
+"set incsearch  " インクリメンタルサーチ. １文字入力毎に検索を行う
 set ignorecase " 検索パターンに大文字小文字を区別しない
 set smartcase  " 検索パターンに大文字を含んでいたら大文字小文字を区別する
 set hlsearch   " 検索結果をハイライト
@@ -108,7 +113,6 @@ NeoBundle 'itchyny/lightline.vim'           " ステータスラインの表示�
 NeoBundle 'Yggdroot/indentLine'             " インデントの可視化
 NeoBundle 'Shougo/unite.vim'                " Unite検索
 NeoBundle 'Shougo/neomru.vim'               " for Unite
-NeoBundle 'cohama/lexima.vim'               " 閉じ括弧の補完
 if has('lua')
     NeoBundle 'Shougo/neocomplete.vim'      " コード自動補完
     NeoBundle "Shougo/neosnippet"           " スニペットの補完機能
@@ -126,9 +130,6 @@ colorscheme atom-dark-256
 " ステータスラインの設定
 "----------------------------------------------------------
 set laststatus=2 " ステータスラインを常に表示
-set showmode     " 現在のモードを表示
-set showcmd      " 打ったコマンドをステータスラインの下に表示
-set ruler        " ステータスラインの右側にカーソルの現在位置を表示する
 
 "----------------------------------------------------------
 " neocomplete・neosnippetの設定
@@ -145,14 +146,16 @@ if neobundle#is_installed('neocomplete.vim')
     " 1文字目の入力から補完のポップアップを表示
     let g:neocomplete#auto_completion_start_length = 1
     " バックスペースで補完のポップアップを閉じる
-    inoremap <expr><BS> neocomplete#smart_close_popup()."<C-h>"
+    inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 
     " エンターキーで補完候補の確定. スニペットの展開もエンターキーで確定・・・・・・②
-    imap <expr><CR> neosnippet#expandable() ? "<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "<C-y>" : "<CR>"
+    imap <expr><CR> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-y>" : "\<CR>"
     " タブキーで補完候補の選択. スニペット内のジャンプもタブキーでジャンプ・・・・・・③
-    imap <expr><TAB> pumvisible() ? "<C-n>" : neosnippet#jumpable() ? "<Plug>(neosnippet_expand_or_jump)" : "<TAB>"
+    imap <expr><TAB> pumvisible() ? "<C-n>" : neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+else
+    inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "\<CR>"
 endif
-inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "<CR>"
+
 "----------------------------------------------------------
 " unite setting
 "----------------------------------------------------------
