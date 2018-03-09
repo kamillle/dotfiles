@@ -59,6 +59,15 @@ PROMPT='[ %{$fg_bold[blue]%}%T% %{$fg_bold[yellow]%} %n@%m% %{$fg_bold[green]%} 
 %{${fg_bold[green]}%}%} > %{${reset_color}% '
 RPROMPT='${vcs_info_msg_0_}'
 
+# setting peco
+function peco-history-selection() {
+    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+    CURSOR=$#BUFFER
+    zle reset-prompt
+}
+
+zle -N peco-history-selection
+bindkey '^R' peco-history-selection
 
 ##### PATH #####
 # Ruby
