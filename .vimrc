@@ -108,16 +108,16 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " インストール
 "----------------------------------------------------------
 "NeoBundle 'gosukiwi/vim-atom-dark'          " color-theme
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'bronson/vim-trailing-whitespace' " 末尾の全角と半角の空白文字を赤くハイライト
-NeoBundle 'itchyny/lightline.vim'           " ステータスラインの表示内容強化
-NeoBundle 'Yggdroot/indentLine'             " インデントの可視化
-NeoBundle 'Shougo/unite.vim'                " Unite検索
-NeoBundle 'Shougo/neomru.vim'               " for Unite
+NeoBundle 'altercation/vim-colors-solarized' " color-theme-solarized
+NeoBundle 'bronson/vim-trailing-whitespace'  " 末尾の全角と半角の空白文字を赤くハイライト
+NeoBundle 'itchyny/lightline.vim'            " ステータスラインの表示内容強化
+NeoBundle 'Yggdroot/indentLine'              " インデントの可視化
+NeoBundle 'Shougo/unite.vim'                 " Unite検索
+NeoBundle 'Shougo/neomru.vim'                " for Unite
 if has('lua')
-    NeoBundle 'Shougo/neocomplete.vim'      " コード自動補完
-    NeoBundle "Shougo/neosnippet"           " スニペットの補完機能
-    NeoBundle 'Shougo/neosnippet-snippets'  " スニペット集
+    NeoBundle 'Shougo/neocomplete.vim'       " コード自動補完
+    NeoBundle "Shougo/neosnippet"            " スニペットの補完機能
+    NeoBundle 'Shougo/neosnippet-snippets'   " スニペット集
 endif
 "----------------------------------------------------------
 " setting colorscheme
