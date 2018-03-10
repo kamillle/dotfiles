@@ -107,7 +107,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "----------------------------------------------------------
 " インストール
 "----------------------------------------------------------
-NeoBundle 'gosukiwi/vim-atom-dark'          " color-theme
+"NeoBundle 'gosukiwi/vim-atom-dark'          " color-theme
+NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'bronson/vim-trailing-whitespace' " 末尾の全角と半角の空白文字を赤くハイライト
 NeoBundle 'itchyny/lightline.vim'           " ステータスラインの表示内容強化
 NeoBundle 'Yggdroot/indentLine'             " インデントの可視化
@@ -119,15 +120,24 @@ if has('lua')
     NeoBundle 'Shougo/neosnippet-snippets'  " スニペット集
 endif
 "----------------------------------------------------------
-" setting atom-dark
+" setting colorscheme
 "----------------------------------------------------------
+"syntax enable
+"set t_Co=256
+"colorscheme atom-dark-256
+
 syntax enable
-set t_Co=256
-colorscheme atom-dark-256
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
 "----------------------------------------------------------
 " ステータスラインの設定
 "----------------------------------------------------------
 set laststatus=2 " ステータスラインを常に表示
+let g:lightline = {
+        \ 'colorscheme': 'solarized',
+        \ 'mode_map': {'c': 'NORMAL'},
+        \ }
 
 "----------------------------------------------------------
 " neocomplete・neosnippetの設定

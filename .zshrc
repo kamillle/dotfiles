@@ -1,3 +1,5 @@
+source ~/.zplug/init.zsh
+
 # 日本語を使用
 export LANG=ja_JP.UTF-8
 
@@ -17,7 +19,7 @@ setopt no_beep
 
 # VCSの情報を取得するzsh関数
 autoload -Uz vcs_info
-autoload -Uz colors # black red green yellow blue magenta cyan white
+autoload -Uz colors # can user black red green yellow blue magenta cyan white
 colors
 
 # PROMPT変数内で変数参照
