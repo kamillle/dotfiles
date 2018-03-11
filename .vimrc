@@ -54,7 +54,7 @@ set shiftwidth=2  " smartindentで増減する幅
 "----------------------------------------------------------
 "" search function
 "----------------------------------------------------------
-"set incsearch  " インクリメンタルサーチ. １文字入力毎に検索を行う
+set incsearch  " インクリメンタルサーチ. １文字入力毎に検索を行う
 set ignorecase " 検索パターンに大文字小文字を区別しない
 set smartcase  " 検索パターンに大文字を含んでいたら大文字小文字を区別する
 set hlsearch   " 検索結果をハイライト
@@ -107,7 +107,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "----------------------------------------------------------
 " インストール
 "----------------------------------------------------------
-"NeoBundle 'gosukiwi/vim-atom-dark'          " color-theme
 NeoBundle 'altercation/vim-colors-solarized' " color-theme-solarized
 NeoBundle 'bronson/vim-trailing-whitespace'  " 末尾の全角と半角の空白文字を赤くハイライト
 NeoBundle 'itchyny/lightline.vim'            " ステータスラインの表示内容強化
@@ -115,21 +114,18 @@ NeoBundle 'Yggdroot/indentLine'              " インデントの可視化
 NeoBundle 'Shougo/unite.vim'                 " Unite検索
 NeoBundle 'Shougo/neomru.vim'                " for Unite
 if has('lua')
-    NeoBundle 'Shougo/neocomplete.vim'       " コード自動補完
-    NeoBundle "Shougo/neosnippet"            " スニペットの補完機能
-    NeoBundle 'Shougo/neosnippet-snippets'   " スニペット集
+  NeoBundle 'Shougo/neocomplete.vim'       " コード自動補完
+  NeoBundle "Shougo/neosnippet"            " スニペットの補完機能
+  NeoBundle 'Shougo/neosnippet-snippets'   " スニペット集
 endif
 "----------------------------------------------------------
 " setting colorscheme
 "----------------------------------------------------------
-"syntax enable
-"set t_Co=256
-"colorscheme atom-dark-256
-
 syntax enable
 set background=dark
 colorscheme solarized
 let g:solarized_termcolors=256
+
 "----------------------------------------------------------
 " ステータスラインの設定
 "----------------------------------------------------------
@@ -148,7 +144,7 @@ if neobundle#is_installed('neocomplete.vim')
     " smartcase有効化. 大文字が入力されるまで大文字小文字の区別を無視する
     let g:neocomplete#enable_smart_case = 1
     " 3文字以上の単語に対して補完を有効にする
-    let g:neocomplete#min_keyword_length = 3
+    let g:neocomplete#min_keyword_length = 2
     " 区切り文字まで補完する
     let g:neocomplete#enable_auto_delimiter = 1
     " 1文字目の入力から補完のポップアップを表示
@@ -206,6 +202,7 @@ let g:unite_source_history_yank_enable =1
   function! s:unite_my_settings()"{{{
         nmap <buffer> <ESC> <Plug>(unite_exit)
   endfunction"}}}
+
 call neobundle#end()
 
 " Required:
