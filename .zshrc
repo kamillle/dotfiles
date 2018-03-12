@@ -40,7 +40,7 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]'       #rebase 途中,merge コン�
 precmd () { vcs_info }
 
 # PROMPT
-PROMPT='[ %{$fg_bold[blue]%}%T% %{$fg_bold[yellow]%} %n@%m% %{$fg_bold[white]%} %~% %{$reset_color%} ]
+PROMPT='%{$fg_bold[white]%}[ %{$fg_bold[blue]%}%T% %{$fg_bold[yellow]%} %n@%m% %{$fg_bold[white]%} %~% %{$reset_color%} %{$fg_bold[white]%}]
 %{${fg_bold[red]}%}%} > %{${reset_color}% '
 RPROMPT='${vcs_info_msg_0_}'
 
