@@ -68,3 +68,4 @@ export PGDATA="/usr/local/var/postgresql@9.6"
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
