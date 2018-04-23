@@ -163,6 +163,52 @@ else
     inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "\<CR>"
 endif
 
+" define file path where set original snippet files
+let g:neosnippet#snippets_directory = '~/dotfiles/snippets/'
+
+" スニペットファイルの場所指定
+"let g:neosnippet#snippets_directory='~/.vim/snippets/'
+
+
+" ファイル名で区別出来る場合は直接呼び出し
+" ファイル名で区別できない場合は一旦関数に投げる
+augroup filetypedetect
+  autocmd!  BufEnter *_spec.rb NeoSnippetSource ~/.vim/snippets/rspec.snip
+  autocmd!  BufEnter *rb call s:LoadRailsSnippet()
+augroup END
+
+" rails用スニペット呼び出し関数
+function! s:LoadRailsSnippet()
+
+  " fetch current dir path
+  let s:current_file_path = expand("%:p:h")
+
+  "ignore unless in app dir
+  if ( s:current_file_path !~ "app/" )
+    return
+
+  " if in model dir
+  elseif ( s:current_file_path =~ "app/models" )
+    NeoSnippetSource ~/dotfiles/snippets/model.rails.snip
+
+  " if in controller dir
+  elseif ( s:current_file_path =~ "app/controllers" )
+   NeoSnippetSource ~/dotfiles/snippets/controller.rails.snip
+
+  " if in view dir
+  elseif ( s:current_file_path =~ "app/views" )
+    NeoSnippetSource ~/dotfiles/snippets/view.rails.snip
+
+  " app/helpersフォルダ内ならば
+  "elseif ( s:current_file_path =~ app/helpers" )
+  "  NeoSnippetSource ~/dotfiles/snippets/helper.rails.snip
+
+  " app/assetsフォルダ内ならば
+  "elseif ( s:current_file_path =~ app/assets")
+  "  NeoSnippetSource ~/dotfiles/snippets/asset.rails.snip
+  endif
+endfunction
+
 "----------------------------------------------------------
 " unite setting
 "----------------------------------------------------------
