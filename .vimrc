@@ -3,6 +3,12 @@ scriptencoding utf-8
 language C
 
 "----------------------------------------------------------
+" alias
+"----------------------------------------------------------
+"cnoreabbrev <Alias名> <Aliasを付けたいコマンド>
+cnoreabbrev indent shiftwidth=
+
+"----------------------------------------------------------
 " operation
 "----------------------------------------------------------
 set wildmenu wildmode=list:longest,full " コマンドラインモードでTABキーによるファイル名補完を有効にする
@@ -166,14 +172,9 @@ endif
 " define file path where set original snippet files
 let g:neosnippet#snippets_directory = '~/dotfiles/snippets/'
 
-" スニペットファイルの場所指定
-"let g:neosnippet#snippets_directory='~/.vim/snippets/'
-
-
-" ファイル名で区別出来る場合は直接呼び出し
-" ファイル名で区別できない場合は一旦関数に投げる
+" call appropriate snip file via extension
 augroup filetypedetect
-  autocmd!  BufEnter *_spec.rb NeoSnippetSource ~/.vim/snippets/rspec.snip
+  autocmd!  BufEnter *_spec.rb NeoSnippetSource ~/dotfiles/snippets/rspec.snip
   autocmd!  BufEnter *rb call s:LoadRailsSnippet()
 augroup END
 
