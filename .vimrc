@@ -5,7 +5,7 @@ language C
 "----------------------------------------------------------
 " alias
 "----------------------------------------------------------
-"cnoreabbrev <Alias名> <Aliasを付けたいコマンド>
+"cnoreabbrev <Alias name> <Alias command>
 cnoreabbrev indent shiftwidth=
 
 "----------------------------------------------------------
