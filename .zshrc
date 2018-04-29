@@ -3,10 +3,6 @@ source ~/.zplug/init.zsh
 # 日本語を使用
 export LANG=ja_JP.UTF-8
 
-# 色を使用出来るようにする
-autoload -Uz colors
-colors
-
 # 補完
 autoload -Uz compinit
 compinit
@@ -17,9 +13,12 @@ zstyle ':completion:*' ignore-parents parent pwd ..
 # ビープ音の削除
 setopt no_beep
 
+#----------------------------------------------------------
+# prompt
+#----------------------------------------------------------
 # VCSの情報を取得するzsh関数
 autoload -Uz vcs_info
-autoload -Uz colors # can user black red green yellow blue magenta cyan white
+autoload -Uz colors
 colors
 
 # PROMPT変数内で変数参照
@@ -44,6 +43,10 @@ PROMPT='%{$fg_bold[white]%}[ %{$fg_bold[blue]%}%T% %{$fg_bold[yellow]%} %n@%m% %
 %{${fg_bold[red]}%}%} > %{${reset_color}% '
 RPROMPT='${vcs_info_msg_0_}'
 
+
+#----------------------------------------------------------
+# setting middleware
+#----------------------------------------------------------
 # setting peco
 function peco-history-selection() {
     BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
@@ -54,7 +57,26 @@ function peco-history-selection() {
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
 
-##### PATH #####
+# search from terminal
+g(){
+    if [ $(echo $1 | egrep "^-[cfs]$") ]; then
+        local opt="$1"
+        shift
+    fi
+    local url="https://www.google.co.jp/search?q=${*// /+}"
+    local app="/Applications"
+    local g="${app}/Google Chrome.app"
+    local s="${app}/Safari.app"
+    case ${opt} in
+        "-g")   open "${url}" -a "$g";;
+        "-s")   open "${url}" -a "$s";;
+        *)      open "${url}";;
+    esac
+  }
+
+#----------------------------------------------------------
+# PATH
+#----------------------------------------------------------
 # Ruby
 eval "$(rbenv init -)"
 #Python
