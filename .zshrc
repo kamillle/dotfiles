@@ -27,7 +27,7 @@ setopt prompt_subst
 zstyle ':vcs_info:git:*' check-for-changes true    #formats 設定項目で %c,%u が使用可
 zstyle ':vcs_info:git:*' stagedstr "%F{red}C!"    #commit されていないファイルがある
 zstyle ':vcs_info:git:*' unstagedstr "%F{blue}A+"  #add されていないファイルがある
-zstyle ':vcs_info:*'     formats "%F{white}-> %c%u%b%f" #通常
+zstyle ':vcs_info:*'     formats "%F{white}-> %c%u%b%f " #通常
 zstyle ':vcs_info:*'     actionformats '(%b|%a)'       #rebase 途中,merge コンフリクト等 formats 外の表示
 
 # %b ブランチ情報
