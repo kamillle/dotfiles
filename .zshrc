@@ -37,16 +37,13 @@ zstyle ':vcs_info:*'     actionformats '(%b|%a)'       #rebase 途中,merge コ�
 
 # プロンプト表示直前に vcs_info 呼び出し
 precmd () { vcs_info }
-
-# PROMPT
 PROMPT='%{$fg_bold[white]%}[  %{$fg_bold[blue]%}%T% %{$fg_bold[yellow]%} %n@%m% %{$fg_bold[white]%} %~% %{$reset_color%} ${vcs_info_msg_0_}%{$reset_color%} %{$fg_bold[white]%}]
 %{${fg_bold[red]}%}%} %% %{${reset_color}% '
-
 
 #----------------------------------------------------------
 # setting middleware
 #----------------------------------------------------------
-# setting peco
+# peco
 function peco-history-selection() {
     BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
     CURSOR=$#BUFFER

@@ -7,8 +7,8 @@ setopt share_history        # share command history data
 
 # alias
 alias py="python"
+alias ipy="ipython"
 alias es="elasticsearch"
 alias vi="vim"
 alias be="bundle exec"
-alias ber="bundle exec rspec"
 alias rm="trash"
