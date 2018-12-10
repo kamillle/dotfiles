@@ -27,15 +27,17 @@ set confirm                             " 保存されていないファイル�
 set formatoptions=q                     " 改行無効化
 " インサートモードにてjjでエスケープ
 inoremap jj <Esc>
-" F1ヘルプの無効化
-nnoremap <F1> <nop>
-imap     <F1> <nop>
 " 行が折り返し表示されていた場合、行単位ではなく表示行単位でカーソルを移動する
 nnoremap j gj
 nnoremap k gk
 nnoremap <down> gj
 nnoremap <up> gk
-
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+nnoremap <F1> <nop>
+imap <C-l> <Right>
 "----------------------------------------------------------
 " visual
 "----------------------------------------------------------
@@ -116,12 +118,14 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "----------------------------------------------------------
 " インストール
 "----------------------------------------------------------
-NeoBundle 'altercation/vim-colors-solarized' " color-theme-solarized
+" NeoBundle 'altercation/vim-colors-solarized' " color-theme-solarized
 NeoBundle 'bronson/vim-trailing-whitespace'  " 末尾の全角と半角の空白文字を赤くハイライト
 NeoBundle 'itchyny/lightline.vim'            " ステータスラインの表示内容強化
 NeoBundle 'Yggdroot/indentLine'              " インデントの可視化
 NeoBundle 'Shougo/unite.vim'                 " Unite検索
 NeoBundle 'Shougo/neomru.vim'                " for Unite
+NeoBundle "slim-template/vim-slim"           " sytax for slim
+NeoBundle "tyru/caw.vim.git"                 " multiple comment out via ctrl + k
 if has('lua')
   NeoBundle 'Shougo/neocomplete.vim'       " コード自動補完
   NeoBundle "Shougo/neosnippet"            " スニペットの補完機能
@@ -131,9 +135,16 @@ endif
 " setting colorscheme
 "----------------------------------------------------------
 syntax enable
-set background=dark
+set synmaxcol=100
+" set background=dark
 colorscheme solarized
 let g:solarized_termcolors=256
+
+"----------------------------------------------------------
+" multiple comment out via ctrl + k
+"----------------------------------------------------------
+map <C-K> <Plug>(caw:hatpos:toggle)
+vmap <C-K> <Plug>(caw:hatpos:toggle)
 
 "----------------------------------------------------------
 " ステータスラインの設定
@@ -236,13 +247,13 @@ let g:unite_source_history_yank_enable =1
   nnoremap <silent> [unite]t :<C-u>Unite<Space>tab<CR>
 
   "スペースキーとhキーでヒストリ/ヤンクを表示
-  nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
+  " nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
 
   "スペースキーとoキーでoutline
-  nnoremap <silent> [unite]o :<C-u>Unite<Space>outline<CR>
+  " nnoremap <silent> [unite]o :<C-u>Unite<Space>outline<CR>
 
   "スペースキーとENTERキーでfile_rec:!
-  nnoremap <silent> [unite]<CR> :<C-u>Unite<Space>file_rec:!<CR>
+  " nnoremap <silent> [unite]<CR> :<C-u>Unite<Space>file_rec:!<CR>
 
   "unite.vimを開いている間のキーマッピング
   autocmd FileType unite call s:unite_my_settings()
