@@ -14,3 +14,9 @@ alias rm="trash"
 alias agg="ag -g"
 alias ls="ls -G"
 alias ctags="`brew --prefix`/bin/ctags"
+
+## Set path for pyenv
+export PYENV_ROOT="${HOME}/.pyenv"
+export PATH=${PYENV_ROOT}/bin:$PATH
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
