@@ -108,7 +108,7 @@ if dein#check_install()
   call dein#install()
 endif
 
-let g:python3_host_prog = expand('.pyenv/shims/python')
+let g:python3_host_prog = expand('~/.pyenv/shims/python')
 " for deoplete.vim
 " 一つ目の候補を選択状態にする
 set completeopt+=noinsert
