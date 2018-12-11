@@ -6,3 +6,19 @@ repo = 'bronson/vim-trailing-whitespace'
 
 [[plugins]]
 repo = 'Yggdroot/indentLine'
+
+# 非同期処理全般
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+# load when in insert mode
+
+
