@@ -4,12 +4,13 @@ language C
 
 set wildmenu wildmode=list:longest,full " コマンドラインモードでTABキーによるファイル名補完を有効にする
 set history=1000                        " コマンドラインの履歴をXXXX件保存する
-
 set clipboard=unnamed                   " クリップボードの共有
 set backspace=indent,eol,start          " backspaceキーの制限設定
 set nostartofline                       " ページアップ・ダウン時にカーソル位置を移動しない
+set whichwrap+=h,l,<,>,[,],b,s          " 行末・行頭から次の行へ移動可能に
 set noswapfile                          " ファイル編集中にスワップファイルを作らない
 set confirm                             " 保存されていないファイルがあるときは終了前に保存確認
+set formatoptions=q                     " 改行無効化
 
 " 行が折り返し表示されていた場合、行単位ではなく表示行単位でカーソルを移動する
 nnoremap j gj
