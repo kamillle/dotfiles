@@ -11,6 +11,9 @@ set whichwrap+=h,l,<,>,[,],b,s          " 行末・行頭から次の行へ移�
 set noswapfile                          " ファイル編集中にスワップファイルを作らない
 set confirm                             " 保存されていないファイルがあるときは終了前に保存確認
 set formatoptions=q                     " 改行無効化
+syntax enable
+set background=dark
+colorscheme solarized
 
 inoremap <silent> jj <ESC>
 " 行が折り返し表示されていた場合、行単位ではなく表示行単位でカーソルを移動する
