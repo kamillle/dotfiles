@@ -12,6 +12,7 @@ set noswapfile                          " ファイル編集中にスワップ�
 set confirm                             " 保存されていないファイルがあるときは終了前に保存確認
 set formatoptions=q                     " 改行無効化
 
+inoremap <silent> jj <ESC>
 " 行が折り返し表示されていた場合、行単位ではなく表示行単位でカーソルを移動する
 nnoremap j gj
 nnoremap k gk

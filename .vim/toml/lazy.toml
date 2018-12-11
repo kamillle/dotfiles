@@ -13,6 +13,8 @@ hook_add = '''
       nnoremap <silent> [denite]s :<C-u>Denite -auto_preview grep<CR>
       " 前回のバッファを再表示する"
       nnoremap <silent> [denite]b :<C-u>Denite -resume<CR>
+      " レジスタ一覧
+      nnoremap <silent> [denite]r :<C-u>Denite -direction=topleft -cursor-wrap=true -buffer-name=register register<CR>
 '''
 
 hook_post_source = '''
