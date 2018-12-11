@@ -1,12 +1,15 @@
 set encoding=utf-8
 scriptencoding utf-8
+language C
 
 set wildmenu wildmode=list:longest,full " コマンドラインモードでTABキーによるファイル名補完を有効にする
 set history=1000                        " コマンドラインの履歴をXXXX件保存する
 
-set clipboard=unnamed
-set backspace=indent,eol,start
+set clipboard=unnamed                   " クリップボードの共有
+set backspace=indent,eol,start          " backspaceキーの制限設定
 set nostartofline                       " ページアップ・ダウン時にカーソル位置を移動しない
+set noswapfile                          " ファイル編集中にスワップファイルを作らない
+set confirm                             " 保存されていないファイルがあるときは終了前に保存確認
 
 " 行が折り返し表示されていた場合、行単位ではなく表示行単位でカーソルを移動する
 nnoremap j gj
@@ -18,7 +21,6 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 nnoremap <F1> <nop>
-imap <C-l> <Right>
 
 "----------------------------------------------------------
 " visual
@@ -38,6 +40,11 @@ set softtabstop=2 " 連続した空白に対してタブキーやバックスペ
 set autoindent    " 改行時に前の行のインデントを継続する
 set smartindent   " 改行時に前の行の構文をチェックし次の行のインデントを増減する
 set shiftwidth=2  " smartindentで増減する幅
+" pythonファイルを編集する際はshiftwidthを4にする
+augroup fileTypeIndent
+    autocmd!
+    autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
+augroup END
 "----------------------------------------------------------
 "" search function
 "----------------------------------------------------------
@@ -49,55 +56,45 @@ set wrapscan   " 最後まで検索したら頭に戻る
 " ESCキー2度押しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 
-
+"----------------------------------------------------------
+"" dein Settings
+"----------------------------------------------------------
 if &compatible
   set nocompatible
 endif
-" Add the dein installation directory into runtimepath
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+" プラグインが実際にインストールされるディレクトリ
+let s:dein_dir = expand('~/.cache/dein')
+" dein.vim 本体
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
-if dein#load_state('~/.cache/dein')
-  call dein#begin('~/.cache/dein')
-
-  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
-  call dein#add('Shougo/deoplete.nvim')
-  if !has('nvim')
-    call dein#add('roxma/nvim-yarp')
-    call dein#add('roxma/vim-hug-neovim-rpc')
+" dein.vim がなければ github から落としてくる
+if &runtimepath !~# '/dein.vim'
+  if !isdirectory(s:dein_repo_dir)
+    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
   endif
+  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+endif
+
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
+
+  " プラグインリストを収めた TOML ファイル
+  let s:toml_dir = expand('~/dotfiles/.vim/toml')
+
+  " 起動時に読み込む
+  call dein#load_toml(s:toml_dir . '/default.toml', {'lazy': 0})
+  " 遅延読み込みする
+  call dein#load_toml(s:toml_dir . '/lazy.toml', {'lazy': 1})
+
+  " if !has('nvim')
+  "   call dein#add('roxma/nvim-yarp')
+  "   call dein#add('roxma/vim-hug-neovim-rpc')
+  " endif
 
   call dein#end()
   call dein#save_state()
 endif
 
-filetype plugin indent on
-syntax enable
-
-"dein Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
-
-" Required:
-set runtimepath+=/Users/yuji/.cache/dein/repos/github.com/Shougo/dein.vim
-
-" Required:
-if dein#load_state('/Users/yuji/.cache/dein')
-  call dein#begin('/Users/yuji/.cache/dein')
-
-  " Let dein manage dein
-  " Required:
-  call dein#add('/Users/yuji/.cache/dein/repos/github.com/Shougo/dein.vim')
-
-  " Add or remove your plugins here like this:
-  call dein#add('Shougo/denite.nvim')
-
-  " Required:
-  call dein#end()
-  call dein#save_state()
-endif
-
-" Required:
 filetype plugin indent on
 syntax enable
 
@@ -106,4 +103,7 @@ if dein#check_install()
   call dein#install()
 endif
 
-"End dein Scripts-------------------------
+let g:python3_host_prog = expand('/Users/yuji/.pyenv/shims/python')
+" for deoplete.vim
+" 一つ目の候補を選択状態にする
+set completeopt+=noinsert
