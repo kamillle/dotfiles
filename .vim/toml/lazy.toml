@@ -1,0 +1,80 @@
+[[plugins]]
+repo   = 'Shougo/denite.nvim'
+hook_add = '''
+    let g:denite_enable_start_insert=1
+    let g:denite_source_history_yank_enable=1
+      "prefix keyの設定
+      nmap <Space> [denite]
+      " カレントディレクトリを表示
+      nnoremap <silent> [denite]a :<C-u>Denite<Space>file_rec<CR>
+      " バッファと最近開いたファイル一覧を表示
+      nnoremap <silent> [denite]<Space> :<C-u>Denite -direction=topleft -cursor-wrap=true buffer file_mru<CR>
+      " 検索する(結果をプレビューで表示する)
+      nnoremap <silent> [denite]s :<C-u>Denite -auto_preview grep<CR>
+      " 前回のバッファを再表示する"
+      nnoremap <silent> [denite]b :<C-u>Denite -resume<CR>
+'''
+
+hook_post_source = '''
+    call denite#custom#option('default', 'prompt', '%')
+    " ノーマルモードで起動、jjでノーマルへ
+    call denite#custom#option('default', {'mode': 'normal'})
+    call denite#custom#map('insert', 'jj', '<denite:enter_mode:normal>')
+    " deniteの起動位置をtopに変更
+    call denite#custom#option('default', 'direction', 'top')
+'''
+
+# load when after loaded denite
+[[plugins]]
+repo      = 'Shougo/neomru.vim'
+on_source = ['denite.nvim']
+
+# load when in insert mode
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_i = 1
+hook_add = 'let g:deoplete#enable_at_startup = 1'
+
+# vim8でdeopleteを使うのに必要
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+on_ft = ['ruby']
+
+# vim8でdeopleteを使うのに必要
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+on_ft = ['ruby']
+
+# Rubyの自動補完
+[[plugins]]
+repo = 'Shougo/deoplete-rct'
+on_ft = ['ruby']
+
+# Rubyの自動補完
+[[plugins]]
+repo = 'fishbullet/deoplete-ruby'
+on_ft = ['ruby']
+
+# Rubyの自動補完
+[[plugins]]
+repo = 'osyo-manga/vim-monster'
+on_i = 1
+hook_add = '''
+let g:monster#completion#rcodetools#backend = "async_rct_complete"
+let g:deoplete#sources#omni#input_patterns = {
+  \ "ruby" : '[^. *\t]\.\w*\|\h\w*::',
+  \}
+'''
+
+# load when file format is .slim
+[[plugins]]
+repo = 'slim-template/vim-slim'
+on_ft = ['slim']
+
+# depends の書式も微妙に違う
+[[plugins]]
+repo    = 'vim-airline/vim-airline'
+depends = ['/vim-airline-themes']
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
