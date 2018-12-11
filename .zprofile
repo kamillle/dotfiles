@@ -45,3 +45,4 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 eval "$(direnv hook zsh)"
 export VIP_DB_HOST="localhost"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+export XDG_CONFIG_HOME="$HOME/.config"
