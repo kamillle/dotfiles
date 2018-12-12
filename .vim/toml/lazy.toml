@@ -31,16 +31,6 @@ hook_post_source = '''
 repo      = 'Shougo/neomru.vim'
 on_source = ['denite.nvim']
 
-# vim8でdeopleteを使うのに必要
-[[plugins]]
-repo = 'roxma/nvim-yarp'
-on_ft = ['ruby']
-
-# vim8でdeopleteを使うのに必要
-[[plugins]]
-repo = 'roxma/vim-hug-neovim-rpc'
-on_ft = ['ruby']
-
 # load when in insert mode
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
