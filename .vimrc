@@ -9,7 +9,6 @@ set backspace=indent,eol,start          " backspaceキーの制限設定
 set nostartofline                       " ページアップ・ダウン時にカーソル位置を移動しない
 set whichwrap+=h,l,<,>,[,],b,s          " 行末・行頭から次の行へ移動可能に
 set noswapfile                          " ファイル編集中にスワップファイルを作らない
-set confirm                             " 保存されていないファイルがあるときは終了前に保存確認
 set formatoptions=q                     " 改行無効化
 syntax enable
 set background=dark
