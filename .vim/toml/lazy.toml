@@ -53,24 +53,8 @@ hook_source = '''
 
 # Rubyの自動補完
 [[plugins]]
-repo = 'Shougo/deoplete-rct'
-on_ft = ['ruby']
-
-# Rubyの自動補完
-[[plugins]]
 repo = 'fishbullet/deoplete-ruby'
 on_ft = ['ruby']
-
-# Rubyの自動補完
-[[plugins]]
-repo = 'osyo-manga/vim-monster'
-on_i = 1
-hook_add = '''
-let g:monster#completion#rcodetools#backend = "async_rct_complete"
-let g:deoplete#sources#omni#input_patterns = {
-  \ "ruby" : '[^. *\t]\.\w*\|\h\w*::',
-  \}
-'''
 
 # load when file format is .slim
 [[plugins]]
