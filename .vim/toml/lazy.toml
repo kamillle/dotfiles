@@ -26,7 +26,6 @@ hook_post_source = '''
     call denite#custom#option('default', 'direction', 'top')
 '''
 
-# load when after loaded denite
 [[plugins]]
 repo      = 'Shougo/neomru.vim'
 on_source = ['denite.nvim']
