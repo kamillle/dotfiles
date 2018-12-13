@@ -9,7 +9,6 @@ set backspace=indent,eol,start          " backspaceキーの制限設定
 set nostartofline                       " ページアップ・ダウン時にカーソル位置を移動しない
 set whichwrap+=h,l,<,>,[,],b,s          " 行末・行頭から次の行へ移動可能に
 set noswapfile                          " ファイル編集中にスワップファイルを作らない
-set confirm                             " 保存されていないファイルがあるときは終了前に保存確認
 set formatoptions=q                     " 改行無効化
 syntax enable
 set background=dark
@@ -90,7 +89,6 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml(s:toml_dir . '/default.toml', {'lazy': 0})
   " 遅延読み込みする
   call dein#load_toml(s:toml_dir . '/lazy.toml', {'lazy': 1})
-
   call dein#end()
   call dein#save_state()
 endif
@@ -104,6 +102,3 @@ if dein#check_install()
 endif
 
 let g:python3_host_prog = expand('~/.pyenv/shims/python')
-" for deoplete.vim
-" 一つ目の候補を選択状態にする
-set completeopt+=noinsert
