@@ -26,7 +26,6 @@ hook_post_source = '''
     call denite#custom#option('default', 'direction', 'top')
 '''
 
-# load when after loaded denite
 [[plugins]]
 repo      = 'Shougo/neomru.vim'
 on_source = ['denite.nvim']
@@ -48,11 +47,6 @@ hook_post_source = '''
         \ '_': ['omni']
         \ }
 '''
-
-# Rubyの自動補完
-[[plugins]]
-repo = 'fishbullet/deoplete-ruby'
-on_ft = ['ruby']
 
 # load when file format is .slim
 [[plugins]]

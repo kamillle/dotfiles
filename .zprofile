@@ -14,6 +14,7 @@ alias rm="trash"
 alias agg="ag -g"
 alias ls="ls -G"
 alias ctags="`brew --prefix`/bin/ctags"
+alias v="nvim"
 
 #----------------------------------------------------------
 # PATH
@@ -49,4 +50,3 @@ export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 eval "$(direnv hook zsh)"
 export VIP_DB_HOST="localhost"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
-export XDG_CONFIG_HOME="$HOME/.config"
