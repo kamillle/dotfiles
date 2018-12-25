@@ -1,7 +1,7 @@
 set encoding=utf-8
 scriptencoding utf-8
-language C
 
+"sssss
 set wildmenu wildmode=list:longest,full " コマンドラインモードでTABキーによるファイル名補完を有効にする
 set history=1000                        " コマンドラインの履歴をXXXX件保存する
 set clipboard=unnamed                   " クリップボードの共有
@@ -13,6 +13,7 @@ set formatoptions=q                     " 改行無効化
 syntax enable
 set background=dark
 colorscheme solarized
+"aaaaa
 
 inoremap <silent> jj <ESC>
 " 行が折り返し表示されていた場合、行単位ではなく表示行単位でカーソルを移動する
