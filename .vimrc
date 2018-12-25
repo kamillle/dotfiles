@@ -1,6 +1,7 @@
 set encoding=utf-8
 scriptencoding utf-8
-
+"aaaaaaaa
+""1111
 "sssss
 set wildmenu wildmode=list:longest,full " コマンドラインモードでTABキーによるファイル名補完を有効にする
 set history=1000                        " コマンドラインの履歴をXXXX件保存する
