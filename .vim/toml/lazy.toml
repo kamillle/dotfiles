@@ -57,3 +57,7 @@ depends = ['/vim-airline-themes']
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'

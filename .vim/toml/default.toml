@@ -22,3 +22,10 @@ repo = 'roxma/vim-hug-neovim-rpc'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+on_source = ['tyru/open-browser-github.vim']
+
+[[plugins]]
+repo = 'tyru/open-browser-github.vim'
