@@ -41,15 +41,19 @@ PROMPT='%{$fg_bold[white]%}[  %{$fg_bold[blue]%}%T% %{$fg_bold[yellow]%} %n@%m% 
 #----------------------------------------------------------
 # setting middleware
 #----------------------------------------------------------
-# peco
+# ctrl + r でコマンド履歴一覧
 function peco-history-selection() {
     BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
     CURSOR=$#BUFFER
     zle reset-prompt
 }
-
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
+
+# grepした上でそのファイルをvimで開く
+function av () {
+  vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
+}
 
 # for neovim
 export XDG_CONFIG_HOME="$HOME/.config"
