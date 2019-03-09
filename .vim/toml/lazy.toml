@@ -60,3 +60,11 @@ depends = ['/vim-airline-themes']
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'
+
+[[plugins]]
+repo = 'tpope/vim-rails'
+on_ft = 'ruby'<Paste>
