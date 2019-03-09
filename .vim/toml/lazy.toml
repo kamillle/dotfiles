@@ -67,4 +67,4 @@ on_ft = 'go'
 
 [[plugins]]
 repo = 'tpope/vim-rails'
-on_ft = 'ruby'<Paste>
+on_ft = 'ruby'
