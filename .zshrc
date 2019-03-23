@@ -5,8 +5,8 @@ export LANG=ja_JP.UTF-8
 autoload -U compinit
 compinit -u
 zstyle ':completion:*:default' menu select=1
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-zstyle ':completion:*' ignore-parents parent pwd ..
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # 大文字、小文字を区別せず補完する
+zstyle ':completion::complete:*' use-cache true     # キャッシュの利用による補完の高速化
 # 補完候補を色付け
 autoload -U colors
 colors
@@ -28,11 +28,11 @@ setopt prompt_subst
 # %c changes
 # %u uncommit
 
-zstyle ':vcs_info:git:*' check-for-changes true          #formats 設定項目で %c,%u が使用する true にすると重い...
-zstyle ':vcs_info:git:*' unstagedstr "%F{blue}A+"        #add されていないファイルがある
-zstyle ':vcs_info:git:*' stagedstr "%F{red}C!"           #commit されていないファイルがある
-zstyle ':vcs_info:*'     formats "%F{white}-> %c%u%b%f " #通常
-zstyle ':vcs_info:*'     actionformats '(%b|%a)'         #rebase 途中,merge コンフリクト等 formats 外の表示
+zstyle ':vcs_info:git:*' check-for-changes true          # formats 設定項目で %c,%u が使用する true にすると重い...
+zstyle ':vcs_info:git:*' unstagedstr "%F{blue}A+"        # add されていないファイルがある
+zstyle ':vcs_info:git:*' stagedstr "%F{red}C!"           # commit されていないファイルがある
+zstyle ':vcs_info:*'     formats "%F{white}-> %c%u%b%f " # 通常
+zstyle ':vcs_info:*'     actionformats '(%b|%a)'         # rebase 途中,merge コンフリクト等 formats 外の表示
 
 # プロンプト表示直前に vcs_info 呼び出し
 precmd () { vcs_info }
