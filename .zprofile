@@ -55,3 +55,6 @@ export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 
 eval "$(direnv hook zsh)"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+# chromedriver
+export CHROMEDRIVER_PATH='/usr/local/bin/chromedriver'
