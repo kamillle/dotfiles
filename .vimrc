@@ -108,7 +108,6 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml(s:toml_dir . '/default.toml', {'lazy': 0})
   " 遅延読み込みする
   call dein#load_toml(s:toml_dir . '/lazy.toml', {'lazy': 1})
-
   call dein#end()
   call dein#save_state()
 endif
@@ -122,6 +121,3 @@ if dein#check_install()
 endif
 
 let g:python3_host_prog = expand('~/.pyenv/shims/python')
-" for deoplete.vim
-" 一つ目の候補を選択状態にする
-set completeopt+=noinsert
