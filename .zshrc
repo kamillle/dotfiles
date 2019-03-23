@@ -55,3 +55,6 @@ bindkey '^R' peco-history-selection
 function gv () {
   vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
 }
+
+# hubコマンドをgitコマンドとして使用
+function git(){hub "$@"}
