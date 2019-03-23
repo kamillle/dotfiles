@@ -54,6 +54,3 @@ bindkey '^R' peco-history-selection
 function gv () {
   vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
 }
-
-# for neovim
-export XDG_CONFIG_HOME="$HOME/.config"

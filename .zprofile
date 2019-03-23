@@ -58,3 +58,6 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 # chromedriver
 export CHROMEDRIVER_PATH='/usr/local/bin/chromedriver'
+
+# neovim
+export XDG_CONFIG_HOME="$HOME/.config"
