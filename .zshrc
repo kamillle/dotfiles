@@ -4,7 +4,7 @@ export LANG=ja_JP.UTF-8
 # 補完
 autoload -U compinit
 compinit -u
-zstyle ':completion:*:default' menu select=1
+zstyle ':completion:*:default' menu select=1        # 選択肢をハイライト
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # 大文字、小文字を区別せず補完する
 zstyle ':completion::complete:*' use-cache true     # キャッシュの利用による補完の高速化
 # 補完候補を色付け
