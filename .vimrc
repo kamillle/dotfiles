@@ -62,10 +62,11 @@ set softtabstop=2 " 連続した空白に対してタブキーやバックスペ
 set autoindent    " 改行時に前の行のインデントを継続する
 set smartindent   " 改行時に前の行の構文をチェックし次の行のインデントを増減する
 set shiftwidth=2  " smartindentで増減する幅
-" pythonファイルを編集する際はshiftwidthを4にする
 augroup fileTypeIndent
+    " .py, .go fileの場合はインデントを4つにする
     autocmd!
     autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
+    autocmd BufNewFile,BufRead *.go setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
 "----------------------------------------------------------
 "" search function
