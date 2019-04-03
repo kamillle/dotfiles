@@ -35,8 +35,8 @@ zstyle ':vcs_info:*'     actionformats '(%b|%a)'         # rebase 途中,merge �
 
 # プロンプト表示直前に vcs_info 呼び出し
 precmd () { vcs_info }
-PROMPT='%{$fg_bold[white]%}[  %{$fg_bold[blue]%}%T% %{$fg_bold[yellow]%} %n@%m% %{$fg_bold[white]%} %~% %{$reset_color%} ${vcs_info_msg_0_}%{$reset_color%} %{$fg_bold[white]%}]
-%{${fg_bold[red]}%}%} $ % %{${reset_color}%'
+PROMPT='%{$fg_bold[yellow]%} %~% %{$reset_color%} ${vcs_info_msg_0_}%{$reset_color%}
+%{${fg_bold[red]}%}%}  $ % %{${reset_color}%'
 
 #----------------------------------------------------------
 # alias
