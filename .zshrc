@@ -54,6 +54,7 @@ alias ctags="`brew --prefix`/bin/ctags"
 alias v="nvim"
 alias vim="nvim"
 alias vi="nvim"
+alias ac="git add . && git cm"
 
 #----------------------------------------------------------
 # command history
