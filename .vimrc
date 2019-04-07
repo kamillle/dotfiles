@@ -1,5 +1,6 @@
 set encoding=utf-8
 scriptencoding utf-8
+language C
 
 set wildmenu wildmode=list:longest,full " コマンドラインモードでTABキーによるファイル名補完を有効にする
 set history=1000                        " コマンドラインの履歴をXXXX件保存する
@@ -8,6 +9,7 @@ set backspace=indent,eol,start          " backspaceキーの制限設定
 set nostartofline                       " ページアップ・ダウン時にカーソル位置を移動しない
 set whichwrap+=h,l,<,>,[,],b,s          " 行末・行頭から次の行へ移動可能に
 set noswapfile                          " ファイル編集中にスワップファイルを作らない
+set confirm                             " 保存されていないファイルがあるときは終了前に保存確認
 set formatoptions=q                     " 改行無効化
 syntax enable
 set background=dark
@@ -24,6 +26,13 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 nnoremap <F1> <nop>
+" タブの設定
+nnoremap tt :<C-u>tabnew<CR>
+nnoremap tl gT
+nnoremap tr gt
+nnoremap tc :tabclose<CR>
+" 開いているファイルのgithubページを開く
+nnoremap :og :OpenGithubFile<CR>
 
 "----------------------------------------------------------
 " visual
@@ -32,26 +41,6 @@ set number                                                " 行番号表示
 set list                                                  " 不可視文字の表示
 set listchars=tab:»･,trail:-,extends:»,precedes:«,nbsp:%  " 不可視文字の表示形式指定
 set ambiwidth=double                                      " □や○文字が崩れる問題を解決
-" ファイル名表示
-set statusline=%F
-" 変更チェック表示
-set statusline+=%m
-" 読み込み専用かどうか表示
-set statusline+=%r
-" ヘルプページなら[HELP]と表示
-set statusline+=%h
-" プレビューウインドウなら[Prevew]と表示
-set statusline+=%w
-" これ以降は右寄せ表示
-set statusline+=%=
-" file encoding
-set statusline+=[ENC=%{&fileencoding}]
-" 現在行数/全行数
-set statusline+=[LOW=%l/%L]
-" ステータスラインを常に表示(0:表示しない、1:2つ以上ウィンドウがある時だけ表示)
-set laststatus=2
-" Show gitgutter column always
-set signcolumn=yes
 "----------------------------------------------------------
 " tab function
 "----------------------------------------------------------
@@ -62,11 +51,10 @@ set softtabstop=2 " 連続した空白に対してタブキーやバックスペ
 set autoindent    " 改行時に前の行のインデントを継続する
 set smartindent   " 改行時に前の行の構文をチェックし次の行のインデントを増減する
 set shiftwidth=2  " smartindentで増減する幅
+" pythonファイルを編集する際はshiftwidthを4にする
 augroup fileTypeIndent
-    " .py, .go fileの場合はインデントを4つにする
     autocmd!
     autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
-    autocmd BufNewFile,BufRead *.go setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
 "----------------------------------------------------------
 "" search function
@@ -78,6 +66,11 @@ set hlsearch   " 検索結果をハイライト
 set wrapscan   " 最後まで検索したら頭に戻る
 " ESCキー2度押しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
+
+" vim airlineの設定
+let g:airline_powerline_fonts = 1 " パワーラインでかっこよく
+set laststatus=2                  " ステータスラインを常に表示
+let g:airline_theme = 'luna'      " カラーテーマ指定
 
 "----------------------------------------------------------
 "" dein Settings
@@ -108,6 +101,7 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml(s:toml_dir . '/default.toml', {'lazy': 0})
   " 遅延読み込みする
   call dein#load_toml(s:toml_dir . '/lazy.toml', {'lazy': 1})
+
   call dein#end()
   call dein#save_state()
 endif
