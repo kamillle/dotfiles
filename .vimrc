@@ -70,7 +70,7 @@ nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 " vim airlineの設定
 let g:airline_powerline_fonts = 1 " パワーラインでかっこよく
 set laststatus=2                  " ステータスラインを常に表示
-let g:airline_theme = 'luna'      " カラーテーマ指定
+let g:airline_theme = 'raven'     " カラーテーマ指定
 
 "----------------------------------------------------------
 "" dein Settings
