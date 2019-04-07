@@ -54,6 +54,7 @@ alias ctags="`brew --prefix`/bin/ctags"
 alias v="nvim"
 alias vim="nvim"
 alias vi="nvim"
+alias ac="git add . && git cm"
 
 #----------------------------------------------------------
 # command history
@@ -128,7 +129,7 @@ zle -N peco-history-selection
 bindkey '^R' peco-history-selection
 
 # grepした上でそのファイルをvimで開く
-function gv () {
+function gg () {
   vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
 }
 
