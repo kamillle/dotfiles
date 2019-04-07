@@ -10,7 +10,7 @@ hook_add = '''
       " バッファと最近開いたファイル一覧を表示
       nnoremap <silent> [denite]<Space> :<C-u>Denite -direction=topleft -cursor-wrap=true buffer file_mru<CR>
       " 検索する(結果をプレビューで表示する)
-      nnoremap <silent> [denite]s :<C-u>Denite -auto_preview grep<CR>
+      " nnoremap <silent> [denite]s :<C-u>Denite -auto_preview grep<CR>
       " 前回のバッファを再表示する"
       nnoremap <silent> [denite]b :<C-u>Denite -resume<CR>
       " レジスタ一覧
