@@ -1,6 +1,9 @@
 # neovimの設定ファイルにシンボリックリンクを貼る
 `ln -snfv ${HOME}/dotfiles/.vimrc ${HOME}/.config/nvim/init.vim`
 
+# :R での検索に使用するモジュール
+brew install ripgrep
+
 # airlineで文字化けする場合は下記をinstallし
 # iterm2で、Preferences → Profiles → Text → Non-ANCII Font を xxx pownerline というものにする
 https://github.com/powerline/fonts
