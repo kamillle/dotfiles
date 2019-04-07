@@ -29,3 +29,11 @@ on_source = ['tyru/open-browser-github.vim']
 
 [[plugins]]
 repo = 'tyru/open-browser-github.vim'
+
+# depends の書式も微妙に違う
+[[plugins]]
+repo    = 'vim-airline/vim-airline'
+depends = ['/vim-airline-themes']
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'

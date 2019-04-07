@@ -53,14 +53,6 @@ hook_post_source = '''
 repo = 'slim-template/vim-slim'
 on_ft = ['slim']
 
-# depends の書式も微妙に違う
-[[plugins]]
-repo    = 'vim-airline/vim-airline'
-depends = ['/vim-airline-themes']
-
-[[plugins]]
-repo = 'vim-airline/vim-airline-themes'
-
 [[plugins]]
 repo = 'fatih/vim-go'
 on_ft = 'go'
