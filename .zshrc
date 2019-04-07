@@ -133,6 +133,7 @@ function gg () {
   vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
 }
 
+# 遅いのでコメントアウトしてる
 # hubコマンドをgitコマンドとして使用
 # see: https://qiita.com/yaotti/items/a4a7f3f9a38d7d3415e3
-function git(){hub "$@"}
+# function git(){hub "$@"}

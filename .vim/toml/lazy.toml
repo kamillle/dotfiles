@@ -48,6 +48,9 @@ hook_post_source = '''
         \ }
 '''
 
+[[plugins]]
+repo = 'Shougo/defx.nvim'
+
 # search
 [[plugins]]
 repo = 'junegunn/fzf'
