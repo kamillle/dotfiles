@@ -33,10 +33,14 @@ repo = 'tyru/open-browser-github.vim'
 [[plugins]]
 repo    = 'vim-airline/vim-airline'
 depends = ['/vim-airline-themes']
+depends = ['ryanoasis/vim-devicons']
 depends = ['tpope/vim-fugitive']
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'

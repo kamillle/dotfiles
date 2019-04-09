@@ -41,6 +41,12 @@ set number                                                " 行番号表示
 set list                                                  " 不可視文字の表示
 set listchars=tab:»･,trail:-,extends:»,precedes:«,nbsp:%  " 不可視文字の表示形式指定
 set ambiwidth=double                                      " □や○文字が崩れる問題を解決
+
+" vim airlineの設定
+let g:airline_powerline_fonts = 1 " パワーラインでかっこよく
+set laststatus=2                  " ステータスラインを常に表示
+let g:airline_theme = 'raven'     " テーマの指定
+
 "----------------------------------------------------------
 " tab function
 "----------------------------------------------------------
@@ -56,6 +62,7 @@ augroup fileTypeIndent
     autocmd!
     autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
+
 "----------------------------------------------------------
 "" search function
 "----------------------------------------------------------
@@ -66,11 +73,6 @@ set hlsearch   " 検索結果をハイライト
 set wrapscan   " 最後まで検索したら頭に戻る
 " ESCキー2度押しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
-
-" vim airlineの設定
-let g:airline_powerline_fonts = 1 " パワーラインでかっこよく
-set laststatus=2                  " ステータスラインを常に表示
-let g:airline_theme = 'raven'     " カラーテーマ指定
 
 "----------------------------------------------------------
 "" dein Settings
