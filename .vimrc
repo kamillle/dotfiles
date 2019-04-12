@@ -35,7 +35,7 @@ nnoremap tc :tabclose<CR>
 " 開いているファイルのgithubページを開く
 nnoremap :og :OpenGithubFile<CR>
 " fzf
-nnoremap RR :Rg <CR>
+nnoremap RR :Rg<CR>
 
 "----------------------------------------------------------
 " visual
@@ -73,6 +73,7 @@ set ignorecase " 検索パターンに大文字小文字を区別しない
 set smartcase  " 検索パターンに大文字を含んでいたら大文字小文字を区別する
 set hlsearch   " 検索結果をハイライト
 set wrapscan   " 最後まで検索したら頭に戻る
+set cscopetag  " ctags で <C-]> した時に候補が複数ある場合はリストを表示する
 " ESCキー2度押しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 
