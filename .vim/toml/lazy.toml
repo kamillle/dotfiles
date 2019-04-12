@@ -57,12 +57,12 @@ repo = 'junegunn/fzf'
 build = './install --bin'
 merged = '0'
 
-# :R とするとsearch
+# :Rg とするとsearch
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 hook_add = '''
-    command! -bang -nargs=* RR
+    command! -bang -nargs=* Rg
       \ call fzf#vim#grep(
       \   'rg --line-number --no-heading '.shellescape(<q-args>), 0,
       \   fzf#vim#with_preview({'options': '--exact --reverse'}, 'right:60%:wrap'))

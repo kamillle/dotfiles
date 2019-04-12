@@ -34,6 +34,8 @@ nnoremap tr gt
 nnoremap tc :tabclose<CR>
 " 開いているファイルのgithubページを開く
 nnoremap :og :OpenGithubFile<CR>
+" fzf
+nnoremap RR :Rg <CR>
 
 "----------------------------------------------------------
 " visual
