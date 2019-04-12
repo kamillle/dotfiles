@@ -45,8 +45,7 @@ set list                                                  " 不可視文字の�
 set listchars=tab:»･,trail:-,extends:»,precedes:«,nbsp:%  " 不可視文字の表示形式指定
 set ambiwidth=double                                      " □や○文字が崩れる問題を解決
 
-" vim airlineの設定
-let g:airline_powerline_fonts = 1 " パワーラインでかっこよく
+let g:airline_powerline_fonts = 1 " airlineでかっこよく
 set laststatus=2                  " ステータスラインを常に表示
 let g:airline_theme = 'raven'     " テーマの指定
 
