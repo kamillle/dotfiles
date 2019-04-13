@@ -12,9 +12,6 @@ set whichwrap+=h,l,<,>,[,],b,s          " 行末・行頭から次の行へ移�
 set noswapfile                          " ファイル編集中にスワップファイルを作らない
 set confirm                             " 保存されていないファイルがあるときは終了前に保存確認
 set formatoptions=q                     " 改行無効化
-syntax enable
-set background=dark
-colorscheme solarized
 
 inoremap <silent> jj <ESC>
 " 行が折り返し表示されていた場合、行単位ではなく表示行単位でカーソルを移動する
@@ -40,17 +37,20 @@ nnoremap RR :Rg<CR>
 "----------------------------------------------------------
 " visual
 "----------------------------------------------------------
+syntax enable
+set background=dark
+colorscheme solarized
+
 set number                                                " 行番号表示
 set list                                                  " 不可視文字の表示
 set listchars=tab:»･,trail:-,extends:»,precedes:«,nbsp:%  " 不可視文字の表示形式指定
 set ambiwidth=double                                      " □や○文字が崩れる問題を解決
-
-let g:airline_powerline_fonts = 1 " airlineでかっこよく
-set laststatus=2                  " ステータスラインを常に表示
-let g:airline_theme = 'raven'     " テーマの指定
+set laststatus=2                                          " ステータスラインを常に表示
+let g:airline_powerline_fonts = 1                         " airlineでかっこよく
+let g:airline_theme = 'raven'                             " テーマの指定
 
 "----------------------------------------------------------
-" tab function
+" indent
 "----------------------------------------------------------
 set smarttab
 set expandtab     " タブ入力を複数の空白入力に置き換える
@@ -66,7 +66,7 @@ augroup fileTypeIndent
 augroup END
 
 "----------------------------------------------------------
-"" search function
+"" search
 "----------------------------------------------------------
 set incsearch  " インクリメンタルサーチ. １文字入力毎に検索を行う
 set ignorecase " 検索パターンに大文字小文字を区別しない
@@ -99,7 +99,7 @@ endif
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
 
-  " プラグインリストを収めた TOML ファイル
+  " TOML ファイルがあるディレクトリ
   let s:toml_dir = expand('~/dotfiles/.vim/toml')
 
   " 起動時に読み込む
