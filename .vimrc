@@ -2,6 +2,7 @@ set encoding=utf-8
 scriptencoding utf-8
 " non-ascii の文字をyankできなくなったため一時的にコメントアウトしている
 language C
+autocmd InsertLeave * set nopaste " off paste mode
 
 set wildmenu wildmode=list:longest,full " コマンドラインモードでTABキーによるファイル名補完を有効にする
 set history=1000                        " コマンドラインの履歴をXXXX件保存する
@@ -64,6 +65,7 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
     autocmd BufNewFile,BufRead *.go setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
+filetype plugin on " gocodeの設定
 
 "----------------------------------------------------------
 "" search
