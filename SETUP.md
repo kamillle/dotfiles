@@ -4,8 +4,7 @@
 # :R での検索に使用するモジュール
 brew install ripgrep
 
-# airlineで文字化けする場合は下記をinstallし
-# iterm2で、Preferences → Profiles → Text → Non-ANCII Font を xxx pownerline というものにする
+# airlineで文字化けする場合は下記をinstallし、iterm2で、Preferences → Profiles → Text → Non-ANCII Font を xxx pownerline というものにする
 https://github.com/powerline/fonts
 
 ## vim内のicon表示をリッチにする
