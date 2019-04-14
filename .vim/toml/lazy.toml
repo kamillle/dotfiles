@@ -30,8 +30,7 @@ hook_post_source = '''
 repo      = 'Shougo/neomru.vim'
 on_source = ['denite.nvim']
 
-# load when in insert mode
-[[plugins]]
+[[plugins]] # load when in insert mode
 repo = 'Shougo/deoplete.nvim'
 on_i = 1
 hook_source = '''
@@ -48,17 +47,15 @@ hook_post_source = '''
         \ }
 '''
 
-[[plugins]]
-repo = 'Shougo/defx.nvim'
+# [[plugins]] # filer 使ってない
+# repo = 'Shougo/defx.nvim'
 
-# search
-[[plugins]]
+[[plugins]] # search
 repo = 'junegunn/fzf'
 build = './install --bin'
 merged = '0'
 
-# :Rg とするとsearch
-[[plugins]]
+[[plugins]] # :Rg とするとsearch
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 hook_add = '''
@@ -68,16 +65,38 @@ hook_add = '''
       \   fzf#vim#with_preview({'options': '--exact --reverse'}, 'right:60%:wrap'))
 '''
 
+[[plugins]]
+repo = 'tpope/vim-rails'
+on_ft = ['ruby']
 
-# load when file format is .slim
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = ['go']
+hook_post_source = '''
+    let g:go_highlight_functions = 1
+    let g:go_highlight_methods = 1
+    let g:go_highlight_fields = 1
+    let g:go_highlight_types = 1
+    let g:go_highlight_operators = 1
+    let g:go_highlight_build_constraints = 1
+    let g:go_highlight_structs = 1
+    let g:go_highlight_extra_types = 1
+'''
+
+[[plugins]]
+repo = 'deoplete-plugins/deoplete-go'
+build = 'make'
+on_ft = ['go']
+# depends = ['deoplete.nvim']
+# golangの補完 gocodeのbinaryファイルがないと動かないので注意
+hook_source = '''
+    let g:deoplete#sources#go#gocode_binary = $GOPATH . '/bin/gocode'
+'''
+
 [[plugins]]
 repo = 'slim-template/vim-slim'
 on_ft = ['slim']
 
-[[plugins]]
-repo = 'fatih/vim-go'
-on_ft = 'go'
-
-[[plugins]]
-repo = 'tpope/vim-rails'
-on_ft = 'ruby'
+[[plugins]] # TOMLのシンタックスハイライト
+repo  = 'cespare/vim-toml'
+on_ft = ['toml']

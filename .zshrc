@@ -1,4 +1,4 @@
-export LANG=en # 日本語を使用
+export LANG=ja_JP.UTF-8 # 日本語を使用
 setopt no_beep
 
 #----------------------------------------------------------
