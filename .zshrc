@@ -86,6 +86,7 @@ eval "$(pyenv init -)"
 # Go
 export GOPATH=$HOME/go
 export GOENV_ROOT=$HOME/.goenv
+export GO_WORKSPACE=$HOME/go/src/github.com/kamillle
 export PATH=bin:$GOENV_ROOT/bin:$GOPATH/bin:$PATH
 eval "$(goenv init -)"
 
