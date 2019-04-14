@@ -64,6 +64,7 @@ augroup fileTypeIndent
     autocmd!
     autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
     autocmd BufNewFile,BufRead *.go setlocal tabstop=4 softtabstop=4 shiftwidth=4
+    autocmd BufNewFile,BufRead *.go set nolist " go fmt がタブを使うので可視化しないようにしておく
 augroup END
 filetype plugin on " gocodeの設定
 
