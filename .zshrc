@@ -60,8 +60,8 @@ alias ac="git add . && git cm"
 # command history
 #----------------------------------------------------------
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=20000
+SAVEHIST=20000
 # ignore duplication command history list
 setopt hist_ignore_dups
 # share command history data
