@@ -24,6 +24,9 @@ if brew list | grep git > /dev/null; then
 
   brew install git
 
+  ln -snfv ${HOME}/dotfiles/git_setting/.gitconfig ${HOME}/.gitconfig
+  ln -snfv ${HOME}/dotfiles/git_setting/.gitignore_global ${HOME}/.gitignore_global
+
   echo "============= End =============="
 fi
 

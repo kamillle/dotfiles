@@ -1,0 +1,19 @@
+[user]
+  name = kamillle
+  email = yuji.kmjm@gmail.com
+[alias]
+  co  = checkout
+  st  = status
+  stt = status --short --branch
+  cm = commit
+  fh = fetch
+  del = branch -D
+  rename = branch -m
+  fsync = "!git fetch upstream $(git rev-parse --abbrev-ref HEAD) && git reset --hard FETCH_HEAD"
+  df = diff
+  ps = push
+  # for hub
+  pr = pull-request
+  b = browse
+[core]
+  excludesfile = /Users/yuji/.gitignore_global
