@@ -74,6 +74,18 @@ source ~/dotfiles/.zshrc
 
 echo "================ End ================"
 
+
+echo "======= Setup CLI ======="
+
+brew install peco
+brew install htop
+brew install hub
+brew install tig
+brew install trash
+brew install tree
+
+echo "========== End =========="
+
 echo "======= Setup Neovim ======="
 
 # denite, deopleteが python3を必要とするので先にpythonのセッティングを行う
