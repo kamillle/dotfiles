@@ -117,6 +117,9 @@ eval "$(direnv hook zsh)"
 
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
+# yarn
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
 #----------------------------------------------------------
 # middleware setting
 #----------------------------------------------------------
