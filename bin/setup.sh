@@ -146,3 +146,10 @@ goenv install LATEST_STABLE_GO
 goenv global LATEST_STABLE_GO
 
 echo "========== End ==========="
+
+
+echo "======= Setup mac config ======="
+
+source ./mac_config.sh
+
+echo "============= End =============="
