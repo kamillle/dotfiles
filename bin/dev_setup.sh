@@ -10,3 +10,10 @@ if (type brew > /dev/null 2>&1) ; then
   brew -v
   echo "============= End =============="
 fi
+
+# install git
+if brew list | grep git > /dev/null; then
+  echo "======= Install git ======="
+  brew install git
+  echo "============= End =============="
+fi
