@@ -16,3 +16,11 @@ if brew list | grep git > /dev/null; then
   brew install git
   echo "============= End =============="
 fi
+
+# dotfiles/.bashrc を読み込みbrew cask でのインストール先を /Applications に変更する
+cp .bashrc ~/.bashrc
+source ~/.bashrc
+
+f [ -f ~/.bashrc ] ; then
+  . ~/.bashrc
+fi
