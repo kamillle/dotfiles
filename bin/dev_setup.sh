@@ -69,6 +69,9 @@ brew install zsh-completions
 sudo sh -c "echo /usr/local/bin/zsh >> /etc/shells"
 # change login shell
 chsh -s /usr/local/bin/zsh
+
+source ~/dotfiles/.zshrc
+
 echo "================ End ================"
 
 echo "======= Setup Neovim ======="
