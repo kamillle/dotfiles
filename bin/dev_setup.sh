@@ -110,3 +110,20 @@ brew install ripgrep
 brew cask install font-hack-nerd-font
 
 echo "============ End ============="
+
+echo "======= Setup Ruby ======="
+
+brew install rbenv ruby-build
+
+brew install readline
+brew link readline --force
+RUBY_CONFIGURE_OPTS="--with-readline-dir=$(brew --prefix readline)"
+
+# 最新版をインストールする
+LATEST_STABLE_RUBY = $(rbenv install -l | grep -v - | tail -1)
+rbenv install LATEST_STABLE_RUBY
+rbenv global LATEST_STABLE_RUBY
+gem install bundler
+rbenv rehash
+
+echo "========== End ==========="
