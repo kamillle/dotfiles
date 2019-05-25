@@ -60,3 +60,13 @@ brew install docker
 brew cask install docker
 
 echo "============= End =============="
+
+echo "======= Install & setting zsh ======="
+
+brew install zsh
+brew install zsh-completions
+
+sudo sh -c "echo /usr/local/bin/zsh >> /etc/shells"
+# change login shell
+chsh -s /usr/local/bin/zsh
+echo "================ End ================"
