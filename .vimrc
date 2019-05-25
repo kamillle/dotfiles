@@ -1,7 +1,7 @@
 set encoding=utf-8
 scriptencoding utf-8
 " non-ascii の文字をyankできなくなったため一時的にコメントアウトしている
-language C
+" language C
 autocmd InsertLeave * set nopaste " off paste mode
 
 set wildmenu wildmode=list:longest,full " コマンドラインモードでTABキーによるファイル名補完を有効にする
