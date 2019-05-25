@@ -135,3 +135,14 @@ gem install bundler
 rbenv rehash
 
 echo "========== End ==========="
+
+
+echo "======= Setup golang ======="
+
+# 最新版のgoをインストールする
+LATEST_STABLE_GO = $(goenv install -l | grep -E "([1].[0-9].[0-9])|([1].[0-9][0-9].[0-9])" | tail -1)
+brew install goenv
+goenv install LATEST_STABLE_GO
+goenv global LATEST_STABLE_GO
+
+echo "========== End ==========="
