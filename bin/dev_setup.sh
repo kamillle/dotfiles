@@ -41,7 +41,7 @@ brew cask install google-chrome
 brew cask install google-chrome-canary
 brew cask install google-japanese-ime
 brew cask install firefox
-brew cask install sequel-pro  # mysql GUI
+brew cask install homebrew/cask-versions/sequel-pro-nightly # mysql GUI for mojave
 brew cask install slack       # slackたん
 brew cask install typora      # md editor
 brew cask install cmd-eikana  # 英かな使えるかわからん
