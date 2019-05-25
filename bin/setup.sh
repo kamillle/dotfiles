@@ -157,8 +157,8 @@ goenv global LATEST_STABLE_GO
 echo "========== End ==========="
 
 
-echo "======= Setup mac config ======="
+# echo "======= Setup mac config ======="
 
-source ./mac_config.sh
+# source ./mac_config.sh
 
-echo "============= End =============="
+# echo "============= End =============="
