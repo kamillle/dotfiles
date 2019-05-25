@@ -42,6 +42,7 @@ mas install 1295203466 # Microsoft Remote Desktop (10.2.13)
 mas install 539883307  # LINE
 mas install 417375580  # BetterSnapTool
 
+# TODO: /Applications 配下にあるならインストールしない、ないならインストールするみたいにしたい
 brew cask install google-chrome
 brew cask install google-chrome-canary
 brew cask install google-japanese-ime
