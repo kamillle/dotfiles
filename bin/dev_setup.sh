@@ -70,3 +70,28 @@ sudo sh -c "echo /usr/local/bin/zsh >> /etc/shells"
 # change login shell
 chsh -s /usr/local/bin/zsh
 echo "================ End ================"
+
+echo "======= Setup Neovim ======="
+
+# denite, deopleteが python3を必要とするので先にpythonのセッティングを行う
+PYTHON_VERSION=3.7.1
+brew install pyenv
+pyenv install PYTHON_VERSION
+pyenv global PYTHON_VERSION
+
+brew install neovim
+# deniteセットアップのためのシェルスクリプトをダウンロード & 実行
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+# For example, we just use `~/.cache/dein` as installation directory
+sh ./installer.sh ~/.cache/dein
+
+# set sym link
+ln -snfv ${HOME}/dotfiles/.vimrc ${HOME}/.config/nvim/init.vim
+
+# for incremental search by fzf
+brew install ripgrep
+
+# make rich vim icons
+brew cask install font-hack-nerd-font
+
+echo "============ End ============="
