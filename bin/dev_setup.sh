@@ -67,7 +67,7 @@ brew cask install docker
 echo "============= End =============="
 
 
-echo "======= Install & setting zsh ======="
+echo "======= Setup zsh ======="
 
 brew install zsh
 brew install zsh-completions
