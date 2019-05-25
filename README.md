@@ -1,18 +1,12 @@
-# neovimの設定ファイルにシンボリックリンクを貼る
-`ln -snfv ${HOME}/dotfiles/.vimrc ${HOME}/.config/nvim/init.vim`
+# How to setup
 
-# :R での検索に使用するモジュール
-brew install ripgrep
+```
+cd ~
+git clone git@github.com:kamillle/dotfiles.git
+cd dotfiles
+chmod 777 ./bin/dev_setup.sh
+./bin/dev_setup.sh
+```
 
-# airlineで文字化けする場合は下記をinstallし、iterm2で、Preferences → Profiles → Text → Non-ANCII Font を xxx pownerline というものにする
-https://github.com/powerline/fonts
-
-## vim内のicon表示をリッチにする
-brew tap caskroom/fonts
-brew cask install font-hack-nerd-font
-`iterm2で、Preferences → Profiles → Text → Non-ANCII Font を Hack Regular Nerd Font Complate というものにする`
-
-# vim 内でgit commandを使う
-cd ~/.vim/bundle
-git clone https://github.com/tpope/vim-fugitive.git
-vim -u NONE -c "helptags vim-fugitive/doc" -c q
+適当に作ったからシェルスクリプト動かないかも〜
+大枠は作ったので次PC返る時頑張ろう
