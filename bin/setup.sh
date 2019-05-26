@@ -31,14 +31,6 @@ if brew list | grep git > /dev/null; then
 fi
 
 
-# dotfiles/.bashrc を読み込みbrew cask でのインストール先を /Applications に変更する
-cp .bashrc ~/.bashrc
-source ~/.bashrc
-
-f [ -f ~/.bashrc ] ; then
-  . ~/.bashrc
-fi
-
 echo "======= Install Applications ======="
 
 brew install mas # App StoreのアプリをCLIでダウンロードできるようにする
@@ -50,6 +42,14 @@ mas install 485812721  # TweetDeck
 mas install 1295203466 # Microsoft Remote Desktop (10.2.13)
 mas install 539883307  # LINE
 mas install 417375580  # BetterSnapTool
+
+# dotfiles/.bashrc を読み込みbrew cask でのインストール先を /Applications に変更する
+cp .bashrc ~/.bashrc
+source ~/.bashrc
+
+f [ -f ~/.bashrc ] ; then
+  . ~/.bashrc
+fi
 
 brew cask install google-chrome
 brew cask install google-chrome-canary
