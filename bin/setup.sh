@@ -1,7 +1,13 @@
 #!/bin/sh
 
 read -p "start dev setup? (y/N): " yn
-case "$yn" in [yY]*) ;; *) echo "abort." ; exit ;; esac
+case "$yn" in
+  [yY]*)
+    ;;
+  *)
+    echo "abort." ; exit
+    ;;
+esac
 
 # install homebrew
 if (type brew > /dev/null 2>&1) ; then
@@ -18,17 +24,16 @@ if brew list | grep git > /dev/null; then
 
   brew install git
 
-  echo "============= End =============="
+  echo "========== End ============"
 fi
 
+echo "======= Setup git ======="
 
-# dotfiles/.bashrc を読み込みbrew cask でのインストール先を /Applications に変更する
-cp .bashrc ~/.bashrc
-source ~/.bashrc
+ln -snfv ${HOME}/dotfiles/git_setting/.gitconfig ${HOME}/.gitconfig
+ln -snfv ${HOME}/dotfiles/git_setting/.gitignore_global ${HOME}/.gitignore_global
 
-f [ -f ~/.bashrc ] ; then
-  . ~/.bashrc
-fi
+echo "========== End =========="
+
 
 echo "======= Install Applications ======="
 
@@ -43,6 +48,14 @@ mas install 539883307  # LINE
 mas install 417375580  # BetterSnapTool
 
 # TODO: /Applications 配下にあるならインストールしない、ないならインストールするみたいにしたい
+# dotfiles/.bashrc を読み込みbrew cask でのインストール先を /Applications に変更する
+cp .bashrc ~/.bashrc
+source ~/.bashrc
+
+f [ -f ~/.bashrc ] ; then
+  . ~/.bashrc
+fi
+
 brew cask install google-chrome
 brew cask install google-chrome-canary
 brew cask install google-japanese-ime
@@ -149,8 +162,8 @@ goenv global LATEST_STABLE_GO
 echo "========== End ==========="
 
 
-echo "======= Setup mac config ======="
+# echo "======= Setup mac config ======="
 
-source ./mac_config.sh
+# source ./mac_config.sh
 
-echo "============= End =============="
+# echo "============= End =============="
