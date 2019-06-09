@@ -9,7 +9,7 @@
   fh = fetch
   del = branch -D
   rename = branch -m
-  fsync = "!git fetch upstream $(git rev-parse --abbrev-ref HEAD) && git reset --hard FETCH_HEAD"
+  rsync = "!git fetch upstream $(git rev-parse --abbrev-ref HEAD) && git reset --hard FETCH_HEAD"
   df = diff
   ps = push
   # for hub
