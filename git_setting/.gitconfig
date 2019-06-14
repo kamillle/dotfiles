@@ -6,7 +6,7 @@
   st  = status
   stt = status --short --branch
   cm = commit
-  fh = fetch
+  fh = fetch --prune # remoteで削除済のものはlocalでも削除する
   del = branch -D
   rename = branch -m
   rsync = "!git fetch upstream $(git rev-parse --abbrev-ref HEAD) && git reset --hard FETCH_HEAD"
