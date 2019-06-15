@@ -34,6 +34,9 @@ nnoremap tc :tabclose<CR>
 nnoremap :og :OpenGithubFile<CR>
 " fzf
 nnoremap RR :Rg<CR>
+" terminal mode setting
+nnoremap sh :belowright :terminal<CR>
+tnoremap <silent> <C-q> <C-\><C-n>
 
 "----------------------------------------------------------
 " visual
