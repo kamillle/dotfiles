@@ -16,4 +16,4 @@
   pr = pull-request
   b = browse
 [core]
-  excludesfile = /Users/yuji/.gitignore_global
+  excludesfile = ~/.gitignore_global
