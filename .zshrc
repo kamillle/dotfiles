@@ -1,5 +1,7 @@
 export LANG=ja_JP.UTF-8 # 日本語を使用
 setopt no_beep
+# use vi mode
+# bindkey -v
 
 #----------------------------------------------------------
 # completion

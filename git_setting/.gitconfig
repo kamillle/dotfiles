@@ -12,8 +12,5 @@
   rsync = "!git fetch upstream $(git rev-parse --abbrev-ref HEAD) && git reset --hard FETCH_HEAD"
   df = diff
   ps = push
-  # for hub
-  pr = pull-request
-  b = browse
 [core]
-  excludesfile = /Users/yuji/.gitignore_global
+  excludesfile = ~/.gitignore_global
