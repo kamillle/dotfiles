@@ -146,3 +146,5 @@ function gg () {
 # hubコマンドをgitコマンドとして使用
 # see: https://qiita.com/yaotti/items/a4a7f3f9a38d7d3415e3
 # function git(){hub "$@"}
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
