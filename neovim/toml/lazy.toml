@@ -55,7 +55,8 @@ repo = 'junegunn/fzf'
 build = './install --bin'
 merged = '0'
 
-[[plugins]] # :Rg とするとsearch
+# rg コマンドのoption: https://www.mankier.com/1/rg#Options
+[[plugins]]
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 hook_add = '''
