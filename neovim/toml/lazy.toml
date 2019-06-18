@@ -52,7 +52,7 @@ hook_post_source = '''
 
 [[plugins]] # search
 repo = 'junegunn/fzf'
-build = './install --bin'
+build = './install --all'
 merged = '0'
 
 # rg コマンドのoption: https://www.mankier.com/1/rg#Options
