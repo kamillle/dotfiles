@@ -147,4 +147,14 @@ function gg () {
 # see: https://qiita.com/yaotti/items/a4a7f3f9a38d7d3415e3
 # function git(){hub "$@"}
 
+# snakecase への変換
+function snake() {
+  echo $1 | gsed -r -e 's/^([A-Z])/\L\1\E/' -e 's/([A-Z])/_\L\1\E/g'
+}
+
+# upper camel への変換
+function camel() {
+  echo $1 | gsed -r -e 's/(^|_)(.)/\U\2\E/g'
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
