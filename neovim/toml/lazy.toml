@@ -69,6 +69,8 @@ hook_post_source = '''
     let g:go_highlight_extra_types = 1
 '''
 
+# deopleteのgo補完
+# .go拡張子の場合のみプラグインを読み込む
 [[plugins]]
 repo = 'deoplete-plugins/deoplete-go'
 build = 'make'
