@@ -141,6 +141,12 @@ brew install readline
 brew link readline --force
 RUBY_CONFIGURE_OPTS="--with-readline-dir=$(brew --prefix readline)"
 
+# neovimが ruby2.6.2 と neovim gem を参照するので入れておく
+# 2.6.2 が古くなったらvimrcに書いてあるneovimが参照するバージョンを変更すること
+rbenv install 2.6.2
+rbenv global 2.6.2
+gem install neovim
+
 # 最新版をインストールする
 LATEST_STABLE_RUBY = $(rbenv install -l | grep -v - | tail -1)
 rbenv install LATEST_STABLE_RUBY
