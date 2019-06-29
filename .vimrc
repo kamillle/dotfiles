@@ -22,10 +22,14 @@ set whichwrap+=h,l,<,>,[,],b,s          " 行末・行頭から次の行へ移�
 set noswapfile                          " ファイル編集中にスワップファイルを作らない
 set confirm                             " 保存されていないファイルがあるときは終了前に保存確認
 set formatoptions=q                     " 改行無効化
+set splitright                          " vsplitで新規画面を右に開く
 
 "----------------------------------------------------------
 " command
 "----------------------------------------------------------
+" set Leader
+let mapleader = "\<Space>"
+
 inoremap <silent> jj <ESC>
 " 行が折り返し表示されていた場合、行単位ではなく表示行単位でカーソルを移動する
 nnoremap j gj
@@ -49,9 +53,6 @@ nnoremap RR :Rg<CR>
 " start terminal mode by `sh`
 nnoremap sh :belowright :terminal<CR>
 tnoremap <silent> <C-q> <C-\><C-n>
-
-" set Leader
-let mapleader = "\<Space>"
 " visualモード限定
 " 選択範囲にペーストした際に、置き換えた文字列がクリップボードに入らないようにする
 xnoremap <expr> p 'pgv"'.v:register.'y`>'
