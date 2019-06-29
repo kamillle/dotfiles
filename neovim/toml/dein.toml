@@ -1,6 +1,24 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+# 補完
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_i = 1
+hook_source = '''
+    let g:deoplete#enable_at_startup = 1
+    let g:deoplete#enable_ignore_case = 1
+    let g:deoplete#enable_smart_case = 1
+'''
+
+hook_post_source = '''
+    let g:deoplete#sources = {}
+    let g:deoplete#sources._ = ['buffer', 'member', 'tag', 'file', 'dictionary', 'neosnippet', 'ruby']
+    let g:deoplete#ignore_sources = {
+        \ '_': ['omni']
+        \ }
+'''
+
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
 
