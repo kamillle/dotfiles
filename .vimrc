@@ -40,6 +40,13 @@ set splitright                          " vsplitで新規画面を右に開く
 " set Leader
 let mapleader = "\<Space>"
 
+" : の代わりに leader で主要な操作を置き換える
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>wq :wq<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>qq :q!<CR>
+nnoremap <Leader>vs :vs<CR>
+
 inoremap <silent> jj <ESC>
 " 行が折り返し表示されていた場合、行単位ではなく表示行単位でカーソルを移動する
 nnoremap j gj
