@@ -156,5 +156,3 @@ function snake() {
 function camel() {
   echo $1 | gsed -r -e 's/(^|_)(.)/\U\2\E/g'
 }
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
