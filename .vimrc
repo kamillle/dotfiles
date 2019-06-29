@@ -125,4 +125,11 @@ if dein#check_install()
   call dein#install()
 endif
 
+"----------------------------------------------------------
+"" Language Settings
+"----------------------------------------------------------
+" .rb ファイルを開く際に ruby_path, ruby_host_progを指定しておくことでvimの起動を早くできるので指定している
+" ruby2.6.2 と 2.6.2にinstallしてあるneovim-ruby-host(neovimgem)を利用している
+let g:ruby_path="/Users/yuji/.rbenv/versions/2.6.2/bin/ruby"
+let g:ruby_host_prog='/Users/yuji/.rbenv/versions/2.6.2/gemsets/active/bin/neovim-ruby-host'
 let g:python3_host_prog = expand('~/.pyenv/shims/python')
