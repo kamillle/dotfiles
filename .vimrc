@@ -1,3 +1,12 @@
+"----------------------------------------------------------
+" Include below setting
+"  - command
+"  - visual
+"  - search
+"  - dein
+"  - language(ex: ruby, python)
+"----------------------------------------------------------
+
 set encoding=utf-8
 scriptencoding utf-8
 " non-ascii の文字をyankできなくなったため一時的にコメントアウトしている
@@ -14,6 +23,9 @@ set noswapfile                          " ファイル編集中にスワップ�
 set confirm                             " 保存されていないファイルがあるときは終了前に保存確認
 set formatoptions=q                     " 改行無効化
 
+"----------------------------------------------------------
+" command
+"----------------------------------------------------------
 inoremap <silent> jj <ESC>
 " 行が折り返し表示されていた場合、行単位ではなく表示行単位でカーソルを移動する
 nnoremap j gj
@@ -34,9 +46,15 @@ nnoremap tc :tabclose<CR>
 nnoremap :og :OpenGithubFile<CR>
 " fzf
 nnoremap RR :Rg<CR>
-" terminal mode setting
+" start terminal mode by `sh`
 nnoremap sh :belowright :terminal<CR>
 tnoremap <silent> <C-q> <C-\><C-n>
+
+" set Leader
+let mapleader = "\<Space>"
+" visualモード限定
+" 選択範囲にペーストした際に、置き換えた文字列がクリップボードに入らないようにする
+xnoremap <expr> p 'pgv"'.v:register.'y`>'
 
 "----------------------------------------------------------
 " visual
@@ -53,9 +71,7 @@ set laststatus=2                                          " ステータスラ�
 let g:airline_powerline_fonts = 1                         " airlineでかっこよく
 let g:airline_theme = 'raven'                             " テーマの指定
 
-"----------------------------------------------------------
-" indent
-"----------------------------------------------------------
+" 以降インデントの設定
 set smarttab
 set expandtab     " タブ入力を複数の空白入力に置き換える
 set tabstop=2     " 画面上でタブ文字が占める幅
@@ -84,7 +100,7 @@ set cscopetag  " ctags で <C-]> した時に候補が複数ある場合はリ�
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 
 "----------------------------------------------------------
-"" dein Settings
+"" dein
 "----------------------------------------------------------
 if &compatible
   set nocompatible
@@ -126,7 +142,7 @@ if dein#check_install()
 endif
 
 "----------------------------------------------------------
-"" Language Settings
+"" Language
 "----------------------------------------------------------
 " .rb ファイルを開く際に ruby_path, ruby_host_progを指定しておくことでvimの起動を早くできるので指定している
 " ruby2.6.2 と 2.6.2にinstallしてあるneovim-ruby-host(neovimgem)を利用している
