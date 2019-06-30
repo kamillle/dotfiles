@@ -143,7 +143,7 @@ if dein#load_state(s:dein_dir)
   let s:toml_dir = expand('~/dotfiles/neovim/toml')
 
   " 起動時に読み込む
-  call dein#load_toml(s:toml_dir . '/dein.toml', {'lazy': 0})
+  call dein#load_toml(s:toml_dir . '/default.toml', {'lazy': 0})
   " 遅延読み込みする
   call dein#load_toml(s:toml_dir . '/lazy.toml', {'lazy': 1})
 
