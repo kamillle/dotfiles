@@ -36,6 +36,11 @@ depends = ['/vim-airline-themes']
 depends = ['ryanoasis/vim-devicons']
 depends = ['tpope/vim-fugitive']
 
+hook_add = '''
+  let g:airline_powerline_fonts = 1
+  let g:airline_theme = 'raven'
+'''
+
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 

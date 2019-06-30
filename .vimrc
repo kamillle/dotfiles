@@ -91,8 +91,6 @@ set list                                                  " 不可視文字の�
 set listchars=tab:»･,trail:-,extends:»,precedes:«,nbsp:%  " 不可視文字の表示形式指定
 set ambiwidth=double                                      " □や○文字が崩れる問題を解決
 set laststatus=2                                          " ステータスラインを常に表示
-let g:airline_powerline_fonts = 1                         " airlineでかっこよく
-let g:airline_theme = 'raven'                             " テーマの指定
 
 " 以降インデントの設定
 set smarttab
