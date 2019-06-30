@@ -41,14 +41,6 @@ hook_source = '''
     set completeopt+=noinsert
 '''
 
-hook_post_source = '''
-    let g:deoplete#sources = {}
-    let g:deoplete#sources._ = ['buffer', 'member', 'tag', 'file', 'dictionary', 'neosnippet', 'ruby']
-    let g:deoplete#ignore_sources = {
-        \ '_': ['omni']
-        \ }
-'''
-
 # filer
 # 設定のリファレンス：https://github.com/Shougo/defx.nvim/blob/master/doc/defx.txt
 [[plugins]]
