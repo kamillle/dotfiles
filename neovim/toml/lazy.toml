@@ -116,6 +116,12 @@ hook_add = '''
 repo = 'tpope/vim-rails'
 on_ft = ['ruby']
 
+# Rubyのend補完
+[[plugins]]
+repo = 'tpope/vim-endwise'
+on_event = 'InsertEnter'
+on_ft = ['ruby']
+
 [[plugins]]
 repo = 'fatih/vim-go'
 on_ft = ['go']
