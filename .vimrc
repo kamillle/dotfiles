@@ -65,6 +65,8 @@ nnoremap tr gt
 nnoremap tc :tabclose<CR>
 " 開いているファイルのgithubページを開く
 nnoremap :og :OpenGithubFile<CR>
+" 開いているファイルのvisualモードで選択している行のgithubページを開く
+xnoremap :og :OpenGithubFile<CR>
 " alias fzf commands
 nnoremap RR :Rg<CR>
 nnoremap <Leader>b :Fzfbuffer<CR>
