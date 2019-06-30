@@ -70,6 +70,7 @@ xnoremap :og :OpenGithubFile<CR>
 " alias fzf commands
 nnoremap RR :Rg<CR>
 nnoremap <Leader>b :Fzfbuffer<CR>
+nnoremap <Leader>h :Fzfhistory<CR>
 " sudo write の alias
 nnoremap <Leader>sudow :w !sudo tee %<CR>
 " start terminal mode by `sh`

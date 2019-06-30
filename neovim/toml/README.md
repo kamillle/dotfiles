@@ -29,3 +29,5 @@ https://gist.github.com/alpaca-tc/4521470
   - 検索結果の数とかを表示する
 - https://github.com/tomtom/tcomment_vim
   - 複数行コメントアウト
+- https://github.com/mattn/webapi-vim
+  - vimからapiを叩く

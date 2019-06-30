@@ -119,6 +119,9 @@ hook_add = '''
 
     command! -bang -nargs=* Fzfbuffer
       \ call fzf#vim#buffers()
+
+    command! -bang -nargs=* Fzfhistory
+      \ call fzf#vim#history()
 '''
 
 [[plugins]]
