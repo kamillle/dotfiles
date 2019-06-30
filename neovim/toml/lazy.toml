@@ -102,7 +102,7 @@ hook_source = '''
 
 [[plugins]] # search
 repo = 'junegunn/fzf'
-build = './install --bin'
+build = './install --all'
 merged = '0'
 
 # rg コマンドのoption: https://www.mankier.com/1/rg#Options
@@ -116,6 +116,9 @@ hook_add = '''
       \ call fzf#vim#grep(
       \   'rg --line-number --no-heading '.shellescape(<q-args>), 0,
       \   fzf#vim#with_preview({'options': '--exact --reverse'}, 'right:60%:wrap'))
+
+    command! -bang -nargs=* Fzfbuffer
+      \ call fzf#vim#buffers()
 '''
 
 [[plugins]]

@@ -156,3 +156,6 @@ function snake() {
 function camel() {
   echo $1 | gsed -r -e 's/(^|_)(.)/\U\2\E/g'
 }
+
+# pecoを優先するためコメントアウト
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

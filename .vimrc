@@ -65,8 +65,9 @@ nnoremap tr gt
 nnoremap tc :tabclose<CR>
 " 開いているファイルのgithubページを開く
 nnoremap :og :OpenGithubFile<CR>
-" fzf
+" alias fzf commands
 nnoremap RR :Rg<CR>
+nnoremap <Leader>b :Fzfbuffer<CR>
 " start terminal mode by `sh`
 nnoremap sh :belowright :terminal<CR>
 tnoremap <silent> <C-q> <C-\><C-n>
