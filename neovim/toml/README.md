@@ -27,3 +27,5 @@ https://gist.github.com/alpaca-tc/4521470
   - メソッドの定義元にジャンプする
 - https://github.com/osyo-manga/vim-anzu
   - 検索結果の数とかを表示する
+- https://github.com/tomtom/tcomment_vim
+  - 複数行コメントアウト

@@ -70,11 +70,12 @@ xnoremap :og :OpenGithubFile<CR>
 " alias fzf commands
 nnoremap RR :Rg<CR>
 nnoremap <Leader>b :Fzfbuffer<CR>
+" sudo write の alias
+nnoremap <Leader>sudow :w !sudo tee %<CR>
 " start terminal mode by `sh`
 nnoremap sh :belowright :terminal<CR>
 tnoremap <silent> <C-q> <C-\><C-n>
-" visualモード限定
-" 選択範囲にペーストした際に、置き換えた文字列がクリップボードに入らないようにする
+" visualモードの選択範囲にペーストした際に、置き換えた文字列がクリップボードに入らないようにする
 xnoremap <expr> p 'pgv"'.v:register.'y`>'
 
 "-------------------------------------------------------------------------------------------------
