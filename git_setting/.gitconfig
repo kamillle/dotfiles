@@ -10,7 +10,9 @@
   del = branch -D
   rename = branch -m
   rsync = "!git fetch upstream $(git rev-parse --abbrev-ref HEAD) && git reset --hard FETCH_HEAD"
+  osync = "!git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard FETCH_HEAD"
   df = diff
   ps = push
+  unstage = reset HEAD
 [core]
   excludesfile = ~/.gitignore_global
