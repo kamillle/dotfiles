@@ -118,10 +118,10 @@ hook_add = '''
       \   fzf#vim#with_preview({'options': '--exact --reverse'}, 'right:60%:wrap'))
 
     command! -bang -nargs=* Fzfbuffer
-      \ call fzf#vim#buffers()
+      \ call fzf#vim#buffers({'options': '--exact --reverse'})
 
     command! -bang -nargs=* Fzfhistory
-      \ call fzf#vim#history()
+      \ call fzf#vim#history({'options': '--exact --reverse'})
 '''
 
 [[plugins]]
