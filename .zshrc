@@ -157,5 +157,13 @@ function camel() {
   echo $1 | gsed -r -e 's/(^|_)(.)/\U\2\E/g'
 }
 
+function jtra() {
+  trans -b :en $1
+}
+
+function etra() {
+  trans -b :ja $1
+}
+
 # pecoを優先するためコメントアウト
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
