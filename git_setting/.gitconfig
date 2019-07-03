@@ -6,13 +6,15 @@
   st  = status
   stt = status --short --branch
   cm = commit
-  fh = fetch --prune # remoteで削除済のものはlocalでも削除する
+  fh = fetch
+  df = diff
+  ps = push
+  unstage = reset HEAD
   del = branch -D
   rename = branch -m
   rsync = "!git fetch upstream $(git rev-parse --abbrev-ref HEAD) && git reset --hard FETCH_HEAD"
   osync = "!git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard FETCH_HEAD"
-  df = diff
-  ps = push
-  unstage = reset HEAD
+  # master/develop/release以外のマージ済みブランチを削除する
+  dd = "!git branch --merged | grep -vE 'master|develop|release' | xargs -I % git branch -d %"
 [core]
   excludesfile = ~/.gitignore_global
