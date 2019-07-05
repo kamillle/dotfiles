@@ -90,7 +90,15 @@ sudo sh -c "echo /usr/local/bin/zsh >> /etc/shells"
 # change login shell
 chsh -s /usr/local/bin/zsh
 
-source ~/dotfiles/.zshrc
+ln -snfv ${HOME}/dotfiles/.zshrc ${HOME}/.zshrc
+
+source ${HOME}/.zshrc
+
+brew install tmux
+
+ln -snfv ${HOME}/dotfiles/.tmux.conf ${HOME}/.tmux.conf
+
+tmux source ${HOME}/.tmux.conf
 
 echo "================ End ================"
 
