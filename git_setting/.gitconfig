@@ -9,6 +9,7 @@
   fh = fetch
   df = diff
   ps = push
+  op = open
   unstage = reset HEAD
   del = branch -D
   rename = branch -m
