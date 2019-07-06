@@ -161,6 +161,10 @@ hook_source = '''
 '''
 
 [[plugins]]
+repo = 'tpope/vim-surround'
+on_event = 'InsertEnter'
+
+[[plugins]]
 repo = 'slim-template/vim-slim'
 on_ft = ['slim']
 
