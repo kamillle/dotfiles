@@ -184,6 +184,19 @@ goenv global LATEST_STABLE_GO
 
 echo "========== End ==========="
 
+echo "======= Setup golang ======="
+
+brew install nvm
+mkdir ${HOME}/.nvm
+
+nvm install v10.13.0
+node -v
+nvm use 10.13.0
+
+# make available git open command
+npm install --global git-open
+
+echo "========== End ==========="
 
 # echo "======= Setup mac config ======="
 
