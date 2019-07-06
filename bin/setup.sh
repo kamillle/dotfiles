@@ -94,14 +94,18 @@ ln -snfv ${HOME}/dotfiles/.zshrc ${HOME}/.zshrc
 
 source ${HOME}/.zshrc
 
+echo "================ End ================"
+
+echo "======= Setup tmux ======="
+
 brew install tmux
+brew install reattach-to-user-namespace
 
 ln -snfv ${HOME}/dotfiles/.tmux.conf ${HOME}/.tmux.conf
 
 tmux source ${HOME}/.tmux.conf
 
 echo "================ End ================"
-
 
 echo "======= Setup CLI ======="
 
@@ -138,6 +142,10 @@ brew install ripgrep
 
 # make rich vim icons
 brew cask install font-hack-nerd-font
+
+# monaco powerline
+wget https://gist.github.com/baopham/1838072/raw/2c0e00770826e651d1e355962e751325edb0f1ee/Monaco%20for%20Powerline.otf
+mv Monaco\ for\ Powerline.otf /Library/Fonts/
 
 echo "============ End ============="
 
