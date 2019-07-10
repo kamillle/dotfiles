@@ -40,7 +40,6 @@ echo "======= Install Applications ======="
 brew install mas # App StoreのアプリをCLIでダウンロードできるようにする
 mas install 497799835  # Xcode
 mas install 405399194  # Kindle
-mas install 715768417  # Microsoft Remote Desktop (8.0.30030)
 mas install 425955336  # Skitch
 mas install 485812721  # TweetDeck
 mas install 1295203466 # Microsoft Remote Desktop (10.2.13)
