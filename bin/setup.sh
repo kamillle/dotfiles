@@ -171,6 +171,8 @@ rbenv global LATEST_STABLE_RUBY
 gem install bundler
 rbenv rehash
 
+ln -snfv ${HOME}/dotfiles/.pryrc ${HOME}/.pryrc
+
 echo "========== End ==========="
 
 
