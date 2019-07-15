@@ -47,6 +47,9 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>qq :q!<CR>
 nnoremap <Leader>vs :vs<CR>
 
+" space+y でカーソル位置から行末までコピー
+nnoremap Y y$
+
 inoremap <silent> jj <ESC>
 " 行が折り返し表示されていた場合、行単位ではなく表示行単位でカーソルを移動する
 nnoremap j gj
