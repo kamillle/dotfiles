@@ -47,7 +47,7 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>qq :q!<CR>
 nnoremap <Leader>vs :vs<CR>
 
-" space+y でカーソル位置から行末までコピー
+" Y でカーソル位置から行末までコピー
 nnoremap Y y$
 
 inoremap <silent> jj <ESC>
