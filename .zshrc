@@ -126,7 +126,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
 #----------------------------------------------------------
-# middleware setting
+# define functions
 #----------------------------------------------------------
 # ctrl + r でコマンド履歴一覧
 function peco-history-selection() {
