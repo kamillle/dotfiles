@@ -125,6 +125,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
+# pecoを優先するためコメントアウト
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 #----------------------------------------------------------
 # define functions
 #----------------------------------------------------------
@@ -164,6 +167,3 @@ function jtra() {
 function etra() {
   trans -b :ja $1
 }
-
-# pecoを優先するためコメントアウト
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
