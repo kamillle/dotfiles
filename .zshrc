@@ -153,12 +153,12 @@ function gg () {
 
 # snakecase への変換
 function snake() {
-  echo $1 | gsed -r -e 's/^([A-Z])/\L\1\E/' -e 's/([A-Z])/_\L\1\E/g'
+  echo $1 | gsed -r -e 's/^([A-Z])/\L\1\E/' -e 's/([A-Z])/_\L\1\E/g' | pbcopy
 }
 
 # upper camel への変換
 function camel() {
-  echo $1 | gsed -r -e 's/(^|_)(.)/\U\2\E/g'
+  echo $1 | gsed -r -e 's/(^|_)(.)/\U\2\E/g' | pbcopy
 }
 
 function jtra() {
