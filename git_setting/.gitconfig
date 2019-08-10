@@ -10,6 +10,7 @@
   df = diff
   ps = push
   op = open
+  l = log
   unstage = reset HEAD
   del = branch -D
   rename = branch -m
