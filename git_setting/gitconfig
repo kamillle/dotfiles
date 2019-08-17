@@ -4,6 +4,7 @@
 [alias]
   sh  = switch
   co  = checkout
+  po = "!git branch | peco | xargs git checkout"
   st  = status
   stt = status --short --branch
   ad = add
