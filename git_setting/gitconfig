@@ -2,6 +2,7 @@
   name = kamillle
   email = "32205171+kamillle@users.noreply.github.com"
 [alias]
+  sh  = switch
   co  = checkout
   st  = status
   stt = status --short --branch
