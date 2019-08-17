@@ -14,6 +14,7 @@
   op = open
   l = log
   unstage = reset HEAD
+  back = reset --hard HEAD^
   del = branch -D
   rename = branch -m
   rsync = "!git fetch upstream $(git rev-parse --abbrev-ref HEAD) && git reset --hard FETCH_HEAD"
