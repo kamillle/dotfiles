@@ -160,11 +160,3 @@ function snake() {
 function camel() {
   echo $1 | gsed -r -e 's/(^|_)(.)/\U\2\E/g' | pbcopy
 }
-
-function jtra() {
-  trans -b :en $1
-}
-
-function etra() {
-  trans -b :ja $1
-}
