@@ -5,6 +5,7 @@
   co  = checkout
   st  = status
   stt = status --short --branch
+  ad = add
   cm = commit
   fh = fetch
   df = diff
