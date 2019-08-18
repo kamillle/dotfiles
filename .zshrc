@@ -160,3 +160,8 @@ function snake() {
 function camel() {
   echo $1 | gsed -r -e 's/(^|_)(.)/\U\2\E/g' | pbcopy
 }
+
+# springで起動しているrails appを全部殺すマン
+function kspring() {
+  ps aux | grep spring | grep -v grep | awk '{ print "kill -9", $2 }' | sh
+}
