@@ -119,7 +119,6 @@ brew install gnu-sed
 
 echo "========== End =========="
 
-
 echo "======= Setup Neovim ======="
 
 # denite, deopleteが python3を必要とするので先にpythonのセッティングを行う
