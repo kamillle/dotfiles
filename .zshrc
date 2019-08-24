@@ -90,8 +90,10 @@ eval "$(pyenv init -)"
 export GOPATH=$HOME/go
 export GOENV_ROOT=$HOME/.goenv
 export GO_WORKSPACE=$HOME/go/src/github.com/kamillle
-export PATH=bin:$GOENV_ROOT/bin:$GOPATH/bin:$PATH
+export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
 
 # elastic
 #export PATH="/usr/local/opt/elasticsearch@5.6/bin:$PATH"

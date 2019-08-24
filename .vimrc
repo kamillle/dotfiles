@@ -173,3 +173,6 @@ endif
 let g:ruby_path="~/.rbenv/versions/2.6.2/bin/ruby" " provider/ruby.vim に効果あり。デメリットもあるらしいので注意
 let g:ruby_host_prog='~/.rbenv/versions/2.6.2/bin/neovim-ruby-host' "ftplugin/ruby.vim に効果あり
 let g:python3_host_prog = expand('~/.pyenv/shims/python')
+let g:go_fmt_command        = 'goimports'
+let g:go_def_mode           = 'gopls'
+let g:go_metalinter_command = 'golangci-lint'
