@@ -15,3 +15,9 @@ chmod 777 ./bin/dev_setup.sh
 ## set node.js provider for neovim
 should install neovim for node.js via npm and set `let g:node_host_prog=PATH`
 run `nvm which neovim-node-host` to detect PATH
+
+
+# goenv
+https://github.com/syndbg/goenv/blob/master/INSTALL.md#basic-github-checkout
+
+I do not install goenv with homebrew. Plz install it by git.
