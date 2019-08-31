@@ -171,9 +171,3 @@ on_ft = ['slim']
 [[plugins]] # TOMLのシンタックスハイライト
 repo  = 'cespare/vim-toml'
 on_ft = ['toml']
-
-# vimからgitのコマンドが使えるようにするプラグイン
-# スクロール時に処理が走っていて遅いのでlazy loadする
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-on_cmd = 'Gblame'
