@@ -46,6 +46,3 @@ repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
-
-[[plugins]]
-repo = 'tpope/vim-fugitive'
