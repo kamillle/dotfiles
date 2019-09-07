@@ -21,3 +21,7 @@ run `nvm which neovim-node-host` to detect PATH
 https://github.com/syndbg/goenv/blob/master/INSTALL.md#basic-github-checkout
 
 I do not install goenv with homebrew. Plz install it by git.
+
+# Archived
+- snippets
+  - https://github.com/kamillle/dotfiles/commit/f775052bbaf662f9543ef7ccccee425a612c3345
