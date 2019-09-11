@@ -165,5 +165,5 @@ function camel() {
 
 # springで起動しているrails appを全部殺すマン
 function kspring() {
-  ps aux | grep spring | grep -v grep | awk '{ print "kill -9", $2 }' | sh
+  pkill spring
 }
