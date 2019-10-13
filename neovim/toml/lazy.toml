@@ -41,6 +41,10 @@ hook_source = '''
 '''
 # set completeopt+=noinsert
 
+[[plugins]]
+repo = 'cohama/lexima.vim'
+on_event = 'InsertEnter'
+
 # Rubyの自動補完
 [[plugins]]
 repo = 'fishbullet/deoplete-ruby'
