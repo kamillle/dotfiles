@@ -50,26 +50,20 @@ echo "======= Install Applications ======="
 # mas install 539883307  # LINE
 # mas install 417375580  # BetterSnapTool
 #
-# brew cask install google-chrome-canary
-# brew cask install google-japanese-ime
-# brew cask install firefox
 # brew cask install homebrew/cask-versions/sequel-pro-nightly # mysql GUI for mojave
-# brew cask install slack       # slackたん
-# brew cask install typora      # md editor
-# brew cask install cmd-eikana  # 英かな使えるかわからん
-# brew cask install alfred      # lancher
-# brew cask install hyperswitch # cmd + tab でwindow毎に切り替え
-# brew cask install appcleaner  # remove applications
-# brew cask install dropbox     # share files
 # brew cask install clipy       # extend pdcopy
 # brew cask install dash        # リファレンス見る
-# brew cask install iterm2      # CLI
 # brew cask install karabiner   # customize key mapping
-# brew cask install evernote    # memo
-# brew cask install skitch      # edit images
 # # dockerは brew, brew cask 両方必要
 # brew install docker
 # brew cask install docker
+
+# ブラウザからダウンロード
+# chrome, slack, typora, dropbox
+
+# ランチャー
+# albert
+# @see https://github.com/albertlauncher/albert
 
 echo "============= End =============="
 

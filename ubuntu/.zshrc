@@ -138,7 +138,7 @@ export NVM_DIR="$HOME/.nvm"
 #----------------------------------------------------------
 # ctrl + r でコマンド履歴一覧
 function peco-history-selection() {
-    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+    BUFFER=`history -n 1 | tac  | awk '!a[$0]++' | peco`
     CURSOR=$#BUFFER
     zle reset-prompt
 }
