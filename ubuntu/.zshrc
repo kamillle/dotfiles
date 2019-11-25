@@ -79,6 +79,7 @@ source $ZPLUG_HOME/init.zsh
 export PATH="/usr/local/bin":$PATH
 
 # Ruby
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # Python
