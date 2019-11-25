@@ -96,14 +96,16 @@ echo "================ End ================"
 
 echo "======= Setup CLI ======="
 
-brew install peco
-brew install htop
-brew install hub
-brew install tig
-brew install trash
-brew install tree
-brew install translate-shell # shellからgoogle翻訳
-brew install gnu-sed
+# brew install peco
+# brew install htop
+# brew install hub
+# brew install tig
+# brew install trash
+# brew install tree
+# brew install translate-shell # shellからgoogle翻訳
+# brew install gnu-sed
+
+sudo apt install peco
 
 echo "========== End =========="
 
