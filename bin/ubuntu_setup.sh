@@ -103,9 +103,13 @@ sudo apt install peco
 sudo apt install htop
 sudo apt install tree
 sudo apt install silversearcher-ag
+# @note Change root user auth
+# https://stackoverflow.com/questions/39281594/error-1698-28000-access-denied-for-user-rootlocalhost
+sudo apt install mysql-server
 # for mysql2 gem
 sudo apt install libmysqld-dev
 sudo apt install direnv
+
 
 echo "========== End =========="
 
