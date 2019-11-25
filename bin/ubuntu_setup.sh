@@ -105,6 +105,7 @@ sudo apt install tree
 sudo apt install silversearcher-ag
 # for mysql2 gem
 sudo apt install libmysqld-dev
+sudo apt install direnv
 
 echo "========== End =========="
 
