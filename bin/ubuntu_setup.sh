@@ -85,10 +85,11 @@ echo "================ End ================"
 
 echo "======= Setup tmux ======="
 
-brew install tmux
-brew install reattach-to-user-namespace
+if sudo apt list --installed tmux | grep Done > /dev/null; then
+  sudo apt install tmux
+fi
 
-ln -snfv ${HOME}/dotfiles/.tmux.conf ${HOME}/.tmux.conf
+ln -snfv ${HOME}/dotfiles/ubuntu/.tmux.conf ${HOME}/.tmux.conf
 
 tmux source ${HOME}/.tmux.conf
 
