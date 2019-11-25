@@ -43,15 +43,15 @@ PROMPT='%{$fg_bold[yellow]%} %~% %{$reset_color%} ${vcs_info_msg_0_}%{$reset_col
 #----------------------------------------------------------
 # alias
 #----------------------------------------------------------
-# alias py="python"
-# alias ipy="ipython"
-# alias es="elasticsearch"
-# alias be="bundle exec"
-# alias ber="bundle exec rubocop"
-# alias sr="bundle exec spring rspec"
+alias py="python"
+alias ipy="ipython"
+alias es="elasticsearch"
+alias be="bundle exec"
+alias ber="bundle exec rubocop"
+alias sr="bundle exec spring rspec"
 # alias rm="trash"
-# alias agg="ag -g"
-# alias ls="ls -G"
+alias agg="ag -g"
+alias ls="ls --color"
 # alias ctags="`brew --prefix`/bin/ctags"
 alias v="nvim"
 alias vim="nvim"
