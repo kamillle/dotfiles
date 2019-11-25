@@ -169,8 +169,8 @@ echo "========== End ==========="
 
 echo "======= Setup nvm ======="
 
-brew install nvm
 mkdir ${HOME}/.nvm
+sudo apt install nvm
 
 nvm install v10.13.0
 node -v
