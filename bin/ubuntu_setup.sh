@@ -167,7 +167,7 @@ echo "======= Setup golang ======="
 
 echo "========== End ==========="
 
-echo "======= Setup golang ======="
+echo "======= Setup nvm ======="
 
 brew install nvm
 mkdir ${HOME}/.nvm
