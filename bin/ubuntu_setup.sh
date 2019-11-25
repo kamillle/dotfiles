@@ -136,18 +136,17 @@ echo "============ End ============="
 
 echo "======= Setup Ruby ======="
 
-brew install rbenv ruby-build
+# Install rbenv and ruby-build
+# @see https://github.com/rbenv/ruby-build/wiki#suggested-build-environment
 
-brew install readline
-brew link readline --force
-RUBY_CONFIGURE_OPTS="--with-readline-dir=$(brew --prefix readline)"
-echo 'export PATH="$HOME/.rbenv/bin/:$PATH" >> ~/.zshrc'
-echo 'eval "$(rbenv init -)" >> ~/.zshrc'
+# Install readline
+# Using Ubuntu, install libreadline-dev instead of readline
+sudo apt install libreadline-dev
 
 # neovimが ruby2.6.2 と neovim gem を参照するので入れておく
 # 2.6.2 が古くなったらvimrcに書いてあるneovimが参照するバージョンを変更すること
-rbenv install 2.6.2
-rbenv global 2.6.2
+rbenv install 2.6.5
+rbenv global 2.6.5
 gem install neovim
 
 # 最新版をインストールする
