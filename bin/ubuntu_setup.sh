@@ -180,9 +180,3 @@ nvm use 10.13.0
 npm install --global git-open
 
 echo "========== End ==========="
-
-# echo "======= Setup mac config ======="
-
-# source ./mac_config.sh
-
-# echo "============= End =============="
