@@ -103,6 +103,8 @@ sudo apt install peco
 sudo apt install htop
 sudo apt install tree
 sudo apt install silversearcher-ag
+# for mysql2 gem
+sudo apt install libmysqld-dev
 
 echo "========== End =========="
 
