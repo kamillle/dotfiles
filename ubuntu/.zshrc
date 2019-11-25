@@ -93,9 +93,9 @@ export GOPATH=$HOME/go
 export GOENV_ROOT=$HOME/.goenv
 export GO_WORKSPACE=$HOME/go/src/github.com/kamillle
 export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
+eval "$(goenv init -)"
 
 # elastic
 #export PATH="/usr/local/opt/elasticsearch@5.6/bin:$PATH"
