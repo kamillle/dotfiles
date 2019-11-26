@@ -109,7 +109,7 @@ sudo apt install mysql-server
 # for mysql2 gem
 sudo apt install libmysqld-dev
 sudo apt install direnv
-
+sudo apt install chromium-chromedriver
 
 echo "========== End =========="
 
