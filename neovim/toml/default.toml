@@ -12,6 +12,8 @@ repo = 'Yggdroot/indentLine'
 repo = 'Shougo/vimproc.vim'
 
 [[plugins]]
+# clone below repo and exec `mv vim-colors-solarized ~/.config/nvim/colors`
+# https://github.com/altercation/vim-colors-solarized
 repo = 'altercation/vim-colors-solarized'
 
 [[plugins]]
