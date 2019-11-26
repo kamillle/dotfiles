@@ -121,7 +121,7 @@ echo "======= Setup Neovim ======="
 sudo apt install neovim
 
 # set sym link
-ln -snfv ${HOME}/dotfiles/ubuntu/.vimrc ${HOME}/.config/nvim/init.vim
+ln -snfv ${HOME}/dotfiles/.vimrc ${HOME}/.config/nvim/init.vim
 
 # for incremental search by fzf
 # @see https://github.com/BurntSushi/ripgrep
