@@ -77,7 +77,7 @@ echo "======= Setup zsh ======="
 # # change login shell
 # chsh -s /usr/local/bin/zsh
 #
-ln -snfv ${HOME}/dotfiles/ubuntu/.zshrc ${HOME}/.zshrc
+ln -snfv ${HOME}/dotfiles/.zshrc ${HOME}/.zshrc
 #
 source ${HOME}/.zshrc
 

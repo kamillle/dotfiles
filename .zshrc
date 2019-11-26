@@ -1,4 +1,11 @@
-export LANG=ja_JP.UTF-8 # 日本語を使用
+if [[ $(uname) = "Darwin" ]]; then
+elif [[ $(uname) = "Linux" ]]; then
+fi
+
+if [[ $(uname) = "Darwin" ]]; then
+  export LANG=ja_JP.UTF-8 # 日本語を使用
+elif [[ $(uname) = "Linux" ]]; then
+fi
 setopt no_beep
 # use vi mode
 # bindkey -v
@@ -43,21 +50,28 @@ PROMPT='%{$fg_bold[yellow]%} %~% %{$reset_color%} ${vcs_info_msg_0_}%{$reset_col
 #----------------------------------------------------------
 # alias
 #----------------------------------------------------------
+
 alias py="python"
 alias ipy="ipython"
 alias es="elasticsearch"
 alias be="bundle exec"
 alias ber="bundle exec rubocop"
 alias sr="bundle exec spring rspec"
-alias rm="trash"
 alias agg="ag -g"
-alias ls="ls -G"
-alias ctags="`brew --prefix`/bin/ctags"
 alias v="nvim"
 alias vim="nvim"
 alias vi="nvim"
 alias ac="git add . && git cm"
 alias c="clear"
+
+if [[ $(uname) = "Darwin" ]]; then
+  alias rm="trash"
+  alias ls="ls -G"
+  alias ctags="`brew --prefix`/bin/ctags"
+elif [[ $(uname) = "Linux" ]]; then
+  alias ls="ls --color" # ubuntuでは色付き出力は -G ではなく --color
+  alias pbcopy='xsel --clipboard --input' # @see https://qiita.com/yoshikyoto/items/1676b925580717c0a443
+fi
 
 #----------------------------------------------------------
 # command history
@@ -78,6 +92,9 @@ source $ZPLUG_HOME/init.zsh
 export PATH="/usr/local/bin":$PATH
 
 # Ruby
+if [[ $(uname) = "Linux" ]]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+fi
 eval "$(rbenv init -)"
 
 # Python
@@ -125,9 +142,13 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
-
+if [[ $(uname) = "Darwin" ]]; then
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+elif [[ $(uname) = "Linux" ]]; then
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
 # pecoを優先するためコメントアウト
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -135,11 +156,20 @@ export NVM_DIR="$HOME/.nvm"
 # define functions
 #----------------------------------------------------------
 # ctrl + r でコマンド履歴一覧
-function peco-history-selection() {
-    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
-    CURSOR=$#BUFFER
-    zle reset-prompt
-}
+if [[ $(uname) = "Darwin" ]]; then
+  function peco-history-selection() {
+      BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+      CURSOR=$#BUFFER
+      zle reset-prompt
+  }
+elif [[ $(uname) = "Linux" ]]; then
+  function peco-history-selection() {
+      # tailの-rオプションはmacにしかないためtacを使う
+      BUFFER=`history -n 1 | tac | awk '!a[$0]++' | peco`
+      CURSOR=$#BUFFER
+      zle reset-prompt
+  }
+fi
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
 
