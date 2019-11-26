@@ -110,6 +110,7 @@ sudo apt install mysql-server
 sudo apt install libmysqld-dev
 sudo apt install direnv
 sudo apt install chromium-chromedriver
+sudo apt install ctags
 
 echo "========== End =========="
 
