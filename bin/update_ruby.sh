@@ -23,6 +23,16 @@ case "$version" in
     message="\nInstalling ${version}..."
     echo ${message}
     rbenv install $version
+
+    # setup needed gems
+    rbenv rehash
+    rbenv shell $version
+    gem install bundler
+    # for neovim
+    gem install nvim
+    gem install nvim
+    # for LSP
+    gem install solargraph
     ;;
 
   # 異常系
