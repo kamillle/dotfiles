@@ -29,8 +29,7 @@ case "$version" in
     rbenv shell $version
     gem install bundler
     # for neovim
-    gem install nvim
-    gem install nvim
+    gem install neovim
     # for LSP
     gem install solargraph
     ;;
