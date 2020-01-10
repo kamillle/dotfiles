@@ -187,7 +187,7 @@ goenv global LATEST_STABLE_GO
 
 echo "========== End ==========="
 
-echo "======= Setup golang ======="
+echo "======= Setup nvm ======="
 
 brew install nvm
 mkdir ${HOME}/.nvm
