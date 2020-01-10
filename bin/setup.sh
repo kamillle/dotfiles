@@ -159,10 +159,10 @@ RUBY_CONFIGURE_OPTS="--with-readline-dir=$(brew --prefix readline)"
 echo 'export PATH="$HOME/.rbenv/bin/:$PATH" >> ~/.zshrc'
 echo 'eval "$(rbenv init -)" >> ~/.zshrc'
 
-# neovimが ruby2.6.2 と neovim gem を参照するので入れておく
-# 2.6.2 が古くなったらvimrcに書いてあるneovimが参照するバージョンを変更すること
-rbenv install 2.6.2
-rbenv global 2.6.2
+# neovimが ruby2.7.0 と neovim gem を参照するので入れておく
+# 2.7.0が古くなったらvimrcに書いてあるneovimが参照するバージョンを変更すること
+rbenv install 2.7.0
+rbenv global 2.7.0
 gem install neovim
 
 # 最新版をインストールする
