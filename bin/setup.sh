@@ -115,7 +115,6 @@ brew install hub
 brew install tig
 brew install trash
 brew install tree
-brew install translate-shell # shellからgoogle翻訳
 brew install gnu-sed
 
 echo "========== End =========="
