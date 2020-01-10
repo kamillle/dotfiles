@@ -45,6 +45,7 @@ mas install 485812721  # TweetDeck
 mas install 1295203466 # Microsoft Remote Desktop (10.2.13)
 mas install 539883307  # LINE
 mas install 417375580  # BetterSnapTool
+mas install 1429033973 # RunCat
 
 # TODO: /Applications 配下にあるならインストールしない、ないならインストールするみたいにしたい
 # dotfiles/.bashrc を読み込みbrew cask でのインストール先を /Applications に変更する
