@@ -42,7 +42,7 @@ mas install 497799835  # Xcode
 mas install 405399194  # Kindle
 mas install 425955336  # Skitch
 mas install 485812721  # TweetDeck
-mas install 1295203466 # Microsoft Remote Desktop (10.2.13)
+mas install 1295203466 # Microsoft Remote Desktop
 mas install 539883307  # LINE
 mas install 417375580  # BetterSnapTool
 mas install 1429033973 # RunCat
