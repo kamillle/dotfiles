@@ -18,8 +18,8 @@
   back = reset --hard HEAD^
   del = branch -D
   rename = branch -m
-  rsync = "!git fetch upstream $(git rev-parse --abbrev-ref HEAD) && git reset --hard FETCH_HEAD"
-  osync = "!git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard FETCH_HEAD"
+  # @usage git rsync upstream
+  rsync = "!f(){ git fetch $1 $(git rev-parse --abbrev-ref HEAD) && git reset --hard FETCH_HEAD;};f"
   # master/develop/release以外のマージ済みブランチを削除する
   dd = "!git fetch --all && git branch --merged | grep -vE 'master|develop|release' | xargs -I % git branch -d %"
   cont = "!git add . && git rebase --continue"
