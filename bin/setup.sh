@@ -52,9 +52,9 @@ mas install 1429033973 # RunCat
 cp .bashrc ~/.bashrc
 source ~/.bashrc
 
-f [ -f ~/.bashrc ] ; then
-  . ~/.bashrc
-fi
+# f [ -f ~/.bashrc ] ; then
+#   . ~/.bashrc
+# fi
 
 brew cask install google-chrome
 brew cask install google-chrome-canary
