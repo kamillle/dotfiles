@@ -60,6 +60,7 @@ brew cask install google-chrome
 brew cask install google-chrome-canary
 brew cask install google-japanese-ime
 brew cask install firefox
+brew cask install visual-studio-code
 brew cask install homebrew/cask-versions/sequel-pro-nightly # mysql GUI for mojave
 brew cask install slack       # slackたん
 brew cask install typora      # md editor
