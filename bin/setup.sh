@@ -74,6 +74,7 @@ brew cask install iterm2      # CLI
 brew cask install karabiner   # customize key mapping
 brew cask install evernote    # memo
 brew cask install skitch      # edit images
+brew cask install postman     # develop API
 # dockerは brew, brew cask 両方必要
 brew install docker
 brew cask install docker
