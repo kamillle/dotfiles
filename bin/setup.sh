@@ -136,6 +136,7 @@ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh >
 sh ./installer.sh ~/.cache/dein
 
 # set sym link
+mkdir -p ~/.config/nvim
 ln -snfv ${HOME}/dotfiles/.vimrc ${HOME}/.config/nvim/init.vim
 
 # for incremental search by fzf
