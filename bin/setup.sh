@@ -118,6 +118,7 @@ brew install tig
 brew install trash
 brew install tree
 brew install gnu-sed
+brew install the_silver_searcher
 
 echo "========== End =========="
 
