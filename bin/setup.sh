@@ -87,6 +87,7 @@ echo "======= Setup zsh ======="
 
 brew install zsh
 brew install zsh-completions
+brew install zplug
 
 sudo sh -c "echo /usr/local/bin/zsh >> /etc/shells"
 # change login shell
