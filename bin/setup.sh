@@ -125,10 +125,10 @@ echo "========== End =========="
 echo "======= Setup Neovim ======="
 
 # denite, deopleteが python3を必要とするので先にpythonのセッティングを行う
-PYTHON_VERSION=3.7.1
 brew install pyenv
-pyenv install PYTHON_VERSION
-pyenv global PYTHON_VERSION
+pyenv install 3.7.1
+pyenv global 3.7.1
+pip3 install pynvim # required https://github.com/roxma/nvim-yarp#requirements
 
 brew install neovim
 # deniteセットアップのためのシェルスクリプトをダウンロード & 実行
