@@ -125,6 +125,10 @@ echo "========== End =========="
 
 echo "======= Setup Neovim ======="
 
+echo "======= Setup ghq ======="
+brew install ghq
+echo "=======" End ======="
+
 # denite, deopleteが python3を必要とするので先にpythonのセッティングを行う
 brew install pyenv
 pyenv install 3.7.1
