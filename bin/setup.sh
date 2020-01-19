@@ -127,6 +127,8 @@ echo "======= Setup Neovim ======="
 
 echo "======= Setup ghq ======="
 brew install ghq
+# ghq default root path
+mkdir ~/ghq
 echo "=======" End ======="
 
 # denite, deopleteが python3を必要とするので先にpythonのセッティングを行う
