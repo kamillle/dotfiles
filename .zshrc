@@ -172,6 +172,18 @@ fi
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
 
+# ctrl + ] でghq
+function peco-ghq () {
+  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-ghq
+bindkey '^]' peco-ghq
+
 # grepした上でそのファイルをvimで開く
 function gg () {
   vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
