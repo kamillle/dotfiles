@@ -151,6 +151,7 @@ ln -snfv ${HOME}/dotfiles/.vimrc ${HOME}/.config/nvim/init.vim
 brew install ripgrep
 
 # make rich vim icons
+brew tap homebrew/cask-fonts
 brew cask install font-hack-nerd-font
 
 # monaco powerline
