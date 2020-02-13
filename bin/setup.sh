@@ -114,7 +114,6 @@ echo "======= Setup CLI ======="
 
 brew install peco
 brew install htop
-brew install hub
 brew install tig
 brew install trash
 brew install tree
