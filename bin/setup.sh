@@ -120,6 +120,7 @@ brew install trash
 brew install tree
 brew install gnu-sed
 brew install the_silver_searcher
+brew install github/gh/gh
 
 echo "========== End =========="
 
