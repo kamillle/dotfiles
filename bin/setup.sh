@@ -213,6 +213,14 @@ npm install --global git-open
 
 echo "========== End ==========="
 
+echo "======= Setup vue ======="
+brew install yarn
+
+yarn global add @vue/cli
+yarn global add @vue/cli-init
+
+echo "========== End =========="
+
 # echo "======= Setup mac config ======="
 
 # source ./mac_config.sh
