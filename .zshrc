@@ -135,7 +135,7 @@ eval "$(direnv hook zsh)"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 # yarn
-exprot PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$PATH"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
