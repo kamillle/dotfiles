@@ -68,8 +68,9 @@ nnoremap tr gt
 nnoremap tc :tabclose<CR>
 " 開いているファイルのgithubページを開く
 nnoremap :og :OpenGithubFile<CR>
-" 開いているファイルのvisualモードで選択している行のgithubページを開く
-xnoremap :og :OpenGithubFile<CR>
+" x/sで削除した文字をヤンクしない
+nnoremap x "_x
+nnoremap s "_s
 " alias fzf commands
 nnoremap RR :Rg<CR>
 nnoremap <Leader>b :Fzfbuffer<CR>
@@ -81,6 +82,8 @@ nnoremap sh :belowright :terminal<CR>
 tnoremap <silent> <C-q> <C-\><C-n>
 " visualモードの選択範囲にペーストした際に、置き換えた文字列がクリップボードに入らないようにする
 xnoremap <expr> p 'pgv"'.v:register.'y`>'
+" 開いているファイルのvisualモードで選択している行のgithubページを開く
+xnoremap :og :OpenGithubFile<CR>
 
 "-------------------------------------------------------------------------------------------------
 " visual
