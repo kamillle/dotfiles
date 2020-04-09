@@ -11,7 +11,6 @@
   cm = commit
   fh = fetch
   df = diff
-  ps = push
   op = open
   l = log
   unstage = reset HEAD
@@ -26,3 +25,5 @@
 [core]
   excludesfile = ~/.gitignore_global
   editor = nvim
+[rebase]
+	autostash = true
