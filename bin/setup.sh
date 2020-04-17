@@ -15,27 +15,27 @@ if (type brew > /dev/null 2>&1) ; then
 
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-  echo "============= End =============="
+  echo "======= End ======"
 fi
 
 # install git
 if brew list | grep git > /dev/null; then
-  echo "======= Install git ======="
+  echo "====== Install git ======="
 
   brew install git
 
-  echo "========== End ============"
+  echo "====== End ======"
 fi
 
-echo "======= Setup git ======="
+echo "====== Setup git ======"
 
 ln -snfv ${HOME}/dotfiles/git_setting/gitconfig ${HOME}/.gitconfig
 ln -snfv ${HOME}/dotfiles/git_setting/gitignore_global ${HOME}/.gitignore_global
 
-echo "========== End =========="
+echo "======= End ======"
 
 
-echo "======= Install Applications ======="
+echo "====== Install Applications ======"
 
 brew install mas # App StoreのアプリをCLIでダウンロードできるようにする
 mas install 497799835  # Xcode
@@ -80,10 +80,10 @@ brew cask install postman     # develop API
 brew install docker
 brew cask install docker
 
-echo "============= End =============="
+echo "====== End ======"
 
 
-echo "======= Setup zsh ======="
+echo "====== Setup zsh ======"
 
 brew install zsh
 brew install zsh-completions
@@ -97,9 +97,9 @@ ln -snfv ${HOME}/dotfiles/.zshrc ${HOME}/.zshrc
 
 source ${HOME}/.zshrc
 
-echo "================ End ================"
+echo "====== End ======"
 
-echo "======= Setup tmux ======="
+echo "====== Setup tmux ======"
 
 brew install tmux
 brew install reattach-to-user-namespace
@@ -108,9 +108,9 @@ ln -snfv ${HOME}/dotfiles/.tmux.conf ${HOME}/.tmux.conf
 
 tmux source ${HOME}/.tmux.conf
 
-echo "================ End ================"
+echo "====== End ======"
 
-echo "======= Setup CLI ======="
+echo "====== Setup CLI ======"
 
 brew install peco
 brew install htop
@@ -122,16 +122,16 @@ brew install the_silver_searcher
 brew install github/gh/gh
 brew install jid
 
-echo "========== End =========="
+echo "====== End ======"
 
-echo "======= Setup Neovim ======="
 
-echo "======= Setup ghq ======="
+echo "====== Setup ghq ======"
 brew install ghq
 # ghq default root path
 mkdir ~/ghq
-echo "======= End ======="
+echo "====== End ======"
 
+echo "====== Setup Neovim ======"
 # denite, deopleteが python3を必要とするので先にpythonのセッティングを行う
 brew install pyenv
 pyenv install 3.7.1
@@ -158,12 +158,10 @@ brew cask install font-hack-nerd-font
 # monaco powerline
 wget https://gist.github.com/baopham/1838072/raw/2c0e00770826e651d1e355962e751325edb0f1ee/Monaco%20for%20Powerline.otf
 mv Monaco\ for\ Powerline.otf /Library/Fonts/
+echo "====== End ======"
 
-echo "============ End ============="
 
-
-echo "======= Setup Ruby ======="
-
+echo "====== Setup Ruby ======"
 brew install rbenv ruby-build
 
 brew install readline
@@ -186,22 +184,18 @@ gem install bundler
 rbenv rehash
 
 ln -snfv ${HOME}/dotfiles/.pryrc ${HOME}/.pryrc
+echo "====== End ======"
 
-echo "========== End ==========="
 
-
-echo "======= Setup golang ======="
-
+echo "====== Setup golang ======"
 git clone https://github.com/syndbg/goenv.git ~/.goenv
 # 最新版のgoをインストールする
 LATEST_STABLE_GO = $(goenv install -l | grep -E "([1].[0-9].[0-9])|([1].[0-9][0-9].[0-9])" | tail -1)
 goenv install LATEST_STABLE_GO
 goenv global LATEST_STABLE_GO
+echo "====== End ======"
 
-echo "========== End ==========="
-
-echo "======= Setup nvm ======="
-
+echo "====== Setup nvm ======"
 brew install nvm
 mkdir ${HOME}/.nvm
 
@@ -211,19 +205,18 @@ nvm use 10.13.0
 
 # make available git open command
 npm install --global git-open
+echo "====== End ======"
 
-echo "========== End ==========="
-
-echo "======= Setup vue ======="
+echo "====== Setup vue ======"
 brew install yarn
 
 yarn global add @vue/cli
 yarn global add @vue/cli-init
+echo "====== End ======="
 
-echo "========== End =========="
+echo "====== Setup inkdrop ======"
+ln -s ~/dotfiles/inkdrop/keymap.cson ~/Library/Application\ Support/inkdrop/keymap.cson
+echo "====== End ======"
 
-# echo "======= Setup mac config ======="
-
-# source ./mac_config.sh
-
-# echo "============= End =============="
+# echo "======= Setup xxx ======="
+# echo "======= End ======"
