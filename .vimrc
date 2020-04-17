@@ -37,16 +37,6 @@ set splitright                          " vsplitで新規画面を右に開く
 "-------------------------------------------------------------------------------------------------
 " command
 "-------------------------------------------------------------------------------------------------
-" set Leader
-let mapleader = "\<Space>"
-
-" : の代わりに leader で主要な操作を置き換える
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>wq :wq<CR>
-nnoremap <Leader>q :q<CR>
-nnoremap <Leader>qq :q!<CR>
-nnoremap <Leader>vs :vs<CR>
-
 " Y でカーソル位置から行末までコピー
 nnoremap Y y$
 
@@ -73,10 +63,8 @@ nnoremap x "_x
 nnoremap s "_s
 " alias fzf commands
 nnoremap RR :Rg<CR>
-nnoremap <Leader>b :Fzfbuffer<CR>
-nnoremap <Leader>h :Fzfhistory<CR>
-" sudo write の alias
-nnoremap <Leader>sudow :w !sudo tee %<CR>
+nnoremap Fz :Fzfbuffer<CR>
+nnoremap Fh :Fzfhistory<CR>
 " start terminal mode by `sh`
 nnoremap sh :belowright :terminal<CR>
 tnoremap <silent> <C-q> <C-\><C-n>
