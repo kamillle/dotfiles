@@ -64,6 +64,7 @@ brew cask install visual-studio-code
 brew cask install skype
 brew cask install zoom
 brew cask install homebrew/cask-versions/sequel-pro-nightly # mysql GUI for mojave
+brew cask install keyboardcleantool # disable keyboard when clean up it
 brew cask install slack       # slackたん
 brew cask install typora      # md editor
 brew cask install cmd-eikana  # 英かな使えるかわからん
