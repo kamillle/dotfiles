@@ -186,6 +186,8 @@ function peco-ghq () {
 zle -N peco-ghq
 bindkey '^]' peco-ghq
 
+alias h='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+
 # grepした上でそのファイルをvimで開く
 function gg () {
   vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
