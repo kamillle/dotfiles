@@ -186,7 +186,18 @@ function peco-ghq () {
 zle -N peco-ghq
 bindkey '^]' peco-ghq
 
-alias h='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+# ctrl + O でhub
+function peco-hub () {
+  local selected_repo=$(ghq list -p | peco --query "$LBUFFER" | cut -d "/" -f 6,7)
+  if [ -n "$selected_repo" ]; then
+    echo ${selected_repo}
+    BUFFER="hub browse ${selected_repo}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-hub
+bindkey '^O' peco-hub
 
 # grepした上でそのファイルをvimで開く
 function gg () {
