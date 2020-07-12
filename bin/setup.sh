@@ -59,26 +59,25 @@ source ~/.bashrc
 brew cask install google-chrome
 brew cask install google-chrome-canary
 brew cask install google-japanese-ime
-brew cask install firefox
 brew cask install visual-studio-code
 brew cask install skype
 brew cask install zoom
 brew cask install homebrew/cask-versions/sequel-pro-nightly # mysql GUI for mojave
 brew cask install keyboardcleantool # disable keyboard when clean up it
-brew cask install slack       # slackたん
-brew cask install typora      # md editor
-brew cask install cmd-eikana  # 英かな使えるかわからん
-brew cask install alfred      # lancher
-brew cask install hyperswitch # cmd + tab でwindow毎に切り替え
-brew cask install appcleaner  # remove applications
-brew cask install dropbox     # share files
+brew cask install slack
+brew cask install typora
+brew cask install cmd-eikana
+brew cask install alfred
+brew cask install hyperswitch
+brew cask install appcleaner
+brew cask install dropbox
 brew cask install clipy       # extend pdcopy
-brew cask install dash        # リファレンス見る
-brew cask install iterm2      # CLI
+brew cask install dash        # watch docs
+brew cask install iterm2
 brew cask install karabiner   # customize key mapping
-brew cask install evernote    # memo
+brew cask install evernote
 brew cask install skitch      # edit images
-brew cask install postman     # develop API
+brew cask install postman
 brew cask install notion
 # dockerは brew, brew cask 両方必要
 brew install docker
