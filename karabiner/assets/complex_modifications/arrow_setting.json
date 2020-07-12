@@ -1,0 +1,25 @@
+{
+  "type": "basic",
+  "from": {
+    "modifiers": {
+      "simultaneous": [
+        {
+          "key_code": "semicolumn"
+        },
+        {
+          "key_code": "fn"
+        }
+      ],
+      "mandatory": {
+        "optional": [
+          "caps_lock",
+          "option"
+        ]
+      }
+    },
+  "to": [
+    {
+      "key_code": "left_arrow"
+    }
+  ]
+}

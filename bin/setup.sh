@@ -113,6 +113,12 @@ tmux source ${HOME}/.tmux.conf
 
 echo "====== End ======"
 
+echo "====== Setup karabiner ======"
+
+ln -snfv ${HOME}/dotfiles/karabiner ${HOME}/.config/karabiner
+
+echo "====== End ======"
+
 echo "====== Setup CLI ======"
 
 brew install peco
