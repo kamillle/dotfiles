@@ -79,6 +79,7 @@ brew cask install karabiner   # customize key mapping
 brew cask install evernote    # memo
 brew cask install skitch      # edit images
 brew cask install postman     # develop API
+brew cask install notion
 # dockerは brew, brew cask 両方必要
 brew install docker
 brew cask install docker
