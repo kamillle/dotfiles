@@ -164,8 +164,8 @@ endif
 "-------------------------------------------------------------------------------------------------
 " .rb ファイルを開く際に ruby_path, ruby_host_progを指定しておくことでvimの起動を早くできるので指定している
 " ruby2.6.2にinstallしてあるneovim-ruby-host(neovimgem)を利用している
-let g:ruby_path="~/.rbenv/versions/2.7.0/bin/ruby" " provider/ruby.vim に効果あり。デメリットもあるらしいので注意
-let g:ruby_host_prog='~/.rbenv/versions/2.7.0/bin/neovim-ruby-host' "ftplugin/ruby.vim に効果あり
+let g:ruby_path="~/.rbenv/versions/2.7.1/bin/ruby" " provider/ruby.vim に効果あり。デメリットもあるらしいので注意
+let g:ruby_host_prog='~/.rbenv/versions/2.7.1/bin/neovim-ruby-host' "ftplugin/ruby.vim に効果あり
 
 let g:python3_host_prog = expand('~/.pyenv/shims/python')
 

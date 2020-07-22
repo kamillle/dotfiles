@@ -45,12 +45,6 @@ hook_source = '''
 repo = 'cohama/lexima.vim'
 on_event = 'InsertEnter'
 
-# Rubyの自動補完
-[[plugins]]
-repo = 'fishbullet/deoplete-ruby'
-on_event = 'InsertEnter'
-on_ft = ['ruby']
-
 # filer
 # 設定のリファレンス：https://github.com/Shougo/defx.nvim/blob/master/doc/defx.txt
 [[plugins]]
