@@ -109,19 +109,12 @@ eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 
-# elastic
-#export PATH="/usr/local/opt/elasticsearch@5.6/bin:$PATH"
-
 # psql
 export PGDATA="/usr/local/var/postgresql@9.6"
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 
 export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-
-# java
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 
 # chromedriver
 export CHROMEDRIVER_PATH='/usr/local/bin/chromedriver'
