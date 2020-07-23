@@ -56,8 +56,6 @@ alias ipy="ipython"
 alias es="elasticsearch"
 alias be="bundle exec"
 alias agg="ag -g"
-alias vim="nvim"
-alias vi="nvim"
 alias ac="git add . && git cm"
 alias c="clear"
 
