@@ -24,6 +24,6 @@
   cont = "!git add . && git rebase --continue"
 [core]
   excludesfile = ~/.gitignore_global
-  editor = nvim
+  editor = vim
 [rebase]
 	autostash = true
