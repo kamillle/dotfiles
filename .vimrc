@@ -15,7 +15,7 @@ autocmd InsertLeave * set nopaste " off paste mode
 
 set wildmenu wildmode=list:longest,full " コマンドラインモードでTABキーによるファイル名補完を有効にする
 set history=1000                        " コマンドラインの履歴をXXXX件保存する
-set clipboard=unnamedplus               " クリップボードの共有
+set clipboard+=unnamed                  " クリップボードの共有
 set backspace=indent,eol,start          " backspaceキーの制限設定
 set nostartofline                       " ページアップ・ダウン時にカーソル位置を移動しない
 set whichwrap+=h,l,<,>,[,],b,s          " 行末・行頭から次の行へ移動可能に
