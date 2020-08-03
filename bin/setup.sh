@@ -226,5 +226,9 @@ yarn global add @vue/cli
 yarn global add @vue/cli-init
 echo "====== End ======="
 
+echo "====== Setup terraform ======"
+brew install tfenv
+echo "====== End ======="
+
 # echo "======= Setup xxx ======="
 # echo "======= End ======"
