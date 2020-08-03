@@ -226,9 +226,5 @@ yarn global add @vue/cli
 yarn global add @vue/cli-init
 echo "====== End ======="
 
-echo "====== Setup inkdrop ======"
-ln -s ~/dotfiles/inkdrop/keymap.cson ~/Library/Application\ Support/inkdrop/keymap.cson
-echo "====== End ======"
-
 # echo "======= Setup xxx ======="
 # echo "======= End ======"

@@ -1,0 +1,110 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.009  000.009: --- NVIM STARTING ---
+001.471  001.462: locale set
+002.177  000.706: inits 1
+002.204  000.027: window checked
+002.209  000.005: parsing arguments
+002.533  000.324: expanding arguments
+002.631  000.098: inits 2
+003.227  000.596: init highlight
+003.682  000.455: waiting for UI
+006.703  003.021: done waiting for UI
+006.717  000.015: initialized screen early for UI
+008.536  000.301  000.301: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/syntax/syncolor.vim
+008.701  000.775  000.474: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/syntax/synload.vim
+016.225  007.209  007.209: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/filetype.vim
+016.312  008.739  000.756: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/syntax/syntax.vim
+017.146  000.205  000.205: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/syntax/syncolor.vim
+018.305  000.082  000.082: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/filetype.vim
+018.736  000.073  000.073: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/ftplugin.vim
+019.700  000.254  000.254: sourcing /Users/kamijima.yuji/.cache/dein/repos/github.com/Shougo/dein.vim/autoload/dein.vim
+022.677  001.543  001.543: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/ftoff.vim
+022.866  002.659  001.116: sourcing /Users/kamijima.yuji/.cache/dein/state_nvim.vim
+030.436  000.328  000.328: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/ftdetect/ftdetect.vim
+030.588  007.372  007.044: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/filetype.vim
+030.981  000.043  000.043: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/ftplugin.vim
+031.268  000.037  000.037: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/ftplugin.vim
+031.689  000.082  000.082: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/indent.vim
+032.579  000.321  000.321: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/syntax/nosyntax.vim
+033.484  000.161  000.161: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/syntax/syncolor.vim
+033.637  000.696  000.535: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/syntax/synload.vim
+033.671  001.678  000.661: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/syntax/syntax.vim
+034.223  000.265  000.265: sourcing /Users/kamijima.yuji/.cache/dein/repos/github.com/Shougo/dein.vim/autoload/dein/autoload.vim
+035.008  000.506  000.506: sourcing /Users/kamijima.yuji/.cache/dein/repos/github.com/Shougo/dein.vim/autoload/dein/util.vim
+036.993  000.201  000.201: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/syntax/syncolor.vim
+037.815  000.183  000.183: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/syntax/syncolor.vim
+041.093  005.542  005.159: sourcing /Users/kamijima.yuji/.config/nvim/colors/solarized.vim
+041.524  022.465  004.027: sourcing /Users/kamijima.yuji/dotfiles/.nvim.vimrc
+041.536  034.398  002.833: sourcing /Users/kamijima.yuji/.config/nvim/init.vim
+041.542  000.427: sourcing vimrc file(s)
+043.008  000.057  000.057: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/plugin/airline-themes.vim
+043.799  000.127  000.127: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/init.vim
+044.549  000.105  000.105: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/parts.vim
+046.164  000.236  000.236: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/util.vim
+046.283  003.111  002.643: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/plugin/airline.vim
+047.817  001.352  001.352: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/plugin/fugitive.vim
+048.603  000.164  000.164: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/gitgutter/utility.vim
+049.571  000.232  000.232: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/gitgutter/highlight.vim
+050.747  002.769  002.373: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/plugin/gitgutter.vim
+051.250  000.328  000.328: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/plugin/openbrowser/github.vim
+051.615  000.198  000.198: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/plugin/openbrowser.vim
+051.886  000.090  000.090: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/plugin/trailing-whitespace.vim
+052.132  000.072  000.072: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/plugin/vimproc.vim
+053.396  000.170  000.170: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline.vim
+054.682  002.397  002.227: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/plugin/webdevicons.vim
+055.961  000.191  000.191: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/gzip.vim
+056.221  000.047  000.047: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/health.vim
+056.523  000.107  000.107: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/man.vim
+058.160  000.205  000.205: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+058.236  001.536  001.330: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/matchit.vim
+058.546  000.160  000.160: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/matchparen.vim
+059.120  000.427  000.427: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/netrwPlugin.vim
+060.107  000.215  000.215: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/autoload/remote/host.vim
+060.895  000.250  000.250: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/autoload/remote/define.vim
+061.259  001.651  001.186: sourcing /Users/kamijima.yuji/.local/share/nvim/rplugin.vim
+061.269  001.983  000.332: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/rplugin.vim
+061.598  000.137  000.137: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/shada.vim
+061.818  000.039  000.039: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/spellfile.vim
+062.220  000.180  000.180: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/tarPlugin.vim
+062.509  000.102  000.102: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/tohtml.vim
+062.775  000.059  000.059: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/tutor.vim
+063.162  000.209  000.209: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/zipPlugin.vim
+063.172  006.079: loading plugins
+063.329  000.157: loading packages
+064.135  000.478  000.478: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/after/plugin/indentLine.vim
+064.293  000.486: loading after plugins
+064.303  000.010: inits 3
+068.380  004.077: reading ShaDa
+069.252  000.352  000.352: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions.vim
+069.676  000.078  000.078: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/quickfix.vim
+070.116  000.044  000.044: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/netrw.vim
+070.807  000.074  000.074: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/section.vim
+071.377  000.192  000.192: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/highlighter.vim
+071.561  001.099  000.833: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/term.vim
+072.021  000.105  000.105: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/hunks.vim
+072.660  000.230  000.230: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/branch.vim
+073.087  000.058  000.058: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/fugitiveline.vim
+073.639  000.162  000.162: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/whitespace.vim
+074.326  000.070  000.070: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/po.vim
+074.768  000.096  000.096: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/wordcount.vim
+075.168  000.032  000.032: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/keymap.vim
+085.344  000.074  000.074: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/themes.vim
+085.556  000.558  000.484: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/themes/raven.vim
+088.185  000.222  000.222: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/themes/raven.vim
+102.392  000.142  000.142: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/builder.vim
+103.261  000.150  000.150: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/default.vim
+116.176  044.401: opening buffers
+116.598  000.112  000.112: sourcing /Users/kamijima.yuji/.cache/dein/.cache/init.vim/.dein/autoload/gitgutter.vim
+116.940  000.651: BufEnter autocommands
+116.943  000.003: editing files in windows
+117.118  000.175: VimEnter autocommands
+117.120  000.002: UIEnter autocommands
+117.603  000.195  000.195: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/autoload/provider/clipboard.vim
+117.611  000.296: before starting main loop
+117.843  000.232: first screen update
+117.845  000.002: --- NVIM STARTED ---
