@@ -107,6 +107,9 @@ eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # psql
 export PGDATA="/usr/local/var/postgresql@9.6"
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
