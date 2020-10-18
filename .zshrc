@@ -86,6 +86,8 @@ export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 export PATH="/usr/local/bin":$PATH
 
+export VISUAL='vim'
+
 # Ruby
 if [[ $(uname) = "Linux" ]]; then
   export PATH="$HOME/.rbenv/bin:$PATH"

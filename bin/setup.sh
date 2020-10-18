@@ -130,6 +130,7 @@ brew install gnu-sed
 brew install the_silver_searcher
 brew install github/gh/gh
 brew install jid
+brew install kustomize
 
 echo "====== End ======"
 
