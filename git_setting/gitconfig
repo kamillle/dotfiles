@@ -20,7 +20,7 @@
   # @usage git rsync upstream
   rsync = "!f(){ git fetch $1 $(git rev-parse --abbrev-ref HEAD) && git reset --hard FETCH_HEAD;};f"
   # master/develop/release以外のマージ済みブランチを削除する
-  dd = "!git fetch -p && git fetch --all && git branch --merged | grep -vE 'master|develop|release' | xargs -I % git branch -d %"
+  fd = "!git fetch -p && git fetch --all && git branch --merged | grep -vE 'master|develop|release' | xargs -I % git branch -d %"
   cont = "!git add . && git rebase --continue"
 [core]
   excludesfile = ~/.gitignore_global
