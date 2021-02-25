@@ -131,6 +131,11 @@ brew install the_silver_searcher
 brew install github/gh/gh
 brew install jid
 brew install kustomize
+# provide kubectx & kubens
+brew install kubectx
+
+echo "To install `kubectl krew`, check the url"
+echo "https://krew.sigs.k8s.io/docs/user-guide/setup/install/"
 
 echo "====== End ======"
 

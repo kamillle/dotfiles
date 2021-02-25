@@ -68,6 +68,10 @@ elif [[ $(uname) = "Linux" ]]; then
   alias pbcopy='xsel --clipboard --input' # @see https://qiita.com/yoshikyoto/items/1676b925580717c0a443
 fi
 
+# For kubernetes
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+alias k="kubectl"
+
 #----------------------------------------------------------
 # command history
 #----------------------------------------------------------
@@ -145,6 +149,9 @@ fi
 
 # nodenv
 eval "$(nodenv init -)"
+
+# kubectl krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # pecoを優先するためコメントアウト
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
