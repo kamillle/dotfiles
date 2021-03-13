@@ -53,14 +53,9 @@ mas install 417375580
 # RunCat
 mas install 1429033973
 
-# TODO: /Applications 配下にあるならインストールしない、ないならインストールするみたいにしたい
-# dotfiles/.bashrc を読み込みbrew cask でのインストール先を /Applications に変更する
-cp .bashrc ~/.bashrc
-source ~/.bashrc
-
-# f [ -f ~/.bashrc ] ; then
-#   . ~/.bashrc
-# fi
+# brew cask でのinstallでは ~/Applications にインストールを行ってしまうため
+# /Applications にインストールするようにPATHを変更する
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 brew install google-chrome --cask
 brew install google-chrome-canary --cask
