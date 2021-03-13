@@ -38,13 +38,20 @@ echo "======= End ======"
 echo "====== Install Applications ======"
 
 brew install mas # App StoreのアプリをCLIでダウンロードできるようにする
-mas install 497799835  # Xcode
-mas install 405399194  # Kindle
-mas install 425955336  # Skitch
-mas install 485812721  # TweetDeck
-mas install 539883307  # LINE
-mas install 417375580  # BetterSnapTool
-mas install 1429033973 # RunCat
+# Xcode
+mas install 497799835
+# Kindle
+mas install 405399194
+# Skitch
+mas install 425955336
+# TweetDeck
+mas install 485812721
+# LINE
+mas install 539883307
+# BetterSnapTool
+mas install 417375580
+# RunCat
+mas install 1429033973
 
 # TODO: /Applications 配下にあるならインストールしない、ないならインストールするみたいにしたい
 # dotfiles/.bashrc を読み込みbrew cask でのインストール先を /Applications に変更する
