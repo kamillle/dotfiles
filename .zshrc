@@ -1,11 +1,4 @@
-if [[ $(uname) = "Darwin" ]]; then
-elif [[ $(uname) = "Linux" ]]; then
-fi
-
-if [[ $(uname) = "Darwin" ]]; then
-  export LANG=ja_JP.UTF-8 # 日本語を使用
-elif [[ $(uname) = "Linux" ]]; then
-fi
+export LANG=ja_JP.UTF-8 # 日本語を使用
 setopt no_beep
 # use vi mode
 # bindkey -v
@@ -58,15 +51,9 @@ alias be="bundle exec"
 alias agg="ag -g"
 alias ac="git add . && git cm"
 alias c="clear"
-
-if [[ $(uname) = "Darwin" ]]; then
-  alias rm="trash"
-  alias ls="ls -G"
-  alias ctags="`brew --prefix`/bin/ctags"
-elif [[ $(uname) = "Linux" ]]; then
-  alias ls="ls --color" # ubuntuでは色付き出力は -G ではなく --color
-  alias pbcopy='xsel --clipboard --input' # @see https://qiita.com/yoshikyoto/items/1676b925580717c0a443
-fi
+alias rm="trash"
+alias ls="ls -G"
+alias ctags="`brew --prefix`/bin/ctags"
 
 # For kubernetes
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
@@ -140,13 +127,8 @@ export PATH="$HOME/.yarn/bin:$PATH"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-if [[ $(uname) = "Darwin" ]]; then
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
-elif [[ $(uname) = "Linux" ]]; then
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-fi
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
 # nodenv
 eval "$(nodenv init -)"
@@ -161,20 +143,11 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # define functions
 #----------------------------------------------------------
 # ctrl + r でコマンド履歴一覧
-if [[ $(uname) = "Darwin" ]]; then
-  function peco-history-selection() {
-      BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
-      CURSOR=$#BUFFER
-      zle reset-prompt
-  }
-elif [[ $(uname) = "Linux" ]]; then
-  function peco-history-selection() {
-      # tailの-rオプションはmacにしかないためtacを使う
-      BUFFER=`history -n 1 | tac | awk '!a[$0]++' | peco`
-      CURSOR=$#BUFFER
-      zle reset-prompt
-  }
-fi
+function peco-history-selection() {
+    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+    CURSOR=$#BUFFER
+    zle reset-prompt
+}
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
 
