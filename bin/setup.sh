@@ -63,22 +63,24 @@ brew install --cask google-japanese-ime
 brew install --cask visual-studio-code
 brew install --cask skype
 brew install --cask zoom
-brew install --cask homebrew/cask-versions/sequel-pro-nightly # mysql GUI for mojave
-brew install --cask keyboardcleantool # disable keyboard when clean up it
+brew install --cask keyboardcleantool
 brew install --cask slack
 brew install --cask typora
 brew install --cask cmd-eikana
 brew install --cask alfred
 brew install --cask hyperswitch
 brew install --cask appcleaner
-brew install --cask clipy # extend pdcopy
-brew install --cask dash # watch docs
+brew install --cask clipy
+brew install --cask dash
 brew install --cask iterm2
-brew install --cask karabiner-elements # customize key mapping
+brew install --cask karabiner-elements
 brew install --cask skitch
 brew install --cask postman
 brew install --cask notion
 brew install --cask kap
+brew install --cask spotify
+# mysql GUI for mojave
+brew install --cask homebrew/cask-versions/sequel-pro-nightly
 # dockerは brew, brew cask 両方必要
 brew install docker
 brew install docker --cask
