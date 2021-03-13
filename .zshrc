@@ -130,9 +130,6 @@ export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 # chromedriver
 export CHROMEDRIVER_PATH='/usr/local/bin/chromedriver'
 
-# neovim
-export XDG_CONFIG_HOME="$HOME/.config"
-
 # direnv
 eval "$(direnv hook zsh)"
 

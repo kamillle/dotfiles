@@ -27,9 +27,6 @@ case "$version" in
     # setup needed gems
     rbenv rehash
     rbenv shell $version
-    gem install bundler
-    # for neovim
-    gem install neovim
     # for LSP
     gem install solargraph
     ;;

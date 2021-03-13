@@ -97,7 +97,3 @@ set wrapscan   " 最後まで検索したら頭に戻る
 set cscopetag  " ctags で <C-]> した時に候補が複数ある場合はリストを表示する
 " ESCキー2度押しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
-
-if has('nvim')
-  source $HOME/dotfiles/.nvim.vimrc
-end
