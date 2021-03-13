@@ -58,7 +58,6 @@ mas install 1429033973
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 brew install --cask google-chrome
-brew install --cask google-chrome-canary
 brew install --cask google-japanese-ime
 brew install --cask visual-studio-code
 brew install --cask skype
@@ -79,6 +78,7 @@ brew install --cask postman
 brew install --cask notion
 brew install --cask kap
 brew install --cask spotify
+brew install --cask authy
 # mysql GUI for mojave
 brew install --cask homebrew/cask-versions/sequel-pro-nightly
 # dockerは brew, brew cask 両方必要
