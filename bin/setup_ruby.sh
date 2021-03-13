@@ -10,9 +10,9 @@ echo 'export PATH="$HOME/.rbenv/bin/:$PATH" >> ~/.zshrc'
 echo 'eval "$(rbenv init -)" >> ~/.zshrc'
 
 # 最新版をインストールする
-LATEST_STABLE_RUBY = $(rbenv install -l | grep -v - | tail -1)
-rbenv install LATEST_STABLE_RUBY
-rbenv global LATEST_STABLE_RUBY
+LATEST_STABLE_RUBY=$(rbenv install -l | grep -v - | tail -1)
+rbenv install $LATEST_STABLE_RUBY
+rbenv global $LATEST_STABLE_RUBY
 rbenv rehash
 
 ln -snfv ${HOME}/dotfiles/.pryrc ${HOME}/.pryrc
