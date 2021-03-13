@@ -74,7 +74,7 @@ brew install appcleaner --cask
 brew install clipy --cask       # extend pdcopy
 brew install dash --cask        # watch docs
 brew install iterm2 --cask
-brew install karabiner --cask   # customize key mapping
+brew install karabiner-elements --cask   # customize key mapping
 brew install skitch --cask      # edit images
 brew install postman --cask
 brew install notion --cask
