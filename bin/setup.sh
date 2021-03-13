@@ -136,9 +136,5 @@ brew install ghq
 mkdir ~/ghq
 echo "====== End ======"
 
-echo "====== Setup terraform ======"
-brew install tfenv
-echo "====== End ======="
-
 # echo "======= Setup xxx ======="
 # echo "======= End ======"
