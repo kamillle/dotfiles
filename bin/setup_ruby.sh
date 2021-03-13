@@ -15,5 +15,7 @@ rbenv install $LATEST_STABLE_RUBY
 rbenv global $LATEST_STABLE_RUBY
 rbenv rehash
 
+mkdir ${HOME}/.bundle
+ln -snfv ${HOME}/dotfiles/bundle_config ${HOME}/.bundle/config
 ln -snfv ${HOME}/dotfiles/.pryrc ${HOME}/.pryrc
 echo "====== End ======"
