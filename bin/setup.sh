@@ -57,27 +57,28 @@ mas install 1429033973
 # /Applications にインストールするようにPATHを変更する
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-brew install google-chrome --cask
-brew install google-chrome-canary --cask
-brew install google-japanese-ime --cask
-brew install visual-studio-code --cask
-brew install skype --cask
-brew install zoom --cask
-brew install homebrew/cask-versions/sequel-pro-nightly --cask # mysql GUI for mojave
-brew install keyboardcleantool --cask # disable keyboard when clean up it
-brew install slack --cask
-brew install typora --cask
-brew install cmd-eikana --cask
-brew install alfred --cask
-brew install hyperswitch --cask
-brew install appcleaner --cask
-brew install clipy --cask       # extend pdcopy
-brew install dash --cask        # watch docs
-brew install iterm2 --cask
-brew install karabiner-elements --cask   # customize key mapping
-brew install skitch --cask      # edit images
-brew install postman --cask
-brew install notion --cask
+brew install --cask google-chrome
+brew install --cask google-chrome-canary
+brew install --cask google-japanese-ime
+brew install --cask visual-studio-code
+brew install --cask skype
+brew install --cask zoom
+brew install --cask homebrew/cask-versions/sequel-pro-nightly # mysql GUI for mojave
+brew install --cask keyboardcleantool # disable keyboard when clean up it
+brew install --cask slack
+brew install --cask typora
+brew install --cask cmd-eikana
+brew install --cask alfred
+brew install --cask hyperswitch
+brew install --cask appcleaner
+brew install --cask clipy # extend pdcopy
+brew install --cask dash # watch docs
+brew install --cask iterm2
+brew install --cask karabiner-elements # customize key mapping
+brew install --cask skitch
+brew install --cask postman
+brew install --cask notion
+brew install --cask kap
 # dockerは brew, brew cask 両方必要
 brew install docker
 brew install docker --cask
