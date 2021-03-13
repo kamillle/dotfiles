@@ -92,6 +92,10 @@ export PATH="/usr/local/bin":$PATH
 
 export VISUAL='vim'
 
+# brew cask でのinstallでは ~/Applications にインストールを行ってしまうため
+# /Applications にインストールするようにPATHを変更する
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 # Ruby
 if [[ $(uname) = "Linux" ]]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
