@@ -55,30 +55,30 @@ source ~/.bashrc
 #   . ~/.bashrc
 # fi
 
-brew cask install google-chrome
-brew cask install google-chrome-canary
-brew cask install google-japanese-ime
-brew cask install visual-studio-code
-brew cask install skype
-brew cask install zoom
-brew cask install homebrew/cask-versions/sequel-pro-nightly # mysql GUI for mojave
-brew cask install keyboardcleantool # disable keyboard when clean up it
-brew cask install slack
-brew cask install typora
-brew cask install cmd-eikana
-brew cask install alfred
-brew cask install hyperswitch
-brew cask install appcleaner
-brew cask install clipy       # extend pdcopy
-brew cask install dash        # watch docs
-brew cask install iterm2
-brew cask install karabiner   # customize key mapping
-brew cask install skitch      # edit images
-brew cask install postman
-brew cask install notion
+brew install google-chrome --cask
+brew install google-chrome-canary --cask
+brew install google-japanese-ime --cask
+brew install visual-studio-code --cask
+brew install skype --cask
+brew install zoom --cask
+brew install homebrew/cask-versions/sequel-pro-nightly --cask # mysql GUI for mojave
+brew install keyboardcleantool --cask # disable keyboard when clean up it
+brew install slack --cask
+brew install typora --cask
+brew install cmd-eikana --cask
+brew install alfred --cask
+brew install hyperswitch --cask
+brew install appcleaner --cask
+brew install clipy --cask       # extend pdcopy
+brew install dash --cask        # watch docs
+brew install iterm2 --cask
+brew install karabiner --cask   # customize key mapping
+brew install skitch --cask      # edit images
+brew install postman --cask
+brew install notion --cask
 # dockerは brew, brew cask 両方必要
 brew install docker
-brew cask install docker
+brew install docker --cask
 
 echo "====== End ======"
 
