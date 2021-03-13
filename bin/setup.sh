@@ -42,7 +42,6 @@ mas install 497799835  # Xcode
 mas install 405399194  # Kindle
 mas install 425955336  # Skitch
 mas install 485812721  # TweetDeck
-mas install 1295203466 # Microsoft Remote Desktop
 mas install 539883307  # LINE
 mas install 417375580  # BetterSnapTool
 mas install 1429033973 # RunCat
@@ -70,12 +69,10 @@ brew cask install cmd-eikana
 brew cask install alfred
 brew cask install hyperswitch
 brew cask install appcleaner
-brew cask install dropbox
 brew cask install clipy       # extend pdcopy
 brew cask install dash        # watch docs
 brew cask install iterm2
 brew cask install karabiner   # customize key mapping
-brew cask install evernote
 brew cask install skitch      # edit images
 brew cask install postman
 brew cask install notion
