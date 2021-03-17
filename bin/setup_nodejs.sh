@@ -1,18 +1,12 @@
 #!/bin/sh
 
 echo "====== Setup nodejs ======"
-brew install nvm
-mkdir ${HOME}/.nvm
-
-nvm install v10.13.0
-node -v
-nvm use 10.13.0
 
 brew install nodenv
+brew install yarn
+exec $SHELL -l
 curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
 
-# make available git open command
-npm install --global git-open
 echo "====== End ======"
 
 echo "====== Setup vue ======"
