@@ -2,6 +2,7 @@ export LANG=ja_JP.UTF-8 # 日本語を使用
 setopt no_beep
 # use vi mode
 # bindkey -v
+# bindkey -e
 
 #----------------------------------------------------------
 # completion
@@ -200,3 +201,9 @@ function camel() {
 function kspring() {
   pkill spring
 }
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/kamillle/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kamillle/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/kamillle/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kamillle/google-cloud-sdk/completion.zsh.inc'; fi
