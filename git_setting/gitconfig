@@ -2,12 +2,9 @@
   name = kamillle
   email = "32205171+kamillle@users.noreply.github.com"
 [alias]
-  sh  = switch
   co  = checkout
   po = "!git branch | peco | xargs git checkout"
   st  = status
-  stt = status --short --branch
-  ad = add
   cm = commit
   df = diff
   op = open
