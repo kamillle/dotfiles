@@ -55,6 +55,7 @@ alias c="clear"
 alias rm="trash"
 alias ls="ls -G"
 alias ctags="`brew --prefix`/bin/ctags"
+alias tf="terraform"
 
 # For kubernetes
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
