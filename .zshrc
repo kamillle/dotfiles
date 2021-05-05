@@ -45,16 +45,12 @@ PROMPT='%{$fg_bold[yellow]%} %~% %{$reset_color%} ${vcs_info_msg_0_}%{$reset_col
 # alias
 #----------------------------------------------------------
 
-alias py="python"
-alias ipy="ipython"
-alias es="elasticsearch"
 alias be="bundle exec"
 alias agg="ag -g"
 alias ac="git add . && git cm"
 alias c="clear"
 alias rm="trash"
 alias ls="ls -G"
-alias ctags="`brew --prefix`/bin/ctags"
 alias tf="terraform"
 
 # For kubernetes
