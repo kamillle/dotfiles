@@ -105,10 +105,6 @@ export PATH="$GOPATH/bin:$PATH"
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# psql
-export PGDATA="/usr/local/var/postgresql@9.6"
-export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
-
 export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
@@ -161,19 +157,6 @@ function peco-ghq () {
 zle -N peco-ghq
 bindkey '^]' peco-ghq
 
-# ctrl + O でhub
-function peco-hub () {
-  local selected_repo=$(ghq list -p | peco --query "$LBUFFER" | cut -d "/" -f 6,7)
-  if [ -n "$selected_repo" ]; then
-    echo ${selected_repo}
-    BUFFER="hub browse ${selected_repo}"
-    zle accept-line
-  fi
-  zle clear-screen
-}
-zle -N peco-hub
-bindkey '^O' peco-hub
-
 # grepした上でそのファイルをvimで開く
 function gg () {
   vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
@@ -199,8 +182,3 @@ function kspring() {
   pkill spring
 }
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kamillle/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kamillle/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/kamillle/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kamillle/google-cloud-sdk/completion.zsh.inc'; fi
