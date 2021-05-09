@@ -62,6 +62,7 @@ brew install --cask google-japanese-ime
 brew install --cask visual-studio-code
 brew install --cask skype
 brew install --cask zoom
+brew install --cask discord
 brew install --cask keyboardcleantool
 brew install --cask slack
 brew install --cask typora
