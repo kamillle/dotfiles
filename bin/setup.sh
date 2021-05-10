@@ -125,7 +125,6 @@ echo "====== End ======"
 
 echo "====== Setup CLI ======"
 
-brew install peco
 brew install htop
 brew install tig
 brew install trash
@@ -134,6 +133,9 @@ brew install gnu-sed
 brew install the_silver_searcher
 brew install github/gh/gh
 brew install jid
+brew install peco
+mkdir ${HOME}/.config/peco
+ln -snfv ${HOME}/dotfiles/peco/config.json ${HOME}/.config/peco/config.json
 
 echo "====== End ======"
 
