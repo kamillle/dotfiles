@@ -87,12 +87,6 @@ if [[ $(uname) = "Linux" ]]; then
 fi
 eval "$(rbenv init -)"
 
-# Python
-export PYENV_ROOT="${HOME}/.pyenv"
-export PATH=${PYENV_ROOT}/bin:$PATH
-eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
-
 # Go
 export GOPATH=$HOME/go
 export GOENV_ROOT=$HOME/.goenv
@@ -107,9 +101,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-
-# chromedriver
-export CHROMEDRIVER_PATH='/usr/local/bin/chromedriver'
 
 # direnv
 eval "$(direnv hook zsh)"
