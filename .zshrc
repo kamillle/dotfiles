@@ -102,9 +102,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
-# direnv
-eval "$(direnv hook zsh)"
-
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 # yarn
