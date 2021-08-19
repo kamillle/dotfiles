@@ -52,6 +52,7 @@ alias c="clear"
 alias rm="trash"
 alias ls="ls -G"
 alias tf="terraform"
+alias py="python"
 
 # For kubernetes
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
