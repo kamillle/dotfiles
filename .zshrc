@@ -108,11 +108,6 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 # yarn
 export PATH="$HOME/.yarn/bin:$PATH"
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
-
 # nodenv
 eval "$(nodenv init -)"
 
@@ -149,25 +144,5 @@ bindkey '^]' peco-ghq
 # grepした上でそのファイルをvimで開く
 function gg () {
   vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
-}
-
-# 遅いのでコメントアウトしてる
-# hubコマンドをgitコマンドとして使用
-# see: https://qiita.com/yaotti/items/a4a7f3f9a38d7d3415e3
-# function git(){hub "$@"}
-
-# snakecase への変換
-function snake() {
-  echo $1 | gsed -r -e 's/^([A-Z])/\L\1\E/' -e 's/([A-Z])/_\L\1\E/g' | pbcopy
-}
-
-# upper camel への変換
-function camel() {
-  echo $1 | gsed -r -e 's/(^|_)(.)/\U\2\E/g' | pbcopy
-}
-
-# springで起動しているrails appを全部殺すマン
-function kspring() {
-  pkill spring
 }
 
