@@ -110,6 +110,7 @@ export PATH="$HOME/.yarn/bin:$PATH"
 
 # nodenv
 eval "$(nodenv init -)"
+export PATH=$PATH:`npm bin -g`
 
 # kubectl krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
@@ -140,6 +141,18 @@ function peco-ghq () {
 }
 zle -N peco-ghq
 bindkey '^]' peco-ghq
+
+# ctrl + ] でghq
+function peco-open-git-repo-by-web () {
+  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir} && gh repo view -w"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-open-git-repo-by-web
+bindkey '^N' peco-open-git-repo-by-web
 
 # grepした上でそのファイルをvimで開く
 function gg () {

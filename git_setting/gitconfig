@@ -23,3 +23,5 @@
   editor = vim
 [rebase]
 	autostash = true
+[init]
+	defaultBranch = main
