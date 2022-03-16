@@ -112,6 +112,11 @@ export PATH="$HOME/.yarn/bin:$PATH"
 eval "$(nodenv init -)"
 export PATH=$PATH:`npm bin -g`
 
+# python
+export PYENV_ROOT=$HOME/.pyenv
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 # kubectl krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
