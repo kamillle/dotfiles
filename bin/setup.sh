@@ -81,6 +81,7 @@ brew install --cask spotify
 brew install --cask authy
 brew install --cask 1password
 brew install --cask microsoft-edge
+brew install --cask alt-tab
 # mysql GUI for mojave
 brew install --cask homebrew/cask-versions/sequel-pro-nightly
 # dockerは brew, brew cask 両方必要
@@ -119,6 +120,7 @@ echo "====== End ======"
 
 echo "====== Setup karabiner ======"
 
+mkdir ${HOME}/.config
 ln -snfv ${HOME}/dotfiles/karabiner ${HOME}/.config/karabiner
 
 echo "====== End ======"
@@ -142,7 +144,7 @@ echo "====== End ======"
 echo "====== Setup ghq ======"
 brew install ghq
 # ghq default root path
-mkdir ~/ghq
+mkdir ${HOME}/ghq
 echo "====== End ======"
 
 # echo "======= Setup xxx ======="
