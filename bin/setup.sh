@@ -77,7 +77,6 @@ brew install --cask karabiner-elements
 brew install --cask skitch
 brew install --cask postman
 brew install --cask notion
-brew install --cask kap
 brew install --cask spotify
 brew install --cask authy
 brew install --cask 1password
