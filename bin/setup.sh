@@ -142,10 +142,20 @@ ln -snfv ${HOME}/dotfiles/peco/config.json ${HOME}/.config/peco/config.json
 
 echo "====== End ======"
 
+echo "====== Setup anyenv ======"
+brew install anyenv
+anyenv init
+echo "Exec 'anyenv install --init'"
+echo "====== End ======"
+
 echo "====== Setup ghq ======"
 brew install ghq
 # ghq default root path
 mkdir ${HOME}/ghq
+echo "====== End ======"
+
+echo "====== Setup ghq ======"
+ln -snfv ${HOME}/dotfiles/.vimrc ${HOME}/.vimrc
 echo "====== End ======"
 
 # echo "======= Setup xxx ======="
