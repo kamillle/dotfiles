@@ -18,6 +18,7 @@
   # master/develop/release以外のマージ済みブランチを削除する
   fd = "!git fetch -p && git fetch --all && git branch --merged | grep -vE 'master|develop|release' | xargs -I % git branch -d %"
   cont = "!git add . && git rebase --continue"
+  sa = "!git add . && git commit --amend --no-edit"
 [core]
   excludesfile = ~/.gitignore_global
   editor = vim
