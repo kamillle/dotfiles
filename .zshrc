@@ -78,6 +78,9 @@ export PATH="/usr/local/bin":$PATH
 
 export VISUAL='vim'
 
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
+
 # brew cask でのinstallでは ~/Applications にインストールを行ってしまうため
 # /Applications にインストールするようにPATHを変更する
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
@@ -109,13 +112,13 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$PATH"
 
 # nodenv
-eval "$(nodenv init -)"
-export PATH=$PATH:`npm bin -g`
+# eval "$(nodenv init -)"
+# export PATH=$PATH:`npm bin -g`
 
 # python
-export PYENV_ROOT=$HOME/.pyenv
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT=$HOME/.pyenv
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
 # kubectl krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
@@ -163,4 +166,3 @@ bindkey '^N' peco-open-git-repo-by-web
 function gg () {
   vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
 }
-
