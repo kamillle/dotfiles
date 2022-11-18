@@ -1,1 +1,7 @@
 set clipboard=unnamed
+set whichwrap+=h,l,<,>,[,],b,s " 行末・行頭から次の行へ移動可能に
+" x/sで削除した文字をヤンクしない
+nnoremap x "_x
+nnoremap s "_s
+" visualモードの選択範囲にペーストした際に、置き換えた文字列がクリップボードに入らないようにする
+" xnoremap <expr> p 'pgv"'.v:register.'y`>'
