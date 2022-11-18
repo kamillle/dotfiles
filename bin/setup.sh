@@ -88,6 +88,8 @@ brew install --cask homebrew/cask-versions/sequel-pro-nightly
 # dockerは brew, brew cask 両方必要
 brew install docker
 brew install docker --cask
+brew install awscli
+brew install --cask google-cloud-sdk
 
 echo "====== End ======"
 
