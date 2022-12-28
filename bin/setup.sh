@@ -9,11 +9,12 @@ case "$yn" in
     ;;
 esac
 
-# install homebrew
-if (type brew > /dev/null 2>&1) ; then
+if ! command -v brew &> /dev/null;then
   echo "======= Install Homebrew ======="
 
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 
   echo "======= End ======"
 fi
