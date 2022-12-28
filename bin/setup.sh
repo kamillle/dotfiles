@@ -91,12 +91,10 @@ brew install docker
 brew install docker --cask
 brew install awscli
 brew install --cask google-cloud-sdk
-
 echo "====== End ======"
 
 
 echo "====== Setup zsh ======"
-
 brew install zsh
 brew install zsh-completions
 brew install zplug
@@ -108,29 +106,23 @@ chsh -s /usr/local/bin/zsh
 ln -snfv ${HOME}/dotfiles/.zshrc ${HOME}/.zshrc
 
 source ${HOME}/.zshrc
-
 echo "====== End ======"
 
 echo "====== Setup tmux ======"
-
 brew install tmux
 brew install reattach-to-user-namespace
 
 ln -snfv ${HOME}/dotfiles/.tmux.conf ${HOME}/.tmux.conf
 
 tmux source ${HOME}/.tmux.conf
-
 echo "====== End ======"
 
 echo "====== Setup karabiner ======"
-
 mkdir ${HOME}/.config
 ln -snfv ${HOME}/dotfiles/karabiner ${HOME}/.config/karabiner
-
 echo "====== End ======"
 
 echo "====== Setup CLI ======"
-
 brew install htop
 brew install tig
 brew install trash
@@ -142,13 +134,6 @@ brew install jid
 brew install peco
 mkdir ${HOME}/.config/peco
 ln -snfv ${HOME}/dotfiles/peco/config.json ${HOME}/.config/peco/config.json
-
-echo "====== End ======"
-
-echo "====== Setup anyenv ======"
-brew install anyenv
-anyenv init
-echo "Exec 'anyenv install --init'"
 echo "====== End ======"
 
 echo "====== Setup ghq ======"
@@ -157,8 +142,13 @@ brew install ghq
 mkdir ${HOME}/ghq
 echo "====== End ======"
 
-echo "====== Setup ghq ======"
+echo "====== Setup vim ======"
 ln -snfv ${HOME}/dotfiles/.vimrc ${HOME}/.vimrc
+echo "====== End ======"
+
+echo "====== Setup asdf ======"
+brew install asdf
+ln -snfv ${HOME}/dotfiles/.asdfrc ${HOME}/.asdfrc
 echo "====== End ======"
 
 # echo "======= Setup xxx ======="
