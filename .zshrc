@@ -91,47 +91,12 @@ export PATH="/opt/homebrew/bin":$PATH
 
 export VISUAL='vim'
 
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
-
 # brew cask でのinstallでは ~/Applications にインストールを行ってしまうため
 # /Applications にインストールするようにPATHを変更する
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-# Ruby
-if [[ $(uname) = "Linux" ]]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-fi
-eval "$(rbenv init -)"
-
-# Go
-export GOPATH=$HOME/go
-export GOENV_ROOT=$HOME/.goenv
-export GO_WORKSPACE=$HOME/go/src/github.com/kamillle
-export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
-export PATH="$GOROOT/bin:$PATH"
-export PATH="$GOPATH/bin:$PATH"
-
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
-
-export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
-export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
-
-export PATH="/opt/homebrew/opt/openssl/bin:$PATH"
-
-# yarn
-export PATH="$HOME/.yarn/bin:$PATH"
-
-# nodenv
-# eval "$(nodenv init -)"
-# export PATH=$PATH:`npm bin -g`
-
-# python
-# export PYENV_ROOT=$HOME/.pyenv
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
 
 # kubectl krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
@@ -140,7 +105,7 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #----------------------------------------------------------
-# define functions
+# functions
 #----------------------------------------------------------
 # ctrl + r でコマンド履歴一覧
 function peco-history-selection() {
