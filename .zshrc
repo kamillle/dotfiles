@@ -1,3 +1,16 @@
+typeset -U path PATH
+path=(
+  /opt/homebrew/bin(N-/)
+  /opt/homebrew/sbin(N-/)
+  /usr/bin
+  /usr/sbin
+  /bin
+  /sbin
+  /usr/local/bin(N-/)
+  /usr/local/sbin(N-/)
+  /Library/Apple/usr/bin
+)
+
 export LANG=ja_JP.UTF-8 # 日本語を使用
 setopt no_beep
 # use vi mode
@@ -47,7 +60,7 @@ PROMPT='%{$fg_bold[yellow]%} %~% %{$reset_color%} ${vcs_info_msg_0_}%{$reset_col
 
 alias be="bundle exec"
 alias agg="ag -g"
-alias ac="git add . && git cm"
+alias ac="git add . && git commit"
 alias c="clear"
 alias rm="trash"
 alias ls="ls -G"
@@ -55,8 +68,8 @@ alias tf="terraform"
 alias py="python"
 
 # For kubernetes
-[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
-alias k="kubectl"
+# [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+# alias k="kubectl"
 
 #----------------------------------------------------------
 # command history
@@ -72,9 +85,9 @@ setopt share_history
 #----------------------------------------------------------
 # environment variable
 #----------------------------------------------------------
-export ZPLUG_HOME=/usr/local/opt/zplug
+export ZPLUG_HOME=/opt/homebrew/opt/zplug
 source $ZPLUG_HOME/init.zsh
-export PATH="/usr/local/bin":$PATH
+export PATH="/opt/homebrew/bin":$PATH
 
 export VISUAL='vim'
 
@@ -104,9 +117,9 @@ export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 
-export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="/opt/homebrew/opt/openssl/bin:$PATH"
 
 # yarn
 export PATH="$HOME/.yarn/bin:$PATH"
@@ -166,3 +179,4 @@ bindkey '^N' peco-open-git-repo-by-web
 function gg () {
   vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
 }
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
