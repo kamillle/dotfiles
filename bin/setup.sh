@@ -53,6 +53,8 @@ mas install 539883307
 mas install 417375580
 # RunCat
 mas install 1429033973
+# Meeter
+mas install 1510445899
 
 # brew cask でのinstallでは ~/Applications にインストールを行ってしまうため
 # /Applications にインストールするようにPATHを変更する
