@@ -63,12 +63,10 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew install --cask google-chrome
 brew install --cask google-japanese-ime
 brew install --cask visual-studio-code
-brew install --cask skype
 brew install --cask zoom
 brew install --cask discord
 brew install --cask keyboardcleantool
 brew install --cask slack
-brew install --cask typora
 brew install --cask cmd-eikana
 brew install --cask alfred
 brew install --cask hyperswitch
@@ -85,7 +83,6 @@ brew install --cask authy
 brew install --cask 1password
 brew install --cask microsoft-edge
 brew install --cask alt-tab
-brew install --cask pycharm
 # mysql GUI for mojave
 brew install --cask homebrew/cask-versions/sequel-pro-nightly
 # dockerは brew, brew cask 両方必要
@@ -134,7 +131,7 @@ brew install the_silver_searcher
 brew install github/gh/gh
 brew install jid
 brew install peco
-mkdir ${HOME}/.config/peco
+mkdir -p ${HOME}/.config/peco
 ln -snfv ${HOME}/dotfiles/peco/config.json ${HOME}/.config/peco/config.json
 echo "====== End ======"
 
