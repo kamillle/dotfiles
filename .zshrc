@@ -66,6 +66,8 @@ alias rm="trash"
 alias ls="ls -G"
 alias tf="terraform"
 alias py="python"
+alias ct='cd "$(git rev-parse --show-toplevel)"'
+alias n='npm'
 
 # For kubernetes
 # [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
