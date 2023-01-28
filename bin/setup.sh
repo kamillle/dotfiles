@@ -45,14 +45,10 @@ mas install 497799835
 mas install 405399194
 # Skitch
 mas install 425955336
-# TweetDeck
-mas install 485812721
 # LINE
 mas install 539883307
 # BetterSnapTool
 mas install 417375580
-# RunCat
-mas install 1429033973
 # Meeter
 mas install 1510445899
 
@@ -69,7 +65,6 @@ brew install --cask keyboardcleantool
 brew install --cask slack
 brew install --cask cmd-eikana
 brew install --cask alfred
-brew install --cask hyperswitch
 brew install --cask appcleaner
 brew install --cask clipy
 brew install --cask dash
@@ -79,7 +74,6 @@ brew install --cask skitch
 brew install --cask postman
 brew install --cask notion
 brew install --cask spotify
-brew install --cask authy
 brew install --cask 1password
 brew install --cask microsoft-edge
 brew install --cask alt-tab
