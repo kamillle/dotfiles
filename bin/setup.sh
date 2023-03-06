@@ -51,6 +51,8 @@ mas install 539883307
 mas install 417375580
 # Meeter
 mas install 1510445899
+# Spark mail
+mas install 1176895641
 
 # brew cask でのinstallでは ~/Applications にインストールを行ってしまうため
 # /Applications にインストールするようにPATHを変更する
