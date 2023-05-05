@@ -96,9 +96,9 @@ brew install zsh
 brew install zsh-completions
 brew install zplug
 
-sudo sh -c "echo /opt/homebrew/opt/zsh >> /etc/shells"
+sudo sh -c "echo /opt/homebrew/bin/zsh >> /etc/shells"
 # change login shell
-chsh -s /opt/homebrew/opt/zsh
+chsh -s /opt/homebrew/bin/zsh
 
 ln -snfv ${HOME}/dotfiles/.zshrc ${HOME}/.zshrc
 
