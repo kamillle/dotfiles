@@ -147,6 +147,7 @@ echo "====== Setup asdf ======"
 brew install asdf
 ln -snfv ${HOME}/dotfiles/.asdfrc ${HOME}/.asdfrc
 ln -snfv ${HOME}/dotfiles/.default-python-packages ${HOME}/.default-python-packages
+ln -snfv ${HOME}/dotfiles/.default-npm-packages ${HOME}/.default-npm-packages
 echo "====== End ======"
 
 # echo "======= Setup xxx ======="
