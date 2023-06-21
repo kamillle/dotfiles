@@ -30,8 +30,8 @@ fi
 
 echo "====== Setup git ======"
 
-ln -snfv ${HOME}/dotfiles/git_setting/gitconfig ${HOME}/.gitconfig
-ln -snfv ${HOME}/dotfiles/git_setting/gitignore_global ${HOME}/.gitignore_global
+ln -snfv ${HOME}/dotfiles/config/gitconfig ${HOME}/.gitconfig
+ln -snfv ${HOME}/dotfiles/config/gitignore_global ${HOME}/.gitignore_global
 
 echo "======= End ======"
 
@@ -100,7 +100,7 @@ sudo sh -c "echo /opt/homebrew/bin/zsh >> /etc/shells"
 # change login shell
 chsh -s /opt/homebrew/bin/zsh
 
-ln -snfv ${HOME}/dotfiles/.zshrc ${HOME}/.zshrc
+ln -snfv ${HOME}/dotfiles/config/zshrc ${HOME}/.zshrc
 
 source ${HOME}/.zshrc
 echo "====== End ======"
@@ -109,7 +109,7 @@ echo "====== Setup tmux ======"
 brew install tmux
 brew install reattach-to-user-namespace
 
-ln -snfv ${HOME}/dotfiles/.tmux.conf ${HOME}/.tmux.conf
+ln -snfv ${HOME}/dotfiles/config/tmux.conf ${HOME}/.tmux.conf
 
 tmux source ${HOME}/.tmux.conf
 echo "====== End ======"
@@ -130,9 +130,9 @@ brew install github/gh/gh
 brew install jid
 brew install peco
 mkdir -p ${HOME}/.config/peco
-ln -snfv ${HOME}/dotfiles/peco/config.json ${HOME}/.config/peco/config.json
+ln -snfv ${HOME}/dotfiles/config/peco.json ${HOME}/.config/peco/config.json
 mkdir -p ${HOME}/.bundle
-ln -snfv ${HOME}/dotfiles/bundle_config ${HOME}/.bundle/config
+ln -snfv ${HOME}/dotfiles/config/bundler ${HOME}/.bundle/config
 echo "====== End ======"
 
 echo "====== Setup ghq ======"
@@ -142,14 +142,15 @@ mkdir ${HOME}/ghq
 echo "====== End ======"
 
 echo "====== Setup vim ======"
-ln -snfv ${HOME}/dotfiles/.vimrc ${HOME}/.vimrc
+ln -snfv ${HOME}/dotfiles/config/vimrc ${HOME}/.vimrc
+ln -snfv ${HOME}/dotfiles/config/ideavimrc ${HOME}/.ideavimrc
 echo "====== End ======"
 
 echo "====== Setup asdf ======"
 brew install asdf
-ln -snfv ${HOME}/dotfiles/.asdfrc ${HOME}/.asdfrc
-ln -snfv ${HOME}/dotfiles/.default-python-packages ${HOME}/.default-python-packages
-ln -snfv ${HOME}/dotfiles/.default-npm-packages ${HOME}/.default-npm-packages
+ln -snfv ${HOME}/dotfiles/config/asdfrc ${HOME}/.asdfrc
+ln -snfv ${HOME}/dotfiles/config/default-python-packages ${HOME}/.default-python-packages
+ln -snfv ${HOME}/dotfiles/config/default-npm-packages ${HOME}/.default-npm-packages
 echo "====== End ======"
 
 # echo "======= Setup xxx ======="
