@@ -131,6 +131,8 @@ brew install jid
 brew install peco
 mkdir -p ${HOME}/.config/peco
 ln -snfv ${HOME}/dotfiles/peco/config.json ${HOME}/.config/peco/config.json
+mkdir -p ${HOME}/.bundle
+ln -snfv ${HOME}/dotfiles/bundle_config ${HOME}/.bundle/config
 echo "====== End ======"
 
 echo "====== Setup ghq ======"
