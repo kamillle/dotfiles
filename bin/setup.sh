@@ -30,8 +30,8 @@ fi
 
 echo "====== Setup git ======"
 
-ln -snfv ${HOME}/dotfiles/config/gitconfig ${HOME}/.gitconfig
-ln -snfv ${HOME}/dotfiles/config/gitignore_global ${HOME}/.gitignore_global
+ln -snfv ${HOME}/dotfiles/config/.gitconfig ${HOME}/
+ln -snfv ${HOME}/dotfiles/config/.gitignore_global ${HOME}/
 
 echo "======= End ======"
 
@@ -100,7 +100,7 @@ sudo sh -c "echo /opt/homebrew/bin/zsh >> /etc/shells"
 # change login shell
 chsh -s /opt/homebrew/bin/zsh
 
-ln -snfv ${HOME}/dotfiles/config/zshrc ${HOME}/.zshrc
+ln -snfv ${HOME}/dotfiles/config/.zshrc ${HOME}/
 
 source ${HOME}/.zshrc
 echo "====== End ======"
@@ -109,14 +109,14 @@ echo "====== Setup tmux ======"
 brew install tmux
 brew install reattach-to-user-namespace
 
-ln -snfv ${HOME}/dotfiles/config/tmux.conf ${HOME}/.tmux.conf
+ln -snfv ${HOME}/dotfiles/config/.tmux.conf ${HOME}/
 
 tmux source ${HOME}/.tmux.conf
 echo "====== End ======"
 
 echo "====== Setup karabiner ======"
 mkdir ${HOME}/.config
-ln -snfv ${HOME}/dotfiles/karabiner ${HOME}/.config/karabiner
+ln -snfv ${HOME}/dotfiles/karabiner ${HOME}/.config/
 echo "====== End ======"
 
 echo "====== Setup CLI ======"
@@ -130,7 +130,7 @@ brew install github/gh/gh
 brew install jid
 brew install peco
 mkdir -p ${HOME}/.config/peco
-ln -snfv ${HOME}/dotfiles/config/peco.json ${HOME}/.config/peco/config.json
+ln -snfv ${HOME}/dotfiles/config/peco/config.json ${HOME}/.config/peco/
 mkdir -p ${HOME}/.bundle
 ln -snfv ${HOME}/dotfiles/config/bundler ${HOME}/.bundle/config
 echo "====== End ======"
@@ -142,15 +142,15 @@ mkdir ${HOME}/ghq
 echo "====== End ======"
 
 echo "====== Setup vim ======"
-ln -snfv ${HOME}/dotfiles/config/vimrc ${HOME}/.vimrc
-ln -snfv ${HOME}/dotfiles/config/ideavimrc ${HOME}/.ideavimrc
+ln -snfv ${HOME}/dotfiles/config/.vimrc ${HOME}/
+ln -snfv ${HOME}/dotfiles/config/.ideavimrc ${HOME}/
 echo "====== End ======"
 
 echo "====== Setup asdf ======"
 brew install asdf
-ln -snfv ${HOME}/dotfiles/config/asdfrc ${HOME}/.asdfrc
-ln -snfv ${HOME}/dotfiles/config/default-python-packages ${HOME}/.default-python-packages
-ln -snfv ${HOME}/dotfiles/config/default-npm-packages ${HOME}/.default-npm-packages
+ln -snfv ${HOME}/dotfiles/config/.asdfrc ${HOME}/
+ln -snfv ${HOME}/dotfiles/config/.default-python-packages ${HOME}/
+ln -snfv ${HOME}/dotfiles/config/.default-npm-packages ${HOME}/
 echo "====== End ======"
 
 # echo "======= Setup xxx ======="
