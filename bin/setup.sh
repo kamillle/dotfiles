@@ -148,6 +148,11 @@ echo "====== End ======"
 
 echo "====== Setup asdf ======"
 brew install asdf
+
+asdf plugin-add python
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf plugin add terraform
+
 ln -snfv ${HOME}/dotfiles/config/.asdfrc ${HOME}/
 ln -snfv ${HOME}/dotfiles/config/.default-python-packages ${HOME}/
 ln -snfv ${HOME}/dotfiles/config/.default-npm-packages ${HOME}/
