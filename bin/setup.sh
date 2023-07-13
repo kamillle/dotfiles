@@ -86,8 +86,6 @@ brew install --cask homebrew/cask-versions/sequel-pro-nightly
 # dockerは brew, brew cask 両方必要
 brew install docker --cask
 brew install docker
-brew install awscli
-brew install --cask google-cloud-sdk
 echo "====== End ======"
 
 
@@ -120,6 +118,8 @@ ln -snfv ${HOME}/dotfiles/karabiner ${HOME}/.config/
 echo "====== End ======"
 
 echo "====== Setup CLI ======"
+brew install --cask google-cloud-sdk
+brew install awscli
 brew install htop
 brew install tig
 brew install trash
