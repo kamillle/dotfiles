@@ -81,6 +81,7 @@ brew install --cask spotify
 brew install --cask 1password
 brew install --cask microsoft-edge
 brew install --cask alt-tab
+brew install --cask pycharm
 # mysql GUI for mojave
 brew install --cask homebrew/cask-versions/sequel-pro-nightly
 # dockerは brew, brew cask 両方必要
