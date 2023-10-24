@@ -68,6 +68,7 @@ alias tf="terraform"
 alias py="python"
 alias ct='cd "$(git rev-parse --show-toplevel)"'
 alias n='npm'
+alias repo='gh repo view -w'
 
 # For kubernetes
 # [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
