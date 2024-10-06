@@ -71,7 +71,6 @@ brew install --cask cmd-eikana
 brew install --cask alfred
 brew install --cask appcleaner
 brew install --cask clipy
-brew install --cask dash
 brew install --cask iterm2
 brew install --cask karabiner-elements
 brew install --cask skitch
@@ -81,7 +80,7 @@ brew install --cask spotify
 brew install --cask 1password
 brew install --cask microsoft-edge
 brew install --cask alt-tab
-brew install --cask pycharm
+brew install --cask cursor
 # mysql GUI for mojave
 brew install --cask homebrew/cask-versions/sequel-pro-nightly
 # dockerは brew, brew cask 両方必要
