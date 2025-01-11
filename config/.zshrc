@@ -50,9 +50,30 @@ zstyle ':vcs_info:*'     formats "%F{white}-> %c%u%b%f " # 通常
 zstyle ':vcs_info:*'     actionformats '(%b|%a)'         # rebase 途中,merge コンフリクト等 formats 外の表示
 
 # プロンプト表示直前に vcs_info 呼び出し
-precmd () { vcs_info }
-PROMPT='%{$fg_bold[yellow]%} %~% %{$reset_color%} ${vcs_info_msg_0_}%{$reset_color%}
-%{${fg_bold[red]}%}%}  $ % %{${reset_color}%'
+precmd () {
+  vcs_info
+  # git config から remote.origin.url を取得
+  if git rev-parse --git-dir > /dev/null 2>&1; then
+    REPO_URL=$(git config --get remote.origin.url)
+    # ssh://git@ で始まる場合は https:// に置換
+    if [[ $REPO_URL =~ ^ssh://git@ ]]; then
+      REPO_URL=$(echo $REPO_URL | sed 's|^ssh://git@|https://|')
+    fi
+    if [[ $REPO_URL =~ ^git@ ]]; then
+      REPO_URL=$(echo $REPO_URL | sed 's|^git@|https://|')
+    fi
+    if [[ $REPO_URL =~ ^https://github.com: ]]; then
+      REPO_URL=$(echo $REPO_URL | sed 's|^https://github.com:|https://github.com/|')
+    fi
+
+    # .git で終わる場合は削除
+    REPO_URL=${REPO_URL%.git}
+  else
+    REPO_URL=""
+  fi
+}
+PROMPT='%{$fg_bold[yellow]%}%~%{$reset_color%} ${vcs_info_msg_0_}${REPO_URL:+| $REPO_URL}
+%{${fg_bold[red]}%}%}  $ % %{${reset_color}%}'
 
 #----------------------------------------------------------
 # alias
@@ -150,3 +171,14 @@ function gg () {
   vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
 }
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+
+# pnpm
+export PNPM_HOME="/Users/kamillle/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
