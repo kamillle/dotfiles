@@ -71,8 +71,15 @@ precmd () {
   else
     REPO_URL=""
   fi
+
+  # hostnameに応じてemojiを設定
+  if [[ $(hostname) == "Yujis-MBA-M2.local" ]]; then
+    EMOJI="💻"
+  else
+    EMOJI="❓"
+  fi
 }
-PROMPT='%{$fg_bold[yellow]%}%~%{$reset_color%} ${vcs_info_msg_0_}${REPO_URL:+| $REPO_URL}
+PROMPT='${EMOJI} %{$fg_bold[yellow]%}%~%{$reset_color%} ${vcs_info_msg_0_}${REPO_URL:+| $REPO_URL}
 %{${fg_bold[red]}%}%}  $ % %{${reset_color}%}'
 
 #----------------------------------------------------------
