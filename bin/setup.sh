@@ -128,9 +128,8 @@ brew install gnu-sed
 brew install the_silver_searcher
 brew install github/gh/gh
 brew install jid
-brew install peco
-mkdir -p ${HOME}/.config/peco
-ln -snfv ${HOME}/dotfiles/config/peco/config.json ${HOME}/.config/peco/
+# WebSocket cilent
+brew install websocat
 mkdir -p ${HOME}/.bundle
 ln -snfv ${HOME}/dotfiles/config/bundler ${HOME}/.bundle/config
 echo "====== End ======"

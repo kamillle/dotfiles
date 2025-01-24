@@ -3,7 +3,7 @@
   email = "32205171+kamillle@users.noreply.github.com"
 [alias]
   co  = checkout
-  po = "!git branch | peco | xargs git checkout"
+  po = "!git branch | fzf | xargs git checkout"
   st  = status
   cm = commit
   df = diff
@@ -26,3 +26,8 @@
 	autostash = true
 [init]
 	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

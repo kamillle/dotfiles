@@ -134,53 +134,31 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # kubectl krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
-# pecoを優先するためコメントアウト
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #----------------------------------------------------------
 # functions
 #----------------------------------------------------------
 # ctrl + r でコマンド履歴一覧
-function peco-history-selection() {
-    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+function fzf-history-selection() {
+    BUFFER=$(history -n 1 | tail -r | awk '!a[$0]++' | fzf --height 60% --reverse)
     CURSOR=$#BUFFER
     zle reset-prompt
 }
-zle -N peco-history-selection
-bindkey '^R' peco-history-selection
+zle -N fzf-history-selection
+bindkey '^R' fzf-history-selection
 
 # ctrl + ] でghq
-function peco-ghq () {
-  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+function fzf-ghq () {
+  local selected_dir=$(ghq list -p | fzf --height 60% --reverse --query "$LBUFFER")
   if [ -n "$selected_dir" ]; then
     BUFFER="cd ${selected_dir}"
     zle accept-line
   fi
   zle clear-screen
 }
-zle -N peco-ghq
-bindkey '^]' peco-ghq
-
-# ctrl + ] でghq
-function peco-open-git-repo-by-web () {
-  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
-  if [ -n "$selected_dir" ]; then
-    BUFFER="cd ${selected_dir} && gh repo view -w"
-    zle accept-line
-  fi
-  zle clear-screen
-}
-zle -N peco-open-git-repo-by-web
-bindkey '^N' peco-open-git-repo-by-web
-
-# grepした上でそのファイルをvimで開く
-function gg () {
-  vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
-}
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
-export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
+zle -N fzf-ghq
+bindkey '^]' fzf-ghq
 
 # pnpm
 export PNPM_HOME="/Users/kamillle/Library/pnpm"
