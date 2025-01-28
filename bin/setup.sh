@@ -130,6 +130,8 @@ brew install github/gh/gh
 brew install jid
 # WebSocket cilent
 brew install websocat
+brew install bat
+
 mkdir -p ${HOME}/.bundle
 ln -snfv ${HOME}/dotfiles/config/bundler ${HOME}/.bundle/config
 echo "====== End ======"
@@ -157,5 +159,4 @@ ln -snfv ${HOME}/dotfiles/config/.default-python-packages ${HOME}/
 ln -snfv ${HOME}/dotfiles/config/.default-npm-packages ${HOME}/
 echo "====== End ======"
 
-# echo "======= Setup xxx ======="
-# echo "======= End ======"
+source ${HOME}/.zshrc

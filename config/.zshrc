@@ -116,6 +116,8 @@ setopt share_history
 #----------------------------------------------------------
 # environment variable
 #----------------------------------------------------------
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
 . ~/.asdf/plugins/golang/set-env.zsh
 export ASDF_GOLANG_MOD_VERSION_ENABLED=true
 export ZPLUG_HOME=/opt/homebrew/opt/zplug
@@ -133,6 +135,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # kubectl krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -149,16 +152,16 @@ zle -N fzf-history-selection
 bindkey '^R' fzf-history-selection
 
 # ctrl + ] でghq
-function fzf-ghq () {
-  local selected_dir=$(ghq list -p | fzf --height 60% --reverse --query "$LBUFFER")
-  if [ -n "$selected_dir" ]; then
-    BUFFER="cd ${selected_dir}"
+function ghq-fzf() {
+  local src=$(ghq list | fzf --reverse --height 95% --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*")
+  if [ -n "$src" ]; then
+    BUFFER="cd $(ghq root)/$src"
     zle accept-line
   fi
-  zle clear-screen
+  zle -R -c
 }
-zle -N fzf-ghq
-bindkey '^]' fzf-ghq
+zle -N ghq-fzf
+bindkey '^]' ghq-fzf
 
 # pnpm
 export PNPM_HOME="/Users/kamillle/Library/pnpm"
