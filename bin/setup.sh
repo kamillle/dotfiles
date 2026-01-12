@@ -71,6 +71,10 @@ brew install --cask notion
 brew install --cask 1password
 brew install --cask alt-tab
 brew install --cask cursor
+brew install --cask raycast
+brew install --cask chatgpt
+brew install --cask aqua-voice
+
 # mysql GUI for mojave
 brew install --cask homebrew/cask-versions/sequel-pro-nightly
 # dockerは brew, brew cask 両方必要
@@ -111,16 +115,11 @@ echo "====== Setup CLI ======"
 brew install --cask google-cloud-sdk
 brew install awscli
 brew install htop
-brew install tig
 brew install trash
-brew install tree
 brew install gnu-sed
-brew install the_silver_searcher
 brew install github/gh/gh
-brew install jid
-# WebSocket cilent
-brew install websocat
-brew install bat
+brew install fzf
+brew install --cask tailscale-app
 
 mkdir -p ${HOME}/.bundle
 ln -snfv ${HOME}/dotfiles/config/bundler ${HOME}/.bundle/config
@@ -137,6 +136,7 @@ ln -snfv ${HOME}/dotfiles/config/.vimrc ${HOME}/
 ln -snfv ${HOME}/dotfiles/config/.ideavimrc ${HOME}/
 echo "====== End ======"
 
+
 echo "====== Setup asdf ======"
 brew install asdf
 
@@ -148,5 +148,9 @@ ln -snfv ${HOME}/dotfiles/config/.asdfrc ${HOME}/
 ln -snfv ${HOME}/dotfiles/config/.default-python-packages ${HOME}/
 ln -snfv ${HOME}/dotfiles/config/.default-npm-packages ${HOME}/
 echo "====== End ======"
+
+brew install uv
+curl -fsSL https://claude.ai/install.sh | bash
+curl -fsSL https://bun.sh/install | bash
 
 source ${HOME}/.zshrc
