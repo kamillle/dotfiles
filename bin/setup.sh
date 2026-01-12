@@ -62,18 +62,13 @@ brew install --cask visual-studio-code
 brew install --cask discord
 brew install --cask keyboardcleantool
 brew install --cask slack
-brew install --cask cmd-eikana
-brew install --cask alfred
 brew install --cask appcleaner
-brew install --cask clipy
 brew install --cask iterm2
 brew install --cask karabiner-elements
 brew install --cask skitch
 brew install --cask postman
 brew install --cask notion
-brew install --cask spotify
 brew install --cask 1password
-brew install --cask microsoft-edge
 brew install --cask alt-tab
 brew install --cask cursor
 # mysql GUI for mojave
