@@ -59,7 +59,6 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew install --cask google-chrome
 brew install --cask google-japanese-ime
 brew install --cask visual-studio-code
-brew install --cask zoom
 brew install --cask discord
 brew install --cask keyboardcleantool
 brew install --cask slack
