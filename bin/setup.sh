@@ -74,6 +74,8 @@ brew install --cask cursor
 brew install --cask raycast
 brew install --cask chatgpt
 brew install --cask aqua-voice
+brew install --cask figma
+brew install --cask notion-calendar
 
 # mysql GUI for mojave
 brew install --cask homebrew/cask-versions/sequel-pro-nightly
