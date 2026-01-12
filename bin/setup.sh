@@ -41,16 +41,12 @@ echo "====== Install Applications ======"
 brew install mas # App StoreのアプリをCLIでダウンロードできるようにする
 # Xcode
 mas install 497799835
-# Kindle
-mas install 405399194
 # Skitch
 mas install 425955336
 # LINE
 mas install 539883307
 # BetterSnapTool
 mas install 417375580
-# Meeter
-mas install 1510445899
 # Spark mail
 mas install 1176895641
 
