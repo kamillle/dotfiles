@@ -118,8 +118,6 @@ setopt share_history
 #----------------------------------------------------------
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
-. ~/.asdf/plugins/golang/set-env.zsh
-export ASDF_GOLANG_MOD_VERSION_ENABLED=true
 export ZPLUG_HOME=/opt/homebrew/opt/zplug
 source $ZPLUG_HOME/init.zsh
 export PATH="/opt/homebrew/bin":$PATH
