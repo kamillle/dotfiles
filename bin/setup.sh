@@ -155,4 +155,7 @@ brew install uv
 curl -fsSL https://claude.ai/install.sh | bash
 curl -fsSL https://bun.sh/install | bash
 
+# macのキー長押し＝アクセント候補（文字バリエーション）表示を使わない
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 source ${HOME}/.zshrc
