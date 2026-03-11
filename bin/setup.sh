@@ -113,7 +113,7 @@ mkdir ${HOME}/.config
 ln -snfv ${HOME}/dotfiles/karabiner ${HOME}/.config/
 echo "====== End ======"
 
-echo "====== Setup CLI ======"
+echo "====== Setup dev tools ======"
 brew install --cask google-cloud-sdk
 brew install awscli
 brew install htop
@@ -125,35 +125,31 @@ brew install --cask tailscale-app
 
 mkdir -p ${HOME}/.bundle
 ln -snfv ${HOME}/dotfiles/config/bundler ${HOME}/.bundle/config
-echo "====== End ======"
 
-echo "====== Setup ghq ======"
+
 brew install ghq
 # ghq default root path
 mkdir ${HOME}/ghq
-echo "====== End ======"
 
-echo "====== Setup vim ======"
 ln -snfv ${HOME}/dotfiles/config/.vimrc ${HOME}/
 ln -snfv ${HOME}/dotfiles/config/.ideavimrc ${HOME}/
-echo "====== End ======"
 
 
-echo "====== Setup asdf ======"
 brew install asdf
-
-asdf plugin-add python
+asdf plugin add python
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf plugin add terraform
-
 ln -snfv ${HOME}/dotfiles/config/.asdfrc ${HOME}/
 ln -snfv ${HOME}/dotfiles/config/.default-python-packages ${HOME}/
 ln -snfv ${HOME}/dotfiles/config/.default-npm-packages ${HOME}/
-echo "====== End ======"
+
 
 brew install uv
+brew install codex
 curl -fsSL https://claude.ai/install.sh | bash
 curl -fsSL https://bun.sh/install | bash
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+echo "====== End ======"
 
 # macのキー長押し＝アクセント候補（文字バリエーション）表示を使わない
 defaults write -g ApplePressAndHoldEnabled -bool false

@@ -89,7 +89,8 @@ PROMPT='${EMOJI} %{$fg_bold[yellow]%}%~%{$reset_color%} ${vcs_info_msg_0_}${REPO
 alias be="bundle exec"
 alias agg="ag -g"
 alias ac="git add . && git commit"
-alias c="clear"
+alias c="claude"
+alias cl="claer"
 alias rm="trash"
 alias ls="ls -G"
 alias tf="terraform"
@@ -166,3 +167,14 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 # bun completions
 [ -s "/Users/yuji/.bun/_bun" ] && source "/Users/yuji/.bun/_bun"
+export PATH="$HOME/.local/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/yuji/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
